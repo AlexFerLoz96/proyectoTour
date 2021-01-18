@@ -18,8 +18,7 @@ class CreateModelos3dTable extends Migration
             $table->string('ruta');
             $table->string('descripcion');
 
-            $table->integer('comercios_id')->unsigned();
-            $table->foreign('comercios_id')->references('id')->on('comercios');
+            $table->foreignId('comercios_id')->constrained('comercios');
             $table->timestamps();
         });
     }

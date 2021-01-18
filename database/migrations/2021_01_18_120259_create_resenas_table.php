@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReseñasTable extends Migration
+class CreateResenasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateReseñasTable extends Migration
      */
     public function up()
     {
-        Schema::create('reseñas', function (Blueprint $table) {
+        Schema::create('resenas', function (Blueprint $table) {
             $table->id();
             $table->string('comentario', 300);
-            $table->integer('puntuacion', 1);
+            $table->integer('puntuacion');
             $table->date('fecha');
 
-            $table->integer('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users');
+            $table->foreignId('users_id')->constrained('users');
 
-            $table->integer('comercios_id')->unsigned();
-            $table->foreign('comercios_id')->references('id')->on('comercios');
+            $table->foreignId('comercios_id')->constrained('comercios');
 
             $table->timestamps();
         });
@@ -36,6 +34,6 @@ class CreateReseñasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reseñas');
+        Schema::dropIfExists('resenas');
     }
 }
