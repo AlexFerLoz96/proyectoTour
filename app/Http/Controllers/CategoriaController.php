@@ -14,7 +14,8 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+        $categoriaList = Categoria::all();
+        return view('categorias.all', ['categoriaList'=>$categoriaList]);
     }
 
     /**
@@ -24,7 +25,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('categoria.form');
     }
 
     /**

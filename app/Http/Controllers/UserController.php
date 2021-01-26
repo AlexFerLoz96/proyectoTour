@@ -14,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $userList = User::all();
+        return view('user.index',['userList'=>$userList]);
     }
 
     /**
@@ -24,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -33,9 +34,14 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $r)
     {
-        //
+        $usr = new User();
+        $usr->name = $r->name;
+        $usr->email = $r->email;
+        $usr->password = $r->password;
+        $usr->save();
+        return redirect()->route('user.index');
     }
 
     /**
@@ -46,7 +52,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $usr = User::find($id);
+        $data['usuario'] = $usr;
+
+        return view('user.show', $data);
     }
 
     /**
@@ -57,7 +66,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('user.create', array('user'=>$user));
     }
 
     /**
@@ -67,9 +77,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $r)
     {
-        //
+        $usr = User::find($r->id);
+        $usr->email = $r->email;
+        $usr->name = $r->name;
+        $usr->password = $r->password;
+        $usr->save();
+        return redirect()->route('user.index');
     }
 
     /**
@@ -80,6 +95,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usr = User::find($id);
+        $usr->delete();
+        return redirect()->route('user.index');
     }
 }
