@@ -25,7 +25,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('categoria.form');
+        return view('categoria.create');
     }
 
     /**
@@ -34,9 +34,12 @@ class CategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $r)
     {
-        //
+        $categoria = new Categoria();
+        $categoria->nombre = $r->nombre;
+        $categoria->save();
+        return redirect()->route('categoria.index');
     }
 
     /**
@@ -47,7 +50,10 @@ class CategoriaController extends Controller
      */
     public function show($id)
     {
-        //
+        $categoria = Categoria::find($id);
+        $data['categoria'] = $categoria;
+
+        return view('categoria.show', $data);
     }
 
     /**
@@ -58,7 +64,8 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return view('categoria.edit', array('categoria'=>$categoria));
     }
 
     /**
@@ -68,9 +75,12 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $r, $id)
     {
-        //
+        $categoria = Categoria::find($r->id);
+        $categoria->nombre = $r->nombre;
+        $categoria->save();
+        return redirect()->route('categoria.index');
     }
 
     /**
@@ -81,6 +91,8 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $categoria = Categoria::find($id);
+        $categoria->delete();
+        return redirect()->route('categoria.index');
     }
 }

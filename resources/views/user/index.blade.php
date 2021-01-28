@@ -25,9 +25,9 @@
     </table>
 @endsection
 <script>
-function question(id){
-    if (confirm('¿Estas seguro de borrar esta película?')){
-       document.getElementById("delete"+id).submit()
+    function question(id){
+        if (confirm('¿Estas seguro de borrar esta película?')){
+            document.getElementById("delete"+id).submit();
+        }
     }
-}
 </script>
