@@ -14,7 +14,8 @@ class ComercioController extends Controller
      */
     public function index()
     {
-        //
+        $comercioList = Comercio::all();
+        return view('comercio.index', ['comercioList'=>$comercioList]);
     }
 
     /**
@@ -24,7 +25,7 @@ class ComercioController extends Controller
      */
     public function create()
     {
-        //
+        return view('comercio.create');
     }
 
     /**
@@ -33,9 +34,14 @@ class ComercioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $r)
     {
-        //
+        $comercio = new Comercio();
+        $comercio->nombre = $r->nombre;
+        $comercio->ubicacion = $r->ubicacion;
+        $comercio->descripcion = $r->descripcion;
+        $comercio->save();
+        return redirect()->route('comercio.index');
     }
 
     /**
@@ -46,7 +52,10 @@ class ComercioController extends Controller
      */
     public function show($id)
     {
-        //
+        $comercio = Comercio::find($id);
+        $data['comercio'] = $comercio;
+
+        return view('comercio.show', $data);
     }
 
     /**
@@ -57,7 +66,8 @@ class ComercioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comercio = Comercio::find($id);
+        return view('comercio.edit', array('comercio'=>$comercio));
     }
 
     /**
@@ -67,9 +77,14 @@ class ComercioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $r)
     {
-        //
+        $comercio = Comercio::find($r->id);
+        $comercio->nombre = $r->nombre;
+        $comercio->ubicacion = $r->ubicacion;
+        $comercio->descripcion = $r->descripcion;
+        $comercio->save();
+        return redirect()->route('categoria.index');
     }
 
     /**
@@ -80,6 +95,8 @@ class ComercioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comercio = Comercio::find($id);
+        $comercio->delete();
+        return redirect()->route('comercio.index');
     }
 }

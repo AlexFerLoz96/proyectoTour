@@ -15,7 +15,7 @@ class CategoriaController extends Controller
     public function index()
     {
         $categoriaList = Categoria::all();
-        return view('categorias.all', ['categoriaList'=>$categoriaList]);
+        return view('categoria.index', ['categoriaList'=>$categoriaList]);
     }
 
     /**
@@ -75,7 +75,7 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $r, $id)
+    public function update(Request $r)
     {
         $categoria = Categoria::find($r->id);
         $categoria->nombre = $r->nombre;

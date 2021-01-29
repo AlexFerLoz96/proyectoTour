@@ -34,3 +34,12 @@ Route::get('/categoria/{id}', 'CategoriaController@show')->name('categoria.show'
 Route::get('/categoria/{id}/edit', 'CategoriaController@edit')->name('categoria.edit');
 Route::put('/categoria/{id}', 'CategoriaController@update')->name('categoria.update');
 Route::delete('/categoria/{id}/borrar', 'CategoriaController@destroy')->name('categoria.destroy');
+
+
+Route::get('/comercio', 'ComercioController@index')->name('comercio.index');
+Route::get('/comercio/create', 'ComercioController@create')->name('comercio.create');
+Route::post('/comercio/store', 'ComercioController@store')->name('comercio.store');
+Route::get('/comercio/{id}', 'ComercioController@show')->name('comercio.show');
+Route::get('/comercio/{id}/edit', 'ComercioController@edit')->name('comercio.edit');
+Route::put('/comercio/{id}', 'ComercioController@update')->name('comercio.update');
+Route::delete('/comercio/{id}/borrar', 'ComercioController@destroy')->name('comercio.destroy');

@@ -1,20 +1,18 @@
 @extends("layouts.master")
 
-@section("title", "Modificación de usuario")
+@section("title", "Modificación de categoria")
 
-@section("header", "Modificación de usuario")
+@section("header", "Modificación de categoria")
 
 @section("content")
-    @isset($user)
-        <form action="{{ route('user.update', ['id' => $user->id]) }}" method="POST">
+    @isset($categoria)
+        <form action="{{ route('categoria.update', ['id' => $categoria->id]) }}" method="POST">
         @method("PUT")
     @else
-        <form action="{{ route('user.store') }}" method="POST">
+        <form action="{{ route('categoria.store') }}" method="POST">
     @endisset
         @csrf
-        User name:<input type="text" name="name" value="{{$user->name ?? '' }}"><br>
-        Email:<input type="text" name="email" value="{{$user->email ?? '' }}"><br>
-        Password:<input type="password" name="password" value="{{$user->password ?? '' }}"><br>
+        Categoria nombre:<input type="text" name="nombre" value="{{$categoria->nombre ?? '' }}"><br>
         <input type="submit">
         </form>
 
