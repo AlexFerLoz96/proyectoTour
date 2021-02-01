@@ -43,3 +43,19 @@ Route::get('/comercio/{id}', 'ComercioController@show')->name('comercio.show');
 Route::get('/comercio/{id}/edit', 'ComercioController@edit')->name('comercio.edit');
 Route::put('/comercio/{id}', 'ComercioController@update')->name('comercio.update');
 Route::delete('/comercio/{id}/borrar', 'ComercioController@destroy')->name('comercio.destroy');
+
+Route::get('/imagen', 'ImagenController@index')->name('imagen.index');
+Route::get('/imagen/create', 'ImagenController@create')->name('imagen.create');
+Route::post('/imagen/store', 'ImagenController@store')->name('imagen.store');
+Route::get('/imagen/{id}', 'ImagenController@show')->name('imagen.show');
+Route::get('/imagen/{id}/edit', 'ImagenController@edit')->name('imagen.edit');
+Route::put('/imagen/{id}', 'ImagenController@update')->name('imagen.update');
+Route::delete('/imagen/{id}/borrar', 'ImagenController@destroy')->name('imagen.destroy');
+
+Route::get('/resena', 'ResenaController@index')->name('resena.index');
+Route::get('/resena/create', 'ResenaController@create')->name('resena.create');
+Route::post('/resena/store', 'ResenaController@store')->name('resena.store');
+Route::get('/resena/{id}', 'ResenaController@show')->name('resena.show');
+Route::get('/resena/{id}/edit', 'ResenaController@edit')->name('resena.edit');
+Route::put('/resena/{id}', 'ResenaController@update')->name('resena.update');
+Route::delete('/resena/{id}/borrar', 'ResenaController@destroy')->name('resena.destroy');

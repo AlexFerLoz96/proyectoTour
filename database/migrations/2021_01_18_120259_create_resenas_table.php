@@ -18,11 +18,6 @@ class CreateResenasTable extends Migration
             $table->string('comentario');
             $table->integer('puntuacion');
             $table->date('fecha');
-
-            $table->foreignId('users_id')->constrained('users');
-
-            $table->foreignId('comercios_id')->constrained('comercios');
-
             $table->timestamps();
         });
     }

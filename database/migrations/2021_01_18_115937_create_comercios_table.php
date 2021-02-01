@@ -19,10 +19,6 @@ class CreateComerciosTable extends Migration
             $table->string('ubicacion');
             $table->string('descripcion');
 
-            $table->foreignId('user_id')->constrained('users');
-
-            $table->foreignId('categorias_id')->constrained('categorias');
-
             $table->timestamps();
         });
     }

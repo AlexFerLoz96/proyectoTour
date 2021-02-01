@@ -84,7 +84,7 @@ class ComercioController extends Controller
         $comercio->ubicacion = $r->ubicacion;
         $comercio->descripcion = $r->descripcion;
         $comercio->save();
-        return redirect()->route('categoria.index');
+        return redirect()->route('comercio.index');
     }
 
     /**

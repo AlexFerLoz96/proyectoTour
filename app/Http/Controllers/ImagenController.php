@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Imagen;
+use Faker\Provider\Image;
 
 class ImagenController extends Controller
 {
@@ -14,7 +15,8 @@ class ImagenController extends Controller
      */
     public function index()
     {
-        //
+        $imagenList = Imagen::all();
+        return view('imagen.index', ['imagenList'=>$imagenList]);
     }
 
     /**
@@ -24,7 +26,7 @@ class ImagenController extends Controller
      */
     public function create()
     {
-        //
+        return view('imagen.create');
     }
 
     /**
@@ -33,9 +35,13 @@ class ImagenController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $r)
     {
-        //
+        $imagen = new Imagen();
+        $imagen->ruta = $r->ruta;
+        $imagen->descripcion = $r->descripcion;
+        $imagen->save();
+        return redirect()->route('imagen.index');
     }
 
     /**
@@ -46,7 +52,10 @@ class ImagenController extends Controller
      */
     public function show($id)
     {
-        //
+        $imagen = Imagen::find($id);
+        $data['imagen'] = $imagen;
+
+        return view('imagen.show', $data);
     }
 
     /**
@@ -57,8 +66,8 @@ class ImagenController extends Controller
      */
     public function edit($id)
     {
-        //
-    }
+        $imagen = Imagen::find($id);
+        return view('imagen.edit', array('imagen'=>$imagen));    }
 
     /**
      * Update the specified resource in storage.
@@ -67,9 +76,13 @@ class ImagenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $r)
     {
-        //
+        $imagen = Imagen::find($r->id);
+        $imagen->ruta = $r->ruta;
+        $imagen->descripcion = $r->descripcion;
+        $imagen->save();
+        return redirect()->route('imagen.index');
     }
 
     /**
@@ -80,6 +93,8 @@ class ImagenController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $imagen = Imagen::find($id);
+        $imagen->delete();
+        return redirect()->route('imagen.index');
     }
 }

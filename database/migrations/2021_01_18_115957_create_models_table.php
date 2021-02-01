@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModelos3dTable extends Migration
+class CreateModelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateModelos3dTable extends Migration
      */
     public function up()
     {
-        Schema::create('modelos3d', function (Blueprint $table) {
+        Schema::create('models', function (Blueprint $table) {
             $table->id();
             $table->string('ruta');
             $table->string('descripcion');
-
-            $table->foreignId('comercios_id')->constrained('comercios');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateModelos3dTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modelos3d');
+        Schema::dropIfExists('models');
     }
 }
