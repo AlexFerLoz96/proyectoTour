@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Modelo3d;
+use App\Models\Modelo;
 
-class Modelo3dController extends Controller
+class ModelosController extends Controller
 {
     /**
      * Display a listing of the resource.

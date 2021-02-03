@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Resena;
 
-class ResenasController extends Controller
+class ResenaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -80,7 +80,7 @@ class ResenasController extends Controller
      */
     public function update(Request $r)
     {
-        $resena = new Resena::find($r->id);
+        $resena = Resena::find($r->id);
         $resena->comentario = $r->comentario;
         $resena->puntuacion = $r->puntuacion;
         $resena->fecha = $r->fecha;
