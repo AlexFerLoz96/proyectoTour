@@ -24,7 +24,7 @@
 @endsection
 <script>
     function question(id){
-        if (confirm('¿Estas seguro de borrar esta película?')){
+        if (confirm('¿Estas seguro de borrar esta categoría?')){
             document.getElementById("delete"+id).submit();
         }
     }
