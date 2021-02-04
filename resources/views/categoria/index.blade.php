@@ -5,21 +5,30 @@
 @section("header", "Categorias")
 
 @section("content")
-    <a href="{{ route('categoria.create') }}">New</a>
-    <table border='1'>
-    @foreach ($categoriaList as $categoria)
+    <a href="{{ route('categoria.create') }}" class="btn btn-success">New</a>
+    <table class="table">
+    <thead class="thead-dark">
+            <tr>
+                <th scope="col">Categorías</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    @foreach ($categoriaList as $categoria) 
+       
         <tr>
             <td>{{$categoria->nombre}}</td>
-            <td><a href="{{route('categoria.edit', $categoria->id)}}">Edit</a></td>
+            <td><a href="{{route('categoria.edit', $categoria->id)}}" class="btn btn-info">Edit</a></td>
             <td>
                 <form action = "{{route('categoria.destroy', $categoria->id)}}" method="POST" id="delete{{$categoria->id}}">
                     @csrf
                     @method("DELETE")
-                    <input type="button"  onclick="question({{ $categoria->id }})" value="Delete">
+                    <input type="button"  onclick="question({{ $categoria->id }})" value="Delete" class="btn btn-danger">
                 </form>
             </td>
         <br>
     @endforeach
+    
     </table>
 @endsection
 <script>
