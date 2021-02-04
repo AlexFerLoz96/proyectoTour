@@ -5,19 +5,30 @@
 @section("header", "resenas")
 
 @section("content")
-    <a href="{{ route('resena.create') }}">New</a>
-    <table border='1'>
-    @foreach ($resenaList as $resena)
+    <a href="{{ route('resena.create') }}" class="btn btn-success">New</a>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Reseña</th>
+                <th>Comentario</th>
+                <th>Puntuación</th>
+                <th>Fecha</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    @foreach ($resenaList as $resena) 
         <tr>
+            <td>{{$resena->id}}</td>
             <td>{{$resena->comentario}}</td>
             <td>{{$resena->puntuacion}}</td>
             <td>{{$resena->fecha}}</td>
-            <td><a href="{{route('resena.edit', $resena->id)}}">Edit</a></td>
+            <td><a href="{{route('resena.edit', $resena->id)}}" class="btn btn-info">Edit</a></td>
             <td>
                 <form action = "{{route('resena.destroy', $resena->id)}}" method="POST" id="delete{{$resena->id}}">
                     @csrf
                     @method("DELETE")
-                    <input type="button"  onclick="question({{ $resena->id }})" value="Delete">
+                    <input type="button"  onclick="question({{ $resena->id }})" value="Delete" class="btn btn-danger">
                 </form>
             </td>
         <br>

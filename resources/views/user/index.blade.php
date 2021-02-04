@@ -5,19 +5,26 @@
 @section("header", "Users")
 
 @section("content")
-    <a href="{{ route('user.create') }}">New</a>
-    <table border='1'>
-    @foreach ($userList as $user)
+    <a href="{{ route('user.create') }}" class="btn btn-success">New</a>
+    <table class="table">
+    <thead class="thead-dark">
+            <tr>
+                <th scope="col">Usuarios</th>
+                <th scope="col">Nombre</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    @foreach ($userList as $user) 
         <tr>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
-            <td>{{$user->password}}</td>
-            <td><a href="{{route('user.edit', $user->id)}}">Edit</a></td>
+            <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-info">Edit</a></td>
             <td>
                 <form action = "{{route('user.destroy', $user->id)}}" method="POST" id="delete{{$user->id}}">
                     @csrf
                     @method("DELETE")
-                    <input type="button"  onclick="question({{$user->id}})" value="Delete">
+                    <input type="button"  onclick="question({{ $user->id }})" value="Delete" class="btn btn-danger">
                 </form>
             </td>
         <br>

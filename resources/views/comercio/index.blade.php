@@ -10,7 +10,7 @@
     <thead class="thead-dark">
             <tr>
                 <th scope="col">Comercios</th>
-                <th>Ubicación</th>
+                <th scope="col">Ubicación</th>
                 <th>Descripción</th>
                 <th></th>
                 <th></th>
