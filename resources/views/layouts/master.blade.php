@@ -48,8 +48,8 @@
                 </nav>
                     </div>
                     @section('sidebar')
-                        @show
-                        <div class="container">
-                        @yield('content')
+                    @show
+                    <div class="container">
+                    @yield('content')
     </body>
 </html>
