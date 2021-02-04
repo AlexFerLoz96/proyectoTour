@@ -26,7 +26,7 @@
 @endsection
 <script>
     function question(id){
-        if (confirm('¿Estas seguro de borrar esta usuario?')){
+        if (confirm('¿Estas seguro de borrar esta película?')){
             document.getElementById("delete"+id).submit();
         }
     }
