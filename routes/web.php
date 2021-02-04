@@ -59,3 +59,11 @@ Route::get('/resena/{id}', 'ResenaController@show')->name('resena.show');
 Route::get('/resena/{id}/edit', 'ResenaController@edit')->name('resena.edit');
 Route::put('/resena/{id}', 'ResenaController@update')->name('resena.update');
 Route::delete('/resena/{id}/borrar', 'ResenaController@destroy')->name('resena.destroy');
+
+Route::get('/modelo', 'ModeloController@index')->name('modelo.index');
+Route::get('/modelo/create', 'ModeloController@create')->name('modelo.create');
+Route::post('/modelo/store', 'ModeloController@store')->name('modelo.store');
+Route::get('/modelo/{id}', 'ModeloController@show')->name('modelo.show');
+Route::get('/modelo/{id}/edit', 'ModeloController@edit')->name('modelo.edit');
+Route::put('/modelo/{id}', 'ModeloController@update')->name('modelo.update');
+Route::delete('/modelo/{id}/borrar', 'ModeloController@destroy')->name('modelo.destroy');

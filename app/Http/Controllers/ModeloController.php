@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Modelo;
 
-class ModelosController extends Controller
+class ModeloController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class ModelosController extends Controller
      */
     public function index()
     {
-        //
+        $modeloList = Modelo::all();
+        return view('modelo.index', ['modeloList'=>$modeloList]);
     }
 
     /**
@@ -24,7 +25,7 @@ class ModelosController extends Controller
      */
     public function create()
     {
-        //
+        return view('modelo.create');
     }
 
     /**
@@ -33,9 +34,13 @@ class ModelosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $r)
     {
-        //
+        $modelo = new Modelo();
+        $modelo->ruta = $r->ruta;
+        $modelo->descripcion = $r->descripcion;
+        $modelo->save();
+        return redirect()->route('modelo.index');
     }
 
     /**
@@ -46,7 +51,10 @@ class ModelosController extends Controller
      */
     public function show($id)
     {
-        //
+        $modelo = Modelo::find($id);
+        $data['modelo'] = $modelo;
+
+        return view('modelo.show', $data);
     }
 
     /**
@@ -57,8 +65,8 @@ class ModelosController extends Controller
      */
     public function edit($id)
     {
-        //
-    }
+        $modelo = Modelo::find($id);
+        return view('modelo.edit', array('modelo'=>$modelo));    }
 
     /**
      * Update the specified resource in storage.
@@ -67,9 +75,13 @@ class ModelosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $r)
     {
-        //
+        $modelo = Modelo::find($r->id);
+        $modelo->ruta = $r->ruta;
+        $modelo->descripcion = $r->descripcion;
+        $modelo->save();
+        return redirect()->route('modelo.index');
     }
 
     /**
@@ -80,6 +92,8 @@ class ModelosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $modelo = Modelo::find($id);
+        $modelo->delete();
+        return redirect()->route('modelo.index');
     }
 }
