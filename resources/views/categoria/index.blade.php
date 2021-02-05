@@ -9,7 +9,8 @@
     <table class="table">
     <thead class="thead-dark">
             <tr>
-                <th scope="col">Categorías</th>
+                <th scope="col">Id</th>
+                <th>Categorías</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -17,6 +18,7 @@
     @foreach ($categoriaList as $categoria) 
        
         <tr>
+            <td>{{$categoria->id}}</td>
             <td>{{$categoria->nombre}}</td>
             <td><a href="{{route('categoria.edit', $categoria->id)}}" class="btn btn-info">Edit</a></td>
             <td>
