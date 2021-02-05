@@ -9,8 +9,9 @@
     <table class="table">
     <thead class="thead-dark">
             <tr>
-                <th scope="col">Comercios</th>
-                <th scope="col">Ubicación</th>
+                <th scope="col">ID</th>
+                <th>Comercios</th>
+                <th>Ubicación</th>
                 <th>Descripción</th>
                 <th></th>
                 <th></th>
@@ -19,10 +20,11 @@
 
     @foreach ($comercioList as $comercio)
         <tr>
+            <td>{{$comercio->id}}</td>
             <td>{{$comercio->nombre}}</td>
             <td>{{$comercio->ubicacion}}</td>
             <td>{{$comercio->descripcion}}</td>
-            <td><a href="{{route('comercio.edit', $comercio->id)}}" class="btn btn-info">Edit</a></td>
+            <td><a href="{{route('comercio.edit', $comercio->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('comercio.destroy', $comercio->id)}}" method="POST" id="delete{{$comercio->id}}">
                     @csrf
