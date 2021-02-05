@@ -9,17 +9,19 @@
     <table class="table">
     <thead class="thead-dark">
             <tr>
-                <th scope="col">Usuarios</th>
-                <th scope="col">Nombre</th>
+                <th  scope="col">ID</th>
+                <th>Usuarios</th>
+                <th>Nombre</th>
                 <th></th>
                 <th></th>
             </tr>
         </thead>
     @foreach ($userList as $user) 
         <tr>
+            <td>{{$user->id}}</td>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
-            <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-info">Edit</a></td>
+            <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('user.destroy', $user->id)}}" method="POST" id="delete{{$user->id}}">
                     @csrf

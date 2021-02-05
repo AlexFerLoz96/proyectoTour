@@ -9,7 +9,8 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Reseña</th>
+                <th scope="col">ID</th>
+                <th>Reseña</th>
                 <th>Comentario</th>
                 <th>Puntuación</th>
                 <th>Fecha</th>
@@ -23,7 +24,7 @@
             <td>{{$resena->comentario}}</td>
             <td>{{$resena->puntuacion}}</td>
             <td>{{$resena->fecha}}</td>
-            <td><a href="{{route('resena.edit', $resena->id)}}" class="btn btn-info">Edit</a></td>
+            <td><a href="{{route('resena.edit', $resena->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('resena.destroy', $resena->id)}}" method="POST" id="delete{{$resena->id}}">
                     @csrf

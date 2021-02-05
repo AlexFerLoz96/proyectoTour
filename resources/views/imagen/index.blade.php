@@ -9,7 +9,8 @@
     <table class="table">
     <thead class="thead-dark">
             <tr>
-                <th scope="col">Ruta</th>
+                <th scope="col">ID</th>
+                <th>Ruta</th>
                 <th>Descripción</th>
                 <th></th>
                 <th></th>
@@ -17,9 +18,10 @@
         </thead>
     @foreach ($imagenList as $imagen)
         <tr>
+            <td>{{$imagen->id}}</td>
             <td>{{$imagen->ruta}}</td>
             <td>{{$imagen->descripcion}}</td>
-            <td><a href="{{route('imagen.edit', $imagen->id)}}" class="btn btn-info">Edit</a></td>
+            <td><a href="{{route('imagen.edit', $imagen->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('imagen.destroy', $imagen->id)}}" method="POST" id="delete{{$imagen->id}}">
                     @csrf

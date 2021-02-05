@@ -9,7 +9,7 @@
     <table class="table">
     <thead class="thead-dark">
             <tr>
-                <th scope="col">Id</th>
+                <th scope="col">ID</th>
                 <th>Categorías</th>
                 <th></th>
                 <th></th>
@@ -20,7 +20,7 @@
         <tr>
             <td>{{$categoria->id}}</td>
             <td>{{$categoria->nombre}}</td>
-            <td><a href="{{route('categoria.edit', $categoria->id)}}" class="btn btn-info">Edit</a></td>
+            <td><a href="{{route('categoria.edit', $categoria->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('categoria.destroy', $categoria->id)}}" method="POST" id="delete{{$categoria->id}}">
                     @csrf
