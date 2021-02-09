@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('main/index');
 });
 
+Route::get('/', 'ComercioController@public')->name('comercio.public');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -34,6 +36,7 @@ Route::delete('/user/{id}/borrar', 'UserController@destroy')->name('user.destroy
 
 
 Route::get('/categoria', 'CategoriaController@index')->name('categoria.index');
+Route::get('/categoria/public', 'CategoriaController@public')->name('categoria.public'); 
 Route::get('/categoria/create', 'CategoriaController@create')->name('categoria.create');
 Route::post('/categoria/store', 'CategoriaController@store')->name('categoria.store');
 Route::get('/categoria/{id}', 'CategoriaController@show')->name('categoria.show');
@@ -43,6 +46,7 @@ Route::delete('/categoria/{id}/borrar', 'CategoriaController@destroy')->name('ca
 
 
 Route::get('/comercio', 'ComercioController@index')->name('comercio.index');
+Route::get('/comercio/public', 'ComercioController@public')->name('comercio.public');
 Route::get('/comercio/create', 'ComercioController@create')->name('comercio.create');
 Route::post('/comercio/store', 'ComercioController@store')->name('comercio.store');
 Route::get('/comercio/{id}', 'ComercioController@show')->name('comercio.show');

@@ -12,6 +12,12 @@ class ComercioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function public()
+    {
+        $comercioList = Comercio::all();
+        return view('main.index', ['comercioList'=>$comercioList]);
+    }
+
     public function index()
     {
         $comercioList = Comercio::all();

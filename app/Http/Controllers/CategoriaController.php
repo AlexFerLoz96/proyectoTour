@@ -12,6 +12,13 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function public()
+    {
+        $categoriaList = Categoria::all();
+        return view('main.index', ['categoriaList'=>$categoriaList]);
+    }
+
     public function index()
     {
         $categoriaList = Categoria::all();
