@@ -2,12 +2,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    max-width: 100%;
-}
-
-
-
 
 
 #navbar{
@@ -24,25 +18,44 @@ body{
     left: 0;
     right: 0;
     top: 0;
-    margin-bottom: 7%;
+    /*margin-bottom: 7%;*/
 }
 
 #text-intro-image{
     font-size: 400%;
+    font-weight: bold;
     color: white;
     top: 20%;
     left: 10%;
 }
 
-#parrafo-intro-image{
-    top: 10%;
+.subtitulo-intro-image{
+    position: absolute;
+    color: white;
+    top: 33%;
     left: 10%;
 }
 
-/*#container{
-    width: 100%;
+.nombre{
+    font-weight: bold;
+    font-size: larger;
+    padding-bottom:10px;
+    border-bottom: 1px solid grey;
+}
+.ubicacion{
+    padding-top: 10px;
 }
 
+.col-5{
+    background-color: rgb(212, 209, 209);
+    border-radius:20px;
+    padding:1%;
+    margin:1%;
+}
+#container{
+    max-width: 100%;
+}
+/*
 .subcontainer{
     width: 20%;
     display: inline-block;
