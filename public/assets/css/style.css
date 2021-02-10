@@ -2,6 +2,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    max-width: 100%;
+}
+
 
 
 
@@ -20,6 +24,7 @@
     left: 0;
     right: 0;
     top: 0;
+    margin-bottom: 7%;
 }
 
 #text-intro-image{
@@ -29,19 +34,23 @@
     left: 10%;
 }
 
-#container{
+#parrafo-intro-image{
+    top: 10%;
+    left: 10%;
+}
+
+/*#container{
     width: 100%;
 }
 
 .subcontainer{
-    width: 15%;
+    width: 20%;
     display: inline-block;
     left: 13%;
     position: relative;
     right: 13%;
-    margin-left: 1.75%;
     border: 1px solid black;
-}
+}*/
 
 
 

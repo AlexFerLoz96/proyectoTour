@@ -27,6 +27,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/comercio">Comercios</a>
                 </li>
+                <li class="nav-item">    
+                    <a class="nav-link" href="/login">Inicia sesión</a>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -37,16 +40,19 @@
 
     <div id="intro-image" class="intro-image" style="background-image:url(https://cdn.getyourguide.com/img/location/5440ed46358e9.jpeg/88.jpg);">
         <h1 id="text-intro-image" style="position: absolute; z-index: 1;">Almería</h1>
+        <p id="parrafo-intro-imagen">Conoce nuestra ciudad</p>
     </div>
 
     <div id="container">
+        <div class="row justify-content-center">
         @foreach ($comercioList as $comercio)
-            <div class="subcontainer">
-                <h2>{{$comercio->nombre ?? ''}}</h2>
-                <h2>{{$comercio->ubicacion ?? ''}}</h2>
-                <p>{{$comercio->descripcion ?? ''}}</p>
-            </div>
+                <div class="col-5">
+                    <div>{{$comercio->nombre ?? ''}}</div>
+                    <div>{{$comercio->ubicacion ?? ''}}</div>
+                    <div>{{$comercio->descripcion ?? ''}}</div>
+                </div>
         @endforeach 
+        </div>
     </div>
 
 </body>
