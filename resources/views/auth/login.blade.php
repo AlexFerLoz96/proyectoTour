@@ -1,7 +1,7 @@
+<link rel="stylesheet" href="assets/css/login.css">
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-                
         </x-slot>
 
         <!-- Session Status -->
