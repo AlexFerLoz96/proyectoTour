@@ -22,22 +22,40 @@ html{
     right: 0;
     top: 0;
     margin-bottom: 7%;
+    opacity: 0.8;
+}
+
+
+
+#fondo-negro{
+    height: 68.5%;
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-bottom: 7%;
 }
 
 #text-intro-image{
+    all: initial;
     font-size: 400%;
     font-weight: bold;
     color: white;
+    position: absolute;
     top: 20%;
     left: 10%;
     border-bottom: 1px solid white;
+    z-index: 200;
 }
 
 .subtitulo-intro-image{
+    all: initial;
     position: absolute;
     color: white;
-    top: 35%;
-    left: 10%;
+    top: 110%;
+    left: 0%;
 }
 
 .nombre{

@@ -11,16 +11,13 @@
 <body>
 
     <nav id="navbar" class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Tour</a>
+        <a class="navbar-brand" href="/">Tour</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/categoria/public">Categorías</a>
                 </li>
@@ -42,10 +39,12 @@
             -->
         </div>
     </nav>
-
+    <div id="fondo-negro"></div>
+    <h1 id="text-intro-image" style="position: absolute; z-index: 1;">Almería
+        <span class="subtitulo-intro-image">Conoce nuestra ciudad</span></h1>
     <div id="intro-image" class="intro-image" style="background-image:url(https://cdn.getyourguide.com/img/location/5440ed46358e9.jpeg/88.jpg);">
-        <h1 id="text-intro-image" style="position: absolute; z-index: 1;">Almería</h1>
-        <div class="subtitulo-intro-image">Conoce nuestra ciudad</div>
+        
+        
     </div>
 
     <div id="container">
