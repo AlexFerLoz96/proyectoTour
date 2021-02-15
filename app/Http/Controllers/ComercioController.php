@@ -24,12 +24,6 @@ class ComercioController extends Controller
         return view('comercio.index', ['comercioList'=>$comercioList]);
     }
 
-    public function getId($id){
-        $comercio = Comercio::find($id);
-        $data['comercio'] = $comercio;
-
-        return view('comercio.id', $data);
-    }
     /**
      * Show the form for creating a new resource.
      *
