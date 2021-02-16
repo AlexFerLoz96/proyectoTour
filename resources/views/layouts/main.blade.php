@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    
     <nav id="navbar" class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="/">Tour</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

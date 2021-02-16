@@ -4,18 +4,48 @@
 
 @section("header", "Modificación de comercio")
 
-@section("content")
-    @isset($comercio)
-        <form action="{{ route('comercio.update', ['id' => $comercio->id]) }}" method="POST">
-        @method("PUT")
-    @else
-        <form action="{{ route('comercio.store') }}" method="POST">
-    @endisset
-        @csrf
-        comercio nombre:<input type="text" name="nombre" value="{{$comercio->nombre ?? '' }}"><br>
-        Ubicacion: <input type="text" name="ubicacion" value="{{$comercio->ubicacion ?? '' }}"><br>
-        Descripcion: <input type="text" name="descripcion" value="{{$comercio->descripcion ?? '' }}"> <br>
-        <input type="submit">
-        </form>
+@section("nav")
 
+    <nav id="navbar" class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Tour</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/categoria/public">Categorías</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/comercio">Comercios</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Inicia sesión</a>
+                </li>
+            </ul>
+            <!--
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            -->
+        </div>
+    </nav>
 @endsection
+
+@section("content")
+    
+        
+    
+        Comercio <br>
+        ID: {{$comercio->id ?? '' }}
+        Nombre:{{$comercio->nombre ?? '' }}<br>
+        Ubicacion: {{$comercio->ubicacion ?? '' }}<br>
+        Descripcion: {{$comercio->descripcion ?? '' }}<br>
+        
+@endsection
+

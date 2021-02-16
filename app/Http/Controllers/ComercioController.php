@@ -61,7 +61,7 @@ class ComercioController extends Controller
         $comercio = Comercio::find($id);
         $data['comercio'] = $comercio;
 
-        return view('comercio.show', $data);
+        return view('comercio.public', $data);
     }
 
     /**
