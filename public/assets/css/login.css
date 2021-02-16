@@ -2,7 +2,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: radial-gradient( rgba(109, 108, 108, 0.8), rgb(0, 0, 0, 0.5)), url(https://cdn.getyourguide.com/img/location/5440ed46358e9.jpeg/88.jpg);
 }
-form {border: 3px solid #f1f1f1;}
 
 #contenedor{
   position: absolute;
@@ -10,7 +9,9 @@ form {border: 3px solid #f1f1f1;}
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-
+  background-color: rgb(126, 126, 126);
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px black;
 }
 
 input[type=email], input[type=password] {
@@ -63,6 +64,9 @@ span.psw {
 
 form{
   padding: 6%;
+}
+label{
+  color: white;
 }
 
 /* Change styles for span and cancel button on extra small screens */

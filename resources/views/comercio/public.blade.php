@@ -3,7 +3,6 @@
 @section("title", "Modificación de comercio")
 
 @section("header", "Modificación de comercio")
-
 @section("nav")
 
     <nav id="navbar" class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
