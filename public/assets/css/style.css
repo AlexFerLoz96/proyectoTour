@@ -69,12 +69,22 @@ html{
 }
 
 .col-5{
-    background-color: rgb(212, 209, 209);
+    cursor: pointer;
+    box-shadow: -15px -15px 15px rgba(0, 0, 0, 0.1), 15px 15px 15px rgba(255, 255, 255,0.01);
+    background-color: rgb(255, 255, 255);
     border-radius:20px;
     padding:1%;
     margin:1%;
     word-wrap: break-word;
+    
 }
+
+.col-5:hover{
+    box-shadow: -15px -15px 15px rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(255, 255, 255,0.01);
+    transform-style: preserve-3d;
+    transform: translate(-3px,-3px);
+}
+
 #container{
     max-width: 100%;
 }
