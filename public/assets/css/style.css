@@ -11,6 +11,24 @@ html{
     z-index: 1;
 }
 
+.nav-item a{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+select{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+form{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
 #intro-image {
     background-position: 50%;
     height: 60%;

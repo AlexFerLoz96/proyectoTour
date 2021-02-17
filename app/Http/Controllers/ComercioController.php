@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comercio;
+use App\Models\Categoria;
 
 class ComercioController extends Controller
 {
@@ -15,7 +16,15 @@ class ComercioController extends Controller
     public function public()
     {
         $comercioList = Comercio::all();
-        return view('main.index', ['comercioList'=>$comercioList]);
+        $categoriaList = Categoria::all();
+        return view('main.index', ['comercioList'=>$comercioList],['categoriaList'=>$categoriaList]);
+    }
+
+    public function search()
+    {
+        $comercioList = Comercio::all();
+        $categoriaList = Categoria::all();
+        return view('main.index', ['comercioList'=>$comercioList],['categoriaList'=>$categoriaList]);
     }
 
     public function index()

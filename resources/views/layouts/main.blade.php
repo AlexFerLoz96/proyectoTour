@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script src="assets/js/carrusel.js"></script>
@@ -17,7 +17,7 @@
 
 <body>
     
-    <nav id="navbar" class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar navbar-light bg-light">
         <a class="navbar-brand" href="/">Tour</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,33 +26,33 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/categoria/public">Categorías</a>
+                    <a class="nav-link" href="/user">Crud</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/comercio">Comercios</a>
+                        <select >
+                                <option>Categorías</option>
+                                @foreach ($categoriaList as $categoria)
+                                    <option value="{{$categoria->id ?? ''}}">{{$categoria->nombre ?? ''}}</option> 
+                                @endforeach
+                        </select>
+                    
                 </li>
-
+                <li class="nav-item">
+                    <form action="{{route('search')}}" >
+                        <input type="search">
+                        <input type="submit" value="Buscar">
+                    </form>                
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Inicia sesión</a>
                 </li>
             </ul>
-            <!--
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            -->
+            
         </div>
+        
     </nav>
-    <!--<div id="fondo-negro"></div>
-    <h1 id="text-intro-image" style="position: absolute; z-index: 1;">Almería
-        <span class="subtitulo-intro-image">Conoce nuestra ciudad</span></h1>
-    <div id="intro-image" class="intro-image" style="background-image:url(https://cdn.getyourguide.com/img/location/5440ed46358e9.jpeg/88.jpg);">
-        
-        
-    </div>-->
     <section class="b1">
         <div class="b1-slider">
             <div class="b1-slide">
