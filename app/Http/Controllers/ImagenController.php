@@ -40,6 +40,14 @@ class ImagenController extends Controller
         $imagen = new Imagen();
         $imagen->ruta = $r->ruta;
         $imagen->descripcion = $r->descripcion;
+        $ruta = 'imgs/usuario/';
+            $imagen = $ruta . basename($_FILES['imagen']['name']);
+                        
+
+            if (move_uploaded_file($_FILES['imagen']['tmp_name'], $imagen)) {
+                $result = $this->db->manipulacion("INSERT INTO usuario (id, email, contrasenya, nombre, apellido1, apellido2, dni, tipo, imagen) 
+                        VALUES ('$id', '$email', '$password', '$nombre', '$apellido1', '$apellido2', '$dni', '$tipo', '$imagen')");  
+
         $imagen->save();
         return redirect()->route('imagen.index');
     }
