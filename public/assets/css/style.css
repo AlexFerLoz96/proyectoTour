@@ -83,6 +83,7 @@ html{
     box-shadow: -15px -15px 15px rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(255, 255, 255,0.01);
     transform-style: preserve-3d;
     transform: translate(-3px,-3px);
+    transition: ease-out 0.3s;
 }
 
 #container{
