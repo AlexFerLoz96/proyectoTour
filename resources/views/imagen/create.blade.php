@@ -6,7 +6,7 @@
 
 @section("content")
     @isset($imagen)
-        <form action="{{ route('imagen.update', ['id' => $imagen->id]) }}" method="POST">
+        <form action="{{ route('imagen.update', ['id' => $imagen->id]) }}" enctype="multipart/form-data" method="POST">
         @method("PUT")
     @else
         <form action="{{ route('imagen.store') }}" method="POST">

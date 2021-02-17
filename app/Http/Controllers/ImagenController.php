@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Imagen;
 use Faker\Provider\Image;
 
+use Iluminate\Support\Facades\Storage;
+
 class ImagenController extends Controller
 {
     /**
@@ -37,19 +39,17 @@ class ImagenController extends Controller
      */
     public function store(Request $r)
     {
-        $imagen = new Imagen();
-        $imagen->ruta = $r->ruta;
+        $imagen = new Imagen($r->all());
         $imagen->descripcion = $r->descripcion;
-        $ruta = 'imgs/usuario/';
-            $imagen = $ruta . basename($_FILES['imagen']['name']);
-                        
-
-            if (move_uploaded_file($_FILES['imagen']['tmp_name'], $imagen)) {
-                $result = $this->db->manipulacion("INSERT INTO usuario (id, email, contrasenya, nombre, apellido1, apellido2, dni, tipo, imagen) 
-                        VALUES ('$id', '$email', '$password', '$nombre', '$apellido1', '$apellido2', '$dni', '$tipo', '$imagen')");  
-
+        if($r->hasFile('ruta')){
+            $file = $r->file("ruta");
+            $nombrearchivo = $file->getClientOriginalName();
+            $file->move(public_path("imgComercio/"), $nombrearchivo);
+            $imagen->ruta = $nombrearchivo;
+        }
+        var_dump($nombrearchivo);
         $imagen->save();
-        return redirect()->route('imagen.index');
+        return redirect()->route('imagen.index')->whit("success","Noticia creada correctamente");
     }
 
     /**
