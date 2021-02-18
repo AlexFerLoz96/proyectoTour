@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Imagen extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'ruta'
+    ];
+  
+    public function setFilenamesAttribute($value)
+    {
+        $this->attributes['ruta'] = json_encode($value);
+    }
 }

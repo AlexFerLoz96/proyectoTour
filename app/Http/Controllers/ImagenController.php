@@ -42,14 +42,17 @@ class ImagenController extends Controller
         $imagen = new Imagen($r->all());
         $imagen->descripcion = $r->descripcion;
         if($r->hasFile('ruta')){
+
+            foreach($r->file('ruta') as $file)
+            {
             $file = $r->file("ruta");
-            $nombrearchivo = $file->getClientOriginalName();
-            $file->move(public_path("imgComercio/"), $nombrearchivo);
+            $nombrearchivo = time().rand(1,100).'.'.$file->extension();;
+            $file->move(public_path("assets/imgs/comercio"), $nombrearchivo);
             $imagen->ruta = $nombrearchivo;
+            }
         }
-        var_dump($nombrearchivo);
         $imagen->save();
-        return redirect()->route('imagen.index')->whit("success","Noticia creada correctamente");
+        return redirect()->route('imagen.index')->with("success","Noticia creada correctamente");
     }
 
     /**
