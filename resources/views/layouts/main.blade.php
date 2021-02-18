@@ -17,42 +17,26 @@
 
 <body>
     
-    <nav id="navbar" class="navbar navbar-expand-lg navbar navbar-light bg-light">
-        <a class="navbar-brand" href="/">Tour</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/user">Crud</a>
-                </li>
-                <li class="nav-item">
-                        <select >
-                                <option>Categorías</option>
-                                @foreach ($categoriaList as $categoria)
-                                    <option value="{{$categoria->id ?? ''}}">{{$categoria->nombre ?? ''}}</option> 
-                                @endforeach
-                        </select>
-                    
-                </li>
-                <li class="nav-item">
-                    <form action="{{route('search')}}" >
-                        <input type="search">
-                        <input type="submit" value="Buscar">
-                    </form>                
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Inicia sesión</a>
-                </li>
-            </ul>
-            
-        </div>
-        
-    </nav>
+    <table id="navbar">
+        <tr>
+            <td><a id="titulo" href="/">Tour</a></td>
+            <td><a class="" href="/user">Crud</a></td>
+            <td><select >
+                        <option>Categorías</option>
+                        @foreach ($categoriaList as $categoria)
+                            <option value="{{$categoria->id ?? ''}}">{{$categoria->nombre ?? ''}}</option> 
+                        @endforeach
+                </select>
+            </td>
+            <td class="search">
+                <form action="{{route('search')}}" >
+                    <input type="search" class="input">
+                    <input type="submit" class="submit" value="Buscar">
+                </form>
+            </td>
+            <td><a class="" href="/login">Inicia sesión</a></td>
+        </tr>     
+</table>
     <section class="b1">
         <div class="b1-slider">
             <div class="b1-slide">
