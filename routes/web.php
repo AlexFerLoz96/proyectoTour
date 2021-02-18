@@ -22,6 +22,8 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 
+Route::get('/search', 'ComercioController@search')->name('search');
+
 Route::get('/user', 'UserController@index')->name('user.index');
 Route::get('/user/create', 'UserController@create')->name('user.create');
 Route::post('/user/store', 'UserController@store')->name('user.store');
