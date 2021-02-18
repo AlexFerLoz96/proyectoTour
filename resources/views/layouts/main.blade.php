@@ -16,27 +16,29 @@
 </head>
 
 <body>
-    
+
     <table id="navbar">
         <tr>
             <td><a id="titulo" href="/">Tour</a></td>
             <td><a class="" href="/user">Crud</a></td>
-            <td><select >
-                        <option>Categorías</option>
-                        @foreach ($categoriaList as $categoria)
-                            <option value="{{$categoria->id ?? ''}}">{{$categoria->nombre ?? ''}}</option> 
-                        @endforeach
+            <td><select>
+                    <option>Categorías</option>
+                    @foreach ($categoriaList as $categoria)
+                    <option value="{{$categoria->id ?? ''}}">{{$categoria->nombre ?? ''}}</option>
+                    @endforeach
                 </select>
             </td>
             <td class="search">
-                <form action="{{route('search')}}" >
-                    <input type="search" class="input">
+                <form action="{{route('comercio.search')}}">
+                {{ csrf_field() }}
+
+                    <input type="search" class="input" name="busqueda">
                     <input type="submit" class="submit" value="Buscar">
                 </form>
             </td>
             <td><a class="" href="/login">Inicia sesión</a></td>
-        </tr>     
-</table>
+        </tr>
+    </table>
     <section class="b1">
         <div class="b1-slider">
             <div class="b1-slide">
@@ -80,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="b1-slide" >
+            <div class="b1-slide">
                 <div class="b1-bg" style="background-image: url('https://cdn.getyourguide.com/img/location/5440ed46358e9.jpeg/88.jpg');"></div>
                 <div class="wancho b1-cnt">
                     <figure class="b1-lanza-video">
@@ -256,13 +258,11 @@
             @endforeach
         </div>
     </div>
-    
+
     <script>
-    
-        function mostrarComercio(id){
+        function mostrarComercio(id) {
             location.href = "/comercio/public/" + id;
         }
-
     </script>
 
 </body>
