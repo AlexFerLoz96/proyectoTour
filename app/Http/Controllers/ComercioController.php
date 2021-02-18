@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Comercio;
 use App\Models\Categoria;
+use DB;
 
 class ComercioController extends Controller
 {
@@ -20,11 +21,20 @@ class ComercioController extends Controller
         return view('main.index', ['comercioList'=>$comercioList],['categoriaList'=>$categoriaList]);
     }
 
-    public function search()
+    public function search(Request $r)
     {
+        $key = trim($r->get('busqueda'));
+
+        $consulta = DB::table('comercios')
+            ->where('nombre', 'like', "%{$key}%")
+            ->orderBy('id')
+            ->take(2)
+            ->get();
+        
         $comercioList = Comercio::all();
         $categoriaList = Categoria::all();
-        return view('main.index', ['comercioList'=>$comercioList],['categoriaList'=>$categoriaList]);
+
+        return view('comercio.search', ['consulta'=>$consulta]);
     }
 
     public function index()
