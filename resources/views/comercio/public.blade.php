@@ -355,25 +355,6 @@
             }
         }
 
-        .support {
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-            padding: 10px;
-            display: flex;
-        }
-
-        .support a {
-            margin: 0 10px;
-            color: #fff;
-            font-size: 1.8rem;
-            backface-visibility: hidden;
-            transition: all 150ms ease;
-        }
-
-        .support a:hover {
-            transform: scale(1.1);
-        }
     </style>
 </head>
 
@@ -434,7 +415,7 @@
                 </div>
 
                 <div class="info previous--info">
-                    <h1 class="text name">Playa del zapillo</h1>
+                    <h1 class="text name">Playa de los muertos</h1>
                     <h4 class="text location">Almería</h4>
                     <p class="text description">Let your dreams come true</p>
                 </div>
@@ -471,12 +452,6 @@
             <polyline points='184 112 328 256 184 400' style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
         </symbol>
     </svg>
-
-    <div class="support">
-        <a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="https://dribbble.com/devloop01" target="_blank"><i class="fab fa-dribbble"></i></a>
-    </div>
-
 
 
     <script>
