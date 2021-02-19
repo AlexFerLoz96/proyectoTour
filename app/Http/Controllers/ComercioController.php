@@ -25,16 +25,22 @@ class ComercioController extends Controller
     {
         $key = trim($r->get('busqueda'));
 
-        $consulta = DB::table('comercios')
+        $consultaComercio = DB::table('comercios')
+            ->where('nombre', 'like', "%{$key}%")
+            ->orWhere('ubicacion', 'like', "%{$key}%")
+            ->orWhere('descripcion', 'like', "%{$key}%")
+            ->orderBy('id')
+            //->take(1)
+            ->get();
+
+        $consultaCategoria = DB::table('categorias')
             ->where('nombre', 'like', "%{$key}%")
             ->orderBy('id')
-            ->take(2)
             ->get();
-        
-        $comercioList = Comercio::all();
-        $categoriaList = Categoria::all();
 
-        return view('comercio.search', ['consulta'=>$consulta]);
+        var_dump($consultaComercio);
+
+        return view('comercio.search', ['consultaComercio'=>$consultaComercio], ['consultaCategoria'=>$consultaCategoria]);
     }
 
     public function index()
