@@ -10,8 +10,10 @@
     <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
+                <th >Imagen</th>
                 <th>Ruta</th>
                 <th>Descripción</th>
+                <th>comercio_id</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -19,8 +21,10 @@
     @foreach ($imagenList as $imagen)
         <tr>
             <td>{{$imagen->id}}</td>
+            <td style="width:20%;heigth:20%;"><img src="assets/imgs/comercio/{{$imagen->ruta}}" alt="" style="width:100%;heigth:100%;"></td>
             <td>{{$imagen->ruta}}</td>
             <td>{{$imagen->descripcion}}</td>
+            <td>{{$imagen->comercio_id}}</td>
             <td><a href="{{route('imagen.edit', $imagen->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('imagen.destroy', $imagen->id)}}" method="POST" id="delete{{$imagen->id}}">

@@ -14,6 +14,12 @@
         @csrf
         imagen ruta:<input type="file" multiple name="ruta[]" value="{{$imagen->ruta ?? '' }}"><br>
         Descripcion: <input type="text" name="descripcion" value="{{$imagen->descripcion ?? ''}}"><br>
+        Comercio: <select name="comercio_id" id="">
+            <option >-- Seleccionar comercio_id --</option>
+            @foreach($comercioList as $comercio)
+                <option value="{{$comercio->id}}">{{$comercio->nombre}}</option>
+            @endforeach
+        </select><br>
         <input type="submit">
         </form>
 

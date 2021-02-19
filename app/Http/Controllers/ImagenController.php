@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Imagen;
+use App\Models\Comercio;
 use Faker\Provider\Image;
 
 use Iluminate\Support\Facades\Storage;
@@ -28,7 +29,8 @@ class ImagenController extends Controller
      */
     public function create()
     {
-        return view('imagen.create');
+        $comercioList=Comercio::all();
+        return view('imagen.create',['comercioList'=>$comercioList]);
     }
 
     /**
@@ -49,7 +51,7 @@ class ImagenController extends Controller
                 $imagen = new Imagen($r->all());
                 $imagen->ruta = $nombrearchivo;
                 $imagen->descripcion = $r->descripcion;
-                $imagen->comercio_id = '1';
+                $imagen->comercio_id = $r->comercio_id;
                 $imagen->save();
             }
         }
