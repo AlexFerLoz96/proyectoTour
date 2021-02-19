@@ -18,6 +18,6 @@ class Imagen extends Model
     }
 
     public function Comercio() {
-        $this->belongsTo('Comercio');
+        $this->belongsTo(Comercio::Class);
     }
 }
