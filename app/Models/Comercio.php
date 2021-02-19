@@ -10,6 +10,6 @@ class Comercio extends Model
     use HasFactory;
 
     public function Imagen() {
-        return $this->hasMany(Imagen::Class);
+        return $this->hasMany(Imagen::Class,'foreign_key');
     }
 }

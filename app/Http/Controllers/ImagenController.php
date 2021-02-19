@@ -49,6 +49,7 @@ class ImagenController extends Controller
                 $imagen = new Imagen($r->all());
                 $imagen->ruta = $nombrearchivo;
                 $imagen->descripcion = $r->descripcion;
+                $imagen->comercio_id = '1';
                 $imagen->save();
             }
         }
