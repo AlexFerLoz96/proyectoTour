@@ -25,6 +25,8 @@ class ComercioController extends Controller
     {
         $key = trim($r->get('busqueda'));
 
+        $categoriaList = Categoria::all();
+
         $consultaComercio = DB::table('comercios')
             ->where('nombre', 'like', "%{$key}%")
             ->orWhere('ubicacion', 'like', "%{$key}%")
@@ -38,9 +40,7 @@ class ComercioController extends Controller
             ->orderBy('id')
             ->get();
 
-        var_dump($consultaComercio);
-
-        return view('comercio.search', ['consultaComercio'=>$consultaComercio], ['consultaCategoria'=>$consultaCategoria]);
+        return view('comercio.search', ['categoriaList'=>$categoriaList], ['consultaComercio'=>$consultaComercio], ['consultaCategoria'=>$consultaCategoria]);
     }
 
     public function index()

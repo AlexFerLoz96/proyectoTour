@@ -12,7 +12,7 @@
         <form action="{{ route('imagen.store') }}" enctype="multipart/form-data" method="POST">
     @endisset
         @csrf
-        imagen ruta:<input type="file" name="ruta[]" value="{{$imagen->ruta ?? '' }}"><br>
+        imagen ruta:<input type="file" multiple name="ruta[]" value="{{$imagen->ruta ?? '' }}"><br>
         Descripcion: <input type="text" name="descripcion" value="{{$imagen->descripcion ?? ''}}"><br>
         <input type="submit">
         </form>

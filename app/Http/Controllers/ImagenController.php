@@ -39,19 +39,19 @@ class ImagenController extends Controller
      */
     public function store(Request $r)
     {
-        $imagen = new Imagen($r->all());
-        $imagen->descripcion = $r->descripcion;
         if($r->hasFile('ruta')){
+
 
             foreach($r->file('ruta') as $file)
             {
-            $file = $r->file("ruta");
-            $nombrearchivo = time().rand(1,100).'.'.$file->extension();;
-            $file->move(public_path("assets/imgs/comercio"), $nombrearchivo);
-            $imagen->ruta = $nombrearchivo;
+                $nombrearchivo = time().rand(1,100).'.'.$file->extension();
+                $file->move(public_path("assets/imgs/comercio"), $nombrearchivo);
+                $imagen = new Imagen($r->all());
+                $imagen->ruta = $nombrearchivo;
+                $imagen->descripcion = $r->descripcion;
+                $imagen->save();
             }
         }
-        $imagen->save();
         return redirect()->route('imagen.index')->with("success","Noticia creada correctamente");
     }
 
