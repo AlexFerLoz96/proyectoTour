@@ -16,29 +16,32 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <table id="navbar">
+            <tr>
+                <td><a id="titulo" href="/">Tour</a></td>
+                <td><a class="" href="/user">Crud</a></td>
+                <td id="miSelect"><select class="select">
+                        <option>Categorías</option>
+                        @foreach ($categoriaList as $categoria)
+                        <option value="{{$categoria->id ?? ''}}">{{$categoria->nombre ?? ''}}</option>
+                        @endforeach
+                    </select>
+                </td>
+                <td >
+                    <form action="{{route('comercio.search')}}" class="miForm">
+                    {{ csrf_field() }}
 
-    <table id="navbar">
-        <tr>
-            <td><a id="titulo" href="/">Tour</a></td>
-            <td><a class="" href="/user">Crud</a></td>
-            <td><select>
-                    <option>Categorías</option>
-                    @foreach ($categoriaList as $categoria)
-                    <option value="{{$categoria->id ?? ''}}">{{$categoria->nombre ?? ''}}</option>
-                    @endforeach
-                </select>
-            </td>
-            <td class="search">
-                <form action="{{route('comercio.search')}}">
-                {{ csrf_field() }}
-
-                    <input type="search" class="input" name="busqueda">
-                    <input type="submit" class="submit" value="Buscar">
-                </form>
-            </td>
-            <td><a class="" href="/login">Inicia sesión</a></td>
-        </tr>
-    </table>
+                        <input type="search" class="input" name="busqueda">
+                        <button type="submit" class="submit" value=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="r-xfsgu1 r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-18qmn74 r-1hfyk0a r-bnwqim r-1plcrui r-lrvibr"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg></button>
+                    </form>
+                </td>
+                
+                <td  id="login"><a  href="/login">Inicia sesión</a></td>
+            </tr>
+        </table>
+    </div>
+    
     <section class="b1">
         <div class="b1-slider">
             <div class="b1-slide">

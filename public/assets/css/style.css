@@ -6,7 +6,6 @@
 html{
     overflow-x: hidden;
 }
-
 #navbar a{
     text-decoration: none;
     color: black;
@@ -18,13 +17,70 @@ html{
     float: left;
 }
 
-#navbar .search .input{
-    width: 360px;
-    padding: 5px;
-    border: solid 1px black;
-    border-radius: 5px;
-    outline-offset: 0px;
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    z-index: 100;
+    background-color: white;
 }
+.submit{
+    width:10%;
+    padding: 2%;
+    border: solid 1px grey;
+    border-radius: 30px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    outline: none;
+    transition: ease-out 0.3s;
+    background-color: transparent;
+}
+.submit:active{
+    transform-style: preserve-3d;
+    transform: translate(-2px,-2px);
+    transition: ease-out 0.3s;
+}
+svg{
+    width: 1.2em;
+    height: 1em;
+}
+#miSelect{
+    width: 10%;
+}
+
+.miForm{
+    transform: translateY(15%);
+    width: 100%;
+    height: 70%;
+    
+}
+.select{
+    padding: 1%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.select:hover{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.input{
+    width: 86%;
+    padding: 2%;
+    border: solid 1px grey;
+    border-radius: 30px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+}
+.input:focus{
+    outline: none;
+}
+
+
 #intro-image {
     background-position: 50%;
     height: 60%;
@@ -39,18 +95,6 @@ html{
     opacity: 0.8;
 }
 
-
-
-#fondo-negro{
-    height: 68.5%;
-    position: absolute;
-    background-color: black;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin-bottom: 7%;
-}
 
 #text-intro-image{
     all: initial;
@@ -71,6 +115,7 @@ html{
     top: 110%;
     left: 0%;
 }
+
 
 .nombre{
     font-weight: bold;
@@ -103,5 +148,13 @@ html{
 #container{
     max-width: 100%;
 }
+#login{
+    float: right !important;
+    width: 100%;
+    text-align: right;
+    transform: translateY(100%);
+}
 
-
+table{
+    width:100%;
+}
