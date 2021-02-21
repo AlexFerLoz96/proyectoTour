@@ -253,6 +253,12 @@
         <div class="row justify-content-center">
             @foreach ($comercioList as $comercio)
             <div class="col-5" onclick="mostrarComercio({{$comercio->id}})">
+                @foreach ($imagenList as $imagen) 
+                    @if($comercio->id == $imagen->comercio_id)
+                        <img src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                        @break
+                    @endif
+                @endforeach
                 <div class="nombre">{{$comercio->nombre ?? ''}}</div>
                 <div class="ubicacion"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
                 <div class="descripcion">{{$comercio->descripcion ?? ''}}</div>
@@ -262,10 +268,7 @@
         </div>
     </div>
     
-    @foreach ($imagenList as $imagen)
-        <img src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="">
-        <p>{{$imagen->descripcion}}</p>
-    @endforeach
+    
 
     <script>
         function mostrarComercio(id) {

@@ -47,7 +47,7 @@
 
     <div id="container">
 
-        <h2>{{$key ?? ''}}</h2>
+        <h2>{{$palabraBusqueda}}</h2>
         <div class="row justify-content-center">
             @if(!@empty($consultaComercio))
             @foreach ($consultaComercio as $comercio)
@@ -59,14 +59,14 @@
             @endforeach
             @endif
         </div>
-
+<!--
         <div class="row justify-content-center">
             @if(!empty($consultaCategoria))
             @foreach ($consultaCategoria ?? '' as $categoria)
             <div>{{$categoria->nombre}}</div>
             @endforeach
             @endif
-        </div>
+        </div>-->
     </div>
 
 

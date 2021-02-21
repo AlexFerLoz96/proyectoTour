@@ -23,10 +23,7 @@ class ComercioController extends Controller
             ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
             ->select('imagens.*')
             ->get();
-
-        var_dump($imagenList);
-
-        return view('main.index', ['categoriaList'=>$categoriaList], ['comercioList'=>$comercioList], compact('imagenList'));
+        return view('main.index',compact('categoriaList','comercioList','imagenList'));
     }
 
     public function search(Request $r)
@@ -50,7 +47,7 @@ class ComercioController extends Controller
             ->orderBy('id')
             ->get();
 
-        return view('comercio.search', ['categoriaList'=>$categoriaList], ['consultaComercio'=>$consultaComercio], ['consultaCategoria'=>$consultaCategoria]);
+        return view('comercio.search', compact('categoriaList', 'consultaComercio','consultaCategoria','palabraBusqueda'));
     }
 
     public function index()
