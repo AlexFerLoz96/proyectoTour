@@ -52,10 +52,12 @@
             @if(!@empty($consultaComercio))
             @foreach ($consultaComercio as $comercio)
             <div class="col-8 mb-5 border" onclick="mostrarComercio({{$comercio->id}})">
-            @if($comercio->id == $imagen ?? ''->comercio_id)
-                        <img class="rounded float-left w-25" src="/assets/imgs/comercio/{{$imagen ?? ''->ruta}}" alt="{{$imagen ?? ''->descripcion}}">
-                        @break
-                    @endif
+                    @foreach ($imagenList as $imagen)
+                        @if($comercio->id == $imagen->comercio_id)
+                            <img class="rounded float-left w-25" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                            @break
+                        @endif
+                    @endforeach
                 <div class="p-2">{{$comercio->nombre ?? ''}}</div> <hr>
                 <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
                 <div class="p-2">{{$comercio->descripcion ?? ''}}</div>
