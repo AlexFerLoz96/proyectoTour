@@ -18,12 +18,22 @@ class ComercioController extends Controller
     {
         $comercioList = Comercio::all();
         $categoriaList = Categoria::all();
-        return view('main.index', ['comercioList'=>$comercioList],['categoriaList'=>$categoriaList]);
+
+        $imagenList = DB::table('imagens')
+            ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
+            ->select('imagens.*')
+            ->get();
+
+        var_dump($imagenList);
+
+        return view('main.index', ['categoriaList'=>$categoriaList], ['comercioList'=>$comercioList], compact('imagenList'));
     }
 
     public function search(Request $r)
     {
         $key = trim($r->get('busqueda'));
+
+        $palabraBusqueda = $key;
 
         $categoriaList = Categoria::all();
 
@@ -46,6 +56,7 @@ class ComercioController extends Controller
     public function index()
     {
         $comercioList = Comercio::all();
+        
         return view('comercio.index', ['comercioList'=>$comercioList]);
     }
 
