@@ -2,7 +2,7 @@
 
 <head>
     <title>@yield('Titulo')</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -33,7 +33,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         @foreach ($categoriaList as $categoria)
-                            <li><a class="dropdown-item" href="#">{{$categoria->nombre}}</a></li>
+                            <li><a class="dropdown-item" href="/categoria">{{$categoria->nombre}}</a></li>
                         @endforeach
                         </ul>
                     </li>
@@ -261,18 +261,18 @@
 
 <h2 class="my-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
     <div id="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center h-100">
             @foreach ($comercioList as $comercio)
-            <div class="col-5" onclick="mostrarComercio({{$comercio->id}})">
+            <div class="col-3 mx-5 my-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
                 @foreach ($imagenList as $imagen) 
                     @if($comercio->id == $imagen->comercio_id)
-                        <img class="rounded float-left w-25" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                        <img class="w-100 h-50" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
                         @break
                     @endif
                 @endforeach
-                <div class="nombre">{{$comercio->nombre ?? ''}}</div>
-                <div class="ubicacion"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
-                <div class="descripcion">{{$comercio->descripcion ?? ''}}</div>
+                <h2 class="p-2">{{$comercio->nombre ?? ''}}</h2>
+                <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
+                <div class="p-2">{{$comercio->descripcion ?? ''}}</div>
             </div>
 
             @endforeach
@@ -286,6 +286,8 @@
             location.href = "/comercio/public/" + id;
         }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 </body>
 
