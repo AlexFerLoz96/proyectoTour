@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="../assets/css/search.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid mx-5">
             <a class="navbar-brand" href="/">Tour Almería</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,6 +52,10 @@
             @if(!@empty($consultaComercio))
             @foreach ($consultaComercio as $comercio)
             <div class="col-8 mb-5 border" onclick="mostrarComercio({{$comercio->id}})">
+            @if($comercio->id == $imagen ?? ''->comercio_id)
+                        <img class="rounded float-left w-25" src="/assets/imgs/comercio/{{$imagen ?? ''->ruta}}" alt="{{$imagen ?? ''->descripcion}}">
+                        @break
+                    @endif
                 <div class="p-2">{{$comercio->nombre ?? ''}}</div> <hr>
                 <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
                 <div class="p-2">{{$comercio->descripcion ?? ''}}</div>

@@ -22,8 +22,8 @@ class ComercioController extends Controller
         $imagenList = DB::table('imagens')
             ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
             ->select('imagens.*')
-            ->take(1)
             ->get();
+
         return view('main.index',compact('categoriaList','comercioList','imagenList'));
     }
 
@@ -48,7 +48,12 @@ class ComercioController extends Controller
             ->orderBy('id')
             ->get();
 
-        return view('comercio.search', compact('categoriaList', 'consultaComercio','consultaCategoria','palabraBusqueda'));
+        $imagenList = DB::table('imagens')
+        ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
+        ->select('imagens.*')
+        ->get();
+
+        return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria', 'palabraBusqueda', 'imagenList'));
     }
 
     public function index()
