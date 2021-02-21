@@ -21,7 +21,7 @@ class ComercioController extends Controller
 
         $imagenList = DB::table('imagens')
             ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
-            ->select('imagens.ruta')
+            ->select('imagens.*')
             ->take(1)
             ->get();
         return view('main.index',compact('categoriaList','comercioList','imagenList'));
