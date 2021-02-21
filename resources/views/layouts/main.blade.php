@@ -38,7 +38,7 @@
                         </ul>
                     </li>
                 </ul>
-                <form action="{{route('comercio.search')}}" class="d-flex ml-1" style="width: 40%;">
+                <form action="{{route('comercio.search')}}" class="d-flex my-2 ml-1" style="width: 40%;">
                 {{ csrf_field() }}
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="busqueda">
                     <button class="btn btn-outline-success" type="submit">Search</button>
