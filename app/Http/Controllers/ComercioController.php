@@ -16,7 +16,7 @@ class ComercioController extends Controller
      */
     public function public()
     {
-        $comercioList = Comercio::all();
+        $comercioList = Comercio::all()->take(10);
         $categoriaList = Categoria::all();
 
         $imagenList = DB::table('imagens')
@@ -24,7 +24,14 @@ class ComercioController extends Controller
             ->select('imagens.*')
             ->get();
 
-        return view('main.index',compact('categoriaList','comercioList','imagenList'));
+        $imagenCiudad = DB::table('imagens')
+            ->join('comercios', 'comercios.id', '=', 'imagens.comercio_id')
+            ->select('imagens.*')
+            ->where('comercios.nombre', '=', 'Almería')
+            ->take(8)
+            ->get();
+        
+        return view('main.index',compact('categoriaList','comercioList','imagenList', 'imagenCiudad'));
     }
 
     public function search(Request $r)

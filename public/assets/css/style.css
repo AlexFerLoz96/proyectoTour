@@ -23,20 +23,19 @@ html{
         3px 3px #53a7ea;
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
+    cursor: pointer;
 }
 
-.w-100{
+.img-responsive{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    height: 15rem;
 }
 
 #descripcion{
     text-overflow: ellipsis;
 }
 
-.img-responsive{
-    height: 15rem;
-}
 
 /*
 .nombre{
