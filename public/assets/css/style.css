@@ -7,11 +7,13 @@ html{
     overflow-x: hidden;
 }
 
+/*.container {
+    height: 100%;
+}*/
 
 .col-3{
     border-radius: 6px;
     padding: 0;
-    
 }
 
 .col-3:hover{
@@ -26,6 +28,14 @@ html{
 .w-100{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+}
+
+#descripcion{
+    text-overflow: ellipsis;
+}
+
+.img-responsive{
+    height: 15rem;
 }
 
 /*

@@ -259,26 +259,34 @@
     </section>
 
 
-<h2 class="my-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
-    <div id="container">
-        <div class="row justify-content-center h-100">
+    <h2 class="my-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
+
+    <div class="container">
+        <div class="row justify-content-center">
             @foreach ($comercioList as $comercio)
             <div class="col-3 mx-5 my-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
                 @foreach ($imagenList as $imagen) 
                     @if($comercio->id == $imagen->comercio_id)
-                        <img class="w-100 h-50" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                            <img class="img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
                         @break
                     @endif
                 @endforeach
                 <h2 class="p-2">{{$comercio->nombre ?? ''}}</h2>
                 <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
-                <div class="p-2">{{$comercio->descripcion ?? ''}}</div>
+                <div id="descripcion" class="p-2">{{$comercio->descripcion ?? ''}}</div>
             </div>
 
             @endforeach
         </div>
     </div>
     
+    <div class="container">
+        <h2 class="my-5 text-center">RAulillo tu harias daño a una mujeeee?</h2>
+        <p class="text-center">Una visita a la provincia de Almería ofrece todo lo necesario para unas vacaciones perfectas. 
+            Aventúrate en su escarpado paisaje para disfrutar de sus maravillas naturales, 
+            desenchufa en su larguísimas y sublimes playas y mézclate con los lugareños en la histórica ciudad de Almería.
+        </p>
+    </div>
     
 
     <script>
