@@ -1,3 +1,7 @@
 .col-4{
     height: 15rem;
 }
+
+.row:hover{
+    cursor: pointer;
+}

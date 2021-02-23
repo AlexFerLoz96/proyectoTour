@@ -33,7 +33,7 @@
                 </ul>
                 <form action="{{route('comercio.search')}}" class="d-flex ml-1" style="width: 40%;">
                 {{ csrf_field() }}
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="busqueda">
+                    <input class="form-control me-2" type="search" autocomplete="off" placeholder="Search" aria-label="Search" name="busqueda">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <ul class="navbar-nav ms-auto p-2">
@@ -47,7 +47,7 @@
 
     <div class="container mx-5">
         <div class="row justify-content-center">
-            <div class="col">
+            <div class="col mb-2">
                 <p class="fs-2 d-inline">{{$palabraBusqueda}} </p>
                 <p class="fs-6 d-inline">{{$contador}} resultados encontrados</p>
             </div>
@@ -55,8 +55,8 @@
         
             @if(!@empty($consultaComercio))
                 @foreach ($consultaComercio as $comercio)
-                    <div class="row mb-5 border shadow rounded">
-                        <div class="col-4 p-0" onclick="mostrarComercio({{$comercio->id}})">
+                    <div class="row mb-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
+                        <div class="col-4 p-0">
                                 @foreach ($imagenList as $imagen)
                                     @if($comercio->id == $imagen->comercio_id)
                                         <img class="rounded p-0 w-100 h-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
@@ -84,6 +84,12 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <script>
+        function mostrarComercio(id) {
+            location.href = "/comercio/public/" + id;
+        }
+    </script>
 </body>
 
 </html>
