@@ -65,7 +65,12 @@ class ComercioController extends Controller
         return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria', 'palabraBusqueda', 'imagenList', 'contador'));
     }
 
-  
+    public function index()
+    {
+        $comercioList = Comercio::all();
+        
+        return view('comercio.index', ['comercioList'=>$comercioList]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -89,6 +94,7 @@ class ComercioController extends Controller
         $comercio->nombre = $r->nombre;
         $comercio->ubicacion = $r->ubicacion;
         $comercio->descripcion = $r->descripcion;
+        $comercio->prioridad = $r->prioridad;
         $comercio->save();
         return redirect()->route('comercio.index');
     }
@@ -103,8 +109,8 @@ class ComercioController extends Controller
     {
         $comercio = Comercio::find($id);
         $data['comercio'] = $comercio;
-        $categoriaList = Categoria::all();
-        return view('comercio.public', compact('comercio','categoriaList'));
+
+        return view('comercio.public', $data);
     }
 
     /**
@@ -132,6 +138,7 @@ class ComercioController extends Controller
         $comercio->nombre = $r->nombre;
         $comercio->ubicacion = $r->ubicacion;
         $comercio->descripcion = $r->descripcion;
+        $comercio->prioridad = $r->prioridad;
         $comercio->save();
         return redirect()->route('comercio.index');
     }
