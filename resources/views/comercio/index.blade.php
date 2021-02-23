@@ -2,8 +2,6 @@
 
 @section("title", "Comercios")
 
-@section("header", "Comercios")
-
 @section("content")
     <a href="{{ route('comercio.create') }}" class="btn btn-success">New</a>
     <table class="table">
