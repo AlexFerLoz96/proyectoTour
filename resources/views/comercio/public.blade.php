@@ -1,47 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends("layouts.main")
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+@section("librerias")
+<link rel="stylesheet" href="../assets/css/search.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
     <style>
-html,body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height: 100%;
-    max-width:100%;
-    
-}       
-#tilt {
-    z-index:2;
-    background-color:black;
-    width: 30rem;
-    height: 15rem;
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                max-height: 100%;
+                max-width:100%;
+                
+            }       
+            #tilt {
+                z-index:2;
+                background-color:black;
+                width: 30rem;
+                height: 15rem;
 
-    transition: box-shadow 0.1s, transform 0.1s;
+                transition: box-shadow 0.1s, transform 0.1s;
 
-  
-}
+            
+            }
 
-#tilt:hover {
-  box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
-  cursor: pointer;
-}
+            #tilt:hover {
+            box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+            cursor: pointer;
+            }
     </style>
-</head>
 
-<body>
+@endsection
 
+@section("content")
 
-
-    <div id="tilt">
-        <!--  Container for our block  -->
+    <div class="container">
+        <div id="tilt">
+            <!--  Container for our block  -->
+        </div>
     </div>
-
 
     <script>
 
@@ -108,6 +107,4 @@ html,body {
 
     </script>
 
-</body>
-
-</html>
+@endsection

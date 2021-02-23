@@ -65,12 +65,7 @@ class ComercioController extends Controller
         return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria', 'palabraBusqueda', 'imagenList', 'contador'));
     }
 
-    public function index()
-    {
-        $comercioList = Comercio::all();
-        
-        return view('comercio.index', ['comercioList'=>$comercioList]);
-    }
+  
 
     /**
      * Show the form for creating a new resource.
@@ -108,8 +103,8 @@ class ComercioController extends Controller
     {
         $comercio = Comercio::find($id);
         $data['comercio'] = $comercio;
-
-        return view('comercio.public', $data);
+        $categoriaList = Categoria::all();
+        return view('comercio.public', compact('comercio','categoriaList'));
     }
 
     /**

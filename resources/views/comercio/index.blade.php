@@ -28,7 +28,7 @@
                     @csrf
                     @method("DELETE")
                     <input type="button"  onclick="question({{ $comercio->id }})" value="Delete" class="btn btn-danger">
-                </form>
+                </form> 
             </td>
         <br>
     @endforeach

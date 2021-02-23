@@ -45,7 +45,6 @@
                     </div>
                 </nav>
             @show
-                    </div>
                     <div class="container">
                     @yield('content')
     </body>
