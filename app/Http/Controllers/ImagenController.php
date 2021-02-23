@@ -95,6 +95,7 @@ class ImagenController extends Controller
         $imagen = Imagen::find($r->id);
         $imagen->ruta = $r->ruta;
         $imagen->descripcion = $r->descripcion;
+        $imagen->comercio_id = $r->comercio_id;
         $imagen->save();
         return redirect()->route('imagen.index');
     }

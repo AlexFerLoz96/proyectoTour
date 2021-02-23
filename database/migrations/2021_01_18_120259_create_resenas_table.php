@@ -18,6 +18,8 @@ class CreateResenasTable extends Migration
             $table->string('comentario');
             $table->integer('puntuacion');
             $table->date('fecha');
+            $table->integer('user_id');
+            $table->integer('comercio_id');
             $table->timestamps();
         });
     }

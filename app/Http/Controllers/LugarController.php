@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Resena;
-use App\Models\Comercio;
-use App\Models\User;
+use App\Models\Lugar;
 
-class ResenaController extends Controller
+
+class LugarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class ResenaController extends Controller
      */
     public function index()
     {
-        $resenaList = Resena::all();
-        return view('resena.index', ['resenaList'=>$resenaList]);
+        $lugarList = Lugar::all();
+        return view('lugar.index', ['lugarList'=>$lugarList]);
     }
 
     /**
@@ -27,8 +26,7 @@ class ResenaController extends Controller
      */
     public function create()
     {
-        return view('resena.create');
-
+        return view('lugar.create');
     }
 
     /**
@@ -39,14 +37,12 @@ class ResenaController extends Controller
      */
     public function store(Request $r)
     {
-        $resena = new Resena();
-        $resena->comentario = $r->comentario;
-        $resena->puntuacion = $r->puntuacion;
-        $resena->fecha = $r->fecha;
-        $resena->user_id = $r->user_id;
-        $resena->comercio_id = $r->comercio_id;
-        $resena->save();
-        return redirect()->route('resena.index');
+        $lugar = new Lugar();
+        $lugar->nombre = $r->nombre;
+        $lugar->imagen = $r->imagen;
+        $lugar->descripcion = $r->descripcion;
+        $lugar->save();
+        return redirect()->route('lugar.index');
     }
 
     /**
@@ -57,10 +53,10 @@ class ResenaController extends Controller
      */
     public function show($id)
     {
-        $resena = Resena::find($id);
-        $data['resena'] = $resena;
+        $lugar = Lugar::find($id);
+        $data['lugar'] = $lugar;
 
-        return view('resena.show', $data);
+        return view('lugar.show', $data);
     }
 
     /**
@@ -71,9 +67,8 @@ class ResenaController extends Controller
      */
     public function edit($id)
     {
-        $resena = Resena::find($id);
-        return view('resena.edit', array('resena'=>$resena));
-    }
+        $lugar = Lugar::find($id);
+        return view('lugar.edit', array('lugar'=>$lugar));    }
 
     /**
      * Update the specified resource in storage.
@@ -84,14 +79,13 @@ class ResenaController extends Controller
      */
     public function update(Request $r)
     {
-        $resena = Resena::find($r->id);
-        $resena->comentario = $r->comentario;
-        $resena->puntuacion = $r->puntuacion;
-        $resena->fecha = $r->fecha;
-        $resena->user_id = $r->user_id;
-        $resena->comercio_id = $r->comercio_id;
-        $resena->save();
-        return redirect()->route('resena.index');    }
+        $lugar = Lugar::find($r->id);
+        $lugar->nombre = $r->nombre;
+        $lugar->imagen = $r->imagen;
+        $lugar->descripcion = $r->descripcion;
+        $lugar->save();
+        return redirect()->route('lugar.index');
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -101,7 +95,8 @@ class ResenaController extends Controller
      */
     public function destroy($id)
     {
-        $resena = Resena::find($id);
-        $resena->delete();
-        return redirect()->route('resena.index');    }
+        $lugar = Lugar::find($id);
+        $lugar->delete();
+        return redirect()->route('lugar.index');
+    }
 }
