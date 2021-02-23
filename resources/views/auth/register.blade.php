@@ -1,59 +1,60 @@
+<link rel="stylesheet" href="assets/css/login.css">
+    <script src="assets/css/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
         </x-slot>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <div>
+        <div class='box'>
+    <div class='box-form'>
+      <div class='box-login-tab'></div>
+      <div class='box-login-title'>
+        <div class='i i-login'></div><h2>REGISTER</h2>
+      </div>
+      <div class='box-login'>
+                <form method="POST" action="{{ route('register') }}" class='fieldset-body' id='login_form'>
+                    @csrf
+                    <!-- Name -->
+                    <p class='field'>
+                        <x-label for="name" :value="__('Name')" />
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+                        <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                    </p>
+                    <p class='field'>
+                    <!-- Email Address -->
+                    <x-label for="email" :value="__('Email')" />
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+                    <x-input id="user" class="block mt-1 w-full" type="text" title="Username" name="email" :value="old('email')" required autofocus />
+                    <span id='valida' class='i i-warning'></span>
+                    </p>
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-            </div>
+                    <!-- Password -->
+                    <p class='field'>
+                        <x-label for="password" :value="__('Password')" />
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+                        <input id="pass" class="block mt-1 w-full" title="Password" type="password" name="password" required autocomplete="current-password" />
+                        <span id='valida' class='i i-close'></span>
+                    </p>
+                            <!-- Confirm Password -->
+                            <p class='field'>
+                        <x-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
+                        <x-input id="password_confirmation" class="block mt-1 w-full"
+                                        type="password"
+                                        name="password_confirmation" required />
+                                    
+                            </p>
+                    <x-button class="ml-3" id='do_login' value='SIGN IN' title='Sign up' >
+                        {{ __('SIGN UP') }}
+                    </x-button>
+                </form>
+                </div>
+        </div>
     </x-auth-card>
 </x-guest-layout>

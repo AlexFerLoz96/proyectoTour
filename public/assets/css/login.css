@@ -297,7 +297,18 @@ label.checkbox {
   padding: 5px 20px;
 	line-height: 1.7;
 }
-
+label.create{
+  all:initial;
+  text-align: center;
+  color: #6255d8;
+}
+link:visited{
+  text-decoration: none;
+  color: #6255d8;
+}
+label.create:hover{
+  color: #7666ff;
+}
 input[type=text],
 input[type=password] {
     width: 100%;

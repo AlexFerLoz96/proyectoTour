@@ -42,7 +42,9 @@
                     <label class='checkbox'>
                         <input type='checkbox' value='TRUE' title='Remember me' /> Remember me
                     </label>
-
+                    <label class='create'>
+                    <a href="/register" title='Sign up now!'> CREATE ACCOUNT</a>
+                    </label>
                     <x-button class="ml-3" id='do_login' value='SIGN IN' title='Get Started' >
                         {{ __('SIGN IN') }}
                     </x-button>
