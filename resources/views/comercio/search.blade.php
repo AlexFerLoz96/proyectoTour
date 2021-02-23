@@ -10,7 +10,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid mx-5">
+        <div class="container mx-5">
             <a class="navbar-brand" href="/">Tour Almería</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,26 +45,33 @@
         </div>
     </nav>
 
-    <div id="container">
-
-        <h2>{{$palabraBusqueda}}</h2>
+    <div class="container mx-5">
         <div class="row justify-content-center">
-            @if(!@empty($consultaComercio))
-            @foreach ($consultaComercio as $comercio)
-            <div class="col-8 mb-5 border" onclick="mostrarComercio({{$comercio->id}})">
-                    @foreach ($imagenList as $imagen)
-                        @if($comercio->id == $imagen->comercio_id)
-                            <img class="rounded float-left w-25" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
-                            @break
-                        @endif
-                    @endforeach
-                <div class="p-2">{{$comercio->nombre ?? ''}}</div> <hr>
-                <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
-                <div class="p-2">{{$comercio->descripcion ?? ''}}</div>
+            <div class="col">
+                <p class="fs-2 d-inline">{{$palabraBusqueda}} </p>
+                <p class="fs-6 d-inline">{{$contador}} resultados encontrados</p>
             </div>
-            @endforeach
-            @endif
         </div>
+        
+            @if(!@empty($consultaComercio))
+                @foreach ($consultaComercio as $comercio)
+                    <div class="row mb-5 border shadow rounded">
+                        <div class="col-4 p-0" onclick="mostrarComercio({{$comercio->id}})">
+                                @foreach ($imagenList as $imagen)
+                                    @if($comercio->id == $imagen->comercio_id)
+                                        <img class="rounded p-0 w-100 h-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                                        @break
+                                    @endif
+                                @endforeach
+                        </div>
+                        <div class="col-8">
+                            <div class="d-block p-2"><h3>{{$comercio->nombre ?? ''}}</h3></div>
+                            <div class="d-block p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
+                            <div class="d-block p-2">{{$comercio->descripcion ?? ''}}</div>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
 <!--
         <div class="row justify-content-center">
             @if(!empty($consultaCategoria))

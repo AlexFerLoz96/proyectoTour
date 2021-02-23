@@ -49,7 +49,9 @@ class ComercioController extends Controller
             ->orderBy('id')
             //->take(1)
             ->get();
-
+        
+        $contador = $consultaComercio->count();
+        
         $consultaCategoria = DB::table('categorias')
             ->where('nombre', 'like', "%{$key}%")
             ->orderBy('id')
@@ -60,7 +62,7 @@ class ComercioController extends Controller
         ->select('imagens.*')
         ->get();
 
-        return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria', 'palabraBusqueda', 'imagenList'));
+        return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria', 'palabraBusqueda', 'imagenList', 'contador'));
     }
 
     public function index()
