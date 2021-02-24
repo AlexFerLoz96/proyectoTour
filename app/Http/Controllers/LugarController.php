@@ -41,6 +41,7 @@ class LugarController extends Controller
         $lugar->nombre = $r->nombre;
         $lugar->imagen = $r->imagen;
         $lugar->descripcion = $r->descripcion;
+        $lugar->ciudad_id = $r->ciudad_id;
         $lugar->save();
         return redirect()->route('lugar.index');
     }

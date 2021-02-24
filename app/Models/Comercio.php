@@ -12,4 +12,12 @@ class Comercio extends Model
     public function Imagen() {
         return $this->hasMany(Imagen::Class,'foreign_key');
     }
+
+    public function Resena() {
+        return $this->hasMany(Resena::Class,'foreign_key');
+    }
+
+    public function Categoria() {
+        return $this->belongsTo(Categoria::Class,'foreign_key');
+    }
 }

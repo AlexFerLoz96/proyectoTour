@@ -40,4 +40,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Resena() {
+        return $this->hasMany(Resena::Class,'foreign_key');
+    }
 }

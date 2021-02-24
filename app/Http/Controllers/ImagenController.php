@@ -52,6 +52,7 @@ class ImagenController extends Controller
                 $imagen->ruta = $nombrearchivo;
                 $imagen->descripcion = $r->descripcion;
                 $imagen->comercio_id = $r->comercio_id;
+                $imagen->lugar_id = $r->lugar_id;
                 $imagen->save();
             }
         }
@@ -96,6 +97,7 @@ class ImagenController extends Controller
         $imagen->ruta = $r->ruta;
         $imagen->descripcion = $r->descripcion;
         $imagen->comercio_id = $r->comercio_id;
+        $imagen->lugar_id = $r->lugar_id;
         $imagen->save();
         return redirect()->route('imagen.index');
     }

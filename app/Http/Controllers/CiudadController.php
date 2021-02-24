@@ -38,7 +38,6 @@ class CiudadController extends Controller
     {
         $ciudad = new Ciudad();
         $ciudad->nombre = $r->nombre;
-        $ciudad->lugar_id = $r->lugar_id;
         $ciudad->save();
         return redirect()->route('ciudad.index');
     }
@@ -79,7 +78,6 @@ class CiudadController extends Controller
     {
         $ciudad = Ciudad::find($r->id);
         $ciudad->nombre = $r->nombre;
-        $ciudad->lugar_id = $r->lugar_id;
         $ciudad->save();
         return redirect()->route('ciudad.index');
     }

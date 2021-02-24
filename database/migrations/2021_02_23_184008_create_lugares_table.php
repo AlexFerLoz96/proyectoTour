@@ -18,6 +18,7 @@ class CreateLugaresTable extends Migration
             $table->string('nombre');
             $table->string('imagen');
             $table->string('descripcion');
+            $table->integer('ciudad_id');
             $table->timestamps();
         });
     }

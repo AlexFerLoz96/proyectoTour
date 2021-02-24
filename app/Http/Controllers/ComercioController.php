@@ -95,6 +95,7 @@ class ComercioController extends Controller
         $comercio->ubicacion = $r->ubicacion;
         $comercio->descripcion = $r->descripcion;
         $comercio->prioridad = $r->prioridad;
+        $comercio->categoria_id = $r->categoria_id;
         $comercio->save();
         return redirect()->route('comercio.index');
     }
@@ -139,6 +140,7 @@ class ComercioController extends Controller
         $comercio->ubicacion = $r->ubicacion;
         $comercio->descripcion = $r->descripcion;
         $comercio->prioridad = $r->prioridad;
+        $comercio->categoria_id = $r->categoria_id;
         $comercio->save();
         return redirect()->route('comercio.index');
     }

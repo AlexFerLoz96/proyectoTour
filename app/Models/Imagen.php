@@ -20,4 +20,8 @@ class Imagen extends Model
     public function Comercio() {
         $this->belongsTo(Comercio::Class, 'foreign_key');
     }
+
+    public function Lugar() {
+        $this->belongsTo(Lugar::Class, 'foreing_key')
+    }
 }

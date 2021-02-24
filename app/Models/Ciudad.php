@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Ciudad extends Model
 {
     use HasFactory;
+
+    public function Lugar() {
+        return $this->hasMany(Lugar::Class,'foreign_key');
+    }
 }

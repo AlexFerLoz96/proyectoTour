@@ -19,7 +19,7 @@ class CreateComerciosTable extends Migration
             $table->string('ubicacion');
             $table->string('descripcion');
             $table->integer('prioridad');
-            $table->integer('id_resena');
+            $table->integer('categoria_id');
             $table->timestamps();
         });
     }

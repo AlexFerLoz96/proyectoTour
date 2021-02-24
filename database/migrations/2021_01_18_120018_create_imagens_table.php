@@ -17,7 +17,8 @@ class CreateImagensTable extends Migration
             $table->id();
             $table->string('ruta');
             $table->string('descripcion');
-            $table->integer('comercio_id');
+            $table->integer('comercio_id')->nullable();
+            $table->integer('lugar_id')->nullable();
             $table->timestamps();
         });
     }
