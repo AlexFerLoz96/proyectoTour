@@ -238,7 +238,7 @@
                 @endforeach
                 <h3 class="p-2">{{$comercio->nombre ?? ''}}</h3>
                 <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
-                <div id="descripcion" class="p-2">{{$comercio->descripcion ?? ''}}</div>
+                <div class="descripcion p-2">{{$comercio->descripcion ?? ''}}</div>
             </div>
             @endforeach
         </div>

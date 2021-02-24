@@ -17,7 +17,9 @@ class ResenaController extends Controller
     public function index()
     {
         $resenaList = Resena::all();
-        return view('resena.index', ['resenaList'=>$resenaList]);
+        $userList = User::all();
+        $comercioList = Comercio::all();
+        return view('resena.index', compact('resenaList','userList','comercioList'));
     }
 
     /**
@@ -27,7 +29,10 @@ class ResenaController extends Controller
      */
     public function create()
     {
-        return view('resena.create');
+
+        $userList = User::all();
+        $comercioList = Comercio::all();
+        return view('resena.create',compact('userList','comercioList'));
 
     }
 

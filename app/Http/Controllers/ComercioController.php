@@ -70,13 +70,8 @@ class ComercioController extends Controller
         $comercioList = Comercio::all();
         $nombreCategoria = DB::table('comercios')
             ->join('categorias', 'categorias.id', '=', 'comercios.categoria_id')
-            ->select('categorias.nombre')
-            ->take(1)
+            ->select('categorias.*')
             ->get();
-            
-
-        
-        
         return view('comercio.index', compact('comercioList', 'nombreCategoria'));
     }
 
@@ -119,9 +114,9 @@ class ComercioController extends Controller
     public function show($id)
     {
         $comercio = Comercio::find($id);
-        $data['comercio'] = $comercio;
+        $categoriaList = Categoria::all();
 
-        return view('comercio.public', $data);
+        return view('comercio.public', compact('categoriaList','comercio'));
     }
 
     /**

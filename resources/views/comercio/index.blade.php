@@ -26,9 +26,11 @@
             <td>{{$comercio->descripcion}}</td>
             <td>{{$comercio->prioridad}}</td>
             @foreach ($nombreCategoria as $categoria)
+                    @if($comercio->categoria_id == $categoria->id)
             <td>{{$categoria->nombre}}</td>
-            @break;
-            @endforeach
+                    @break
+                    @endif
+                @endforeach
             <td><a href="{{route('comercio.edit', $comercio->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('comercio.destroy', $comercio->id)}}" method="POST" id="delete{{$comercio->id}}">

@@ -27,8 +27,9 @@ html{
     height: 15rem;
 }
 
-#descripcion{
+.descripcion{
     text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 
