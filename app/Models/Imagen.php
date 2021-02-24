@@ -22,6 +22,6 @@ class Imagen extends Model
     }
 
     public function Lugar() {
-        $this->belongsTo(Lugar::Class, 'foreing_key')
+        $this->belongsTo(Lugar::Class, 'foreing_key');
     }
 }
