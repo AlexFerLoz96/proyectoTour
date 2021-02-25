@@ -125,7 +125,8 @@ class ComercioController extends Controller
     public function edit($id)
     {
         $comercio = Comercio::find($id);
-        return view('comercio.edit', array('comercio'=>$comercio));
+        $categoriaList = Categoria::all();
+        return view('comercio.edit', compact('comercio','categoriaList'));
     }
 
     /**

@@ -13,9 +13,20 @@
     @endisset
         @csrf
         resena ruta:<input type="text" name="comentario" value="{{$resena->comentario ?? '' }}"><br>
-        Puntuacion: <input type="text" name="puntuacion" value="{{$resena->puntuacion ?? '' }}"> <br>
+        Puntuacion: <input type="number" min="1" max="5" name="puntuacion" value="{{$resena->puntuacion ?? ''}}"><br>
         Fecha: <input type="date" name="fecha" value="{{$resena->fecha ?? '' }}"> <br>
-        <input type="submit">
+        Usuario: <select name="user_id" id="">
+            <option >-- Seleccionar usuario --</option>
+            @foreach($userList as $user)
+                <option value="{{$user->id}}">{{$user->name}}</option>
+            @endforeach
+        </select><br>
+        Comercio: <select name="comercio_id" id="">
+            <option >-- Seleccionar comercio_id --</option>
+            @foreach($comercioList as $comercio)
+                <option value="{{$comercio->id}}">{{$comercio->nombre}}</option>
+            @endforeach
+        </select><br><input type="submit">
         </form>
 
 @endsection

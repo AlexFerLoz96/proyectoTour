@@ -76,7 +76,9 @@ class ResenaController extends Controller
     public function edit($id)
     {
         $resena = Resena::find($id);
-        return view('resena.edit', array('resena'=>$resena));
+        $userList = User::all();
+        $comercioList = Comercio::all();
+        return view('resena.edit',compact('resena','userList','comercioList'));
     }
 
     /**
