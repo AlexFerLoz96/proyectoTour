@@ -11,7 +11,7 @@
                 justify-content: center;
                 align-items: center;
                 align-content: center;
-                max-height: 100%;
+                height: 100%;
                 max-width:100%;
                 
             }       

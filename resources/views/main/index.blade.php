@@ -271,7 +271,7 @@
         function mostrarComercio(id) {
             location.href = "/comercio/public/" + id;
         }
-
+/*
         $(document).ready(function() {
             $("#login").mouseenter(function() {
                 $(this).css("border-bottom", "5px solid black").animate({
@@ -285,7 +285,7 @@
                     'borderColor': 'black'
                 }, 500);
             })
-        });
+        });*/
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
