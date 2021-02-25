@@ -74,3 +74,19 @@ Route::get('/modelo/{id}', 'ModeloController@show')->name('modelo.show');
 Route::get('/modelo/{id}/edit', 'ModeloController@edit')->name('modelo.edit');
 Route::put('/modelo/{id}', 'ModeloController@update')->name('modelo.update');
 Route::delete('/modelo/{id}/borrar', 'ModeloController@destroy')->name('modelo.destroy');
+
+Route::get('/lugar', 'LugarController@index')->name('lugar.index');
+Route::get('/lugar/create', 'LugarController@create')->name('lugar.create');
+Route::post('/lugar/store', 'LugarController@store')->name('lugar.store');
+Route::get('/lugar/{id}', 'LugarController@show')->name('lugar.show');
+Route::get('/lugar/{id}/edit', 'LugarController@edit')->name('lugar.edit');
+Route::put('/lugar/{id}', 'LugarController@update')->name('lugar.update');
+Route::delete('/lugar/{id}/borrar', 'LugarController@destroy')->name('lugar.destroy');
+
+Route::get('/opcion', 'OpcionController@index')->name('opcion.index');
+Route::get('/opcion/create', 'OpcionController@create')->name('opcion.create');
+Route::post('/opcion/store', 'OpcionController@store')->name('opcion.store');
+Route::get('/opcion/{id}', 'OpcionController@show')->name('opcion.show');
+Route::get('/opcion/{id}/edit', 'OpcionController@edit')->name('opcion.edit');
+Route::put('/opcion/{id}', 'OpcionController@update')->name('opcion.update');
+Route::delete('/opcion/{id}/borrar', 'OpcionController@destroy')->name('opcion.destroy');

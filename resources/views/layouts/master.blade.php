@@ -35,6 +35,13 @@
                                 <a class="nav-link" href="/resena">Reseñas</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="/lugar">Lugares</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a class="nav-link" href="/opcion">Opciones</a>
+                            </li>-->
+                            <li class="nav-item">
                                 <a class="nav-link" href="/modelo">Modelos 3D</a>
                             </li>
                         </ul>
