@@ -10,10 +10,10 @@ class Resena extends Model
     use HasFactory;
 
     public function Comercio() {
-        return $this->belongsTo(Comercio::Class,'foreign_key');
+        return $this->belongsTo(Comercio::Class);
     }
 
     public function User() {
-        return $this->belongsTo(User::Class,'foreign_key');
+        return $this->belongsTo(User::Class);
     }
 }

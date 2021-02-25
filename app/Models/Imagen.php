@@ -18,10 +18,10 @@ class Imagen extends Model
     }
 
     public function Comercio() {
-        $this->belongsTo(Comercio::Class, 'foreign_key');
+        $this->belongsTo(Comercio::Class);
     }
 
     public function Lugar() {
-        $this->belongsTo(Lugar::Class, 'foreing_key');
+        $this->belongsTo(Lugar::Class);
     }
 }
