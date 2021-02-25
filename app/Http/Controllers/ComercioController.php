@@ -16,7 +16,11 @@ class ComercioController extends Controller
      */
     public function public()
     {
-        $comercioList = Comercio::all()->take(10);
+        $comercioPrioridad = DB::table('comercios')
+        ->select('*')
+        ->where('prioridad','=','1')
+        ->get();
+        $comercioList = Comercio::all();
         $categoriaList = Categoria::all();
 
         $imagenList = DB::table('imagens')
@@ -31,7 +35,7 @@ class ComercioController extends Controller
             ->take(8)
             ->get();
         
-        return view('main.index',compact('categoriaList','comercioList','imagenList', 'imagenCiudad'));
+        return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','imagenList', 'imagenCiudad'));
     }
 
     public function search(Request $r)

@@ -19,8 +19,18 @@
 @section("content")
     <section class="b1">
         <div class="b1-slider">
+
+            @foreach($comercioPrioridad as $comercio)
             <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://www.guiaturisticoalmeria.es/wp-content/uploads/2019/07/1-alcazaba-almeria.jpg');">
+            <div class="b1-bg">
+            @foreach ($imagenList as $imagen)
+                    @if($comercio->id == $imagen->comercio_id)
+                    
+                    <img class="img-responsive w-100" style="min-height:120%;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                    @break
+                    @endif
+            @endforeach
+               
                 </div>
                 <div class="wancho b1-cnt">
                     <figure class="b1-lanza-video">
@@ -29,196 +39,18 @@
                     <div class="b1-center">
                         <div class="b1-text">
                             <h2>
-                                Compañía peruana líder en consultoría
-                                <strong>Gestión de proyectos y asesoría </strong>
+                                {{$comercio->nombre}}
+                                <strong>{{$comercio->ubicacion}}</strong>
                             </h2>
                         </div>
-                        <a href="#" class="g-button">
+                        <a href="/comercio/public/{{$comercio->id}}" class="g-button">
                             <span>LEER MÁS</span>
                             <i class="icon-SVG-12"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://multimedia.andalucia.org/media/60DBA931A7E0442C961B1EC45AB4EC30/img/B0AD9F73E8D44AF6BFE0CBC6C3009836/19-15_Playa_de_Playaza_de_Rodalquilar_Almeria.jpg?responsive');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Compañía peruana líder
-                                <strong>Gestión de proyectos </strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://cdn.getyourguide.com/img/location/5440ed46358e9.jpeg/88.jpg');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Almería
-                                <strong>Taberna cervecera</strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://diarioelcanal.com/wp-content/uploads/2020/09/muelle-levante-puerto-de-almeria.jpg');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Compañía peruana líder
-                                <strong>Gestión de proyectos </strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://www.educatioservanda.org//wp-content/uploads/2016/07/patronato-almeria-1.jpg');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Compañía peruana líder
-                                <strong>Gestión de proyectos </strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://www.dondeviajamos.com/wp-content/uploads/2015/12/7450036670_376f6833f5_k-1024x375.jpg');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Compañía peruana líder
-                                <strong>Gestión de proyectos </strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://unsplash.it/1920/700');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Compañía peruana líder
-                                <strong>Gestión de proyectos </strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://unsplash.it/1920/700');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Compañía peruana líder
-                                <strong>Gestión de proyectos </strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://unsplash.it/1920/700');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Compañía peruana líder
-                                <strong>Gestión de proyectos </strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="b1-slide">
-                <div class="b1-bg" style="background-image: url('https://unsplash.it/1920/700');"></div>
-                <div class="wancho b1-cnt">
-                    <figure class="b1-lanza-video">
-                        <i class="icon-SVG-11"></i>
-                    </figure>
-                    <div class="b1-center">
-                        <div class="b1-text">
-                            <h2>
-                                Compañía peruana líder
-                                <strong>Gestión de proyectos </strong>
-                            </h2>
-                        </div>
-                        <a href="#" class="g-button">
-                            <span>LEER MÁS</span>
-                            <i class="icon-SVG-12"></i>
-                        </a>
-                    </div>
-                </div>
+             @endforeach
             </div>
         </div>
     </section>
