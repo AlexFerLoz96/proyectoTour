@@ -10,10 +10,10 @@ class Lugar extends Model
     use HasFactory;
 
     public function Imagen() {
-        return $this->hasMany(Imagen::Class,'foreign_key');
+        return $this->hasMany(Imagen::Class);
     }
 
     public function Ciudad() {
-        return $this->belongsTo(Ciudad::Class,'foreign_key');
+        return $this->belongsTo(Ciudad::Class);
     }
 }

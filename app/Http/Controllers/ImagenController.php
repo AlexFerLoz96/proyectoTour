@@ -56,7 +56,7 @@ class ImagenController extends Controller
                 $imagen->save();
             }
         }
-        return redirect()->route('imagen.index')->with("success","Noticia creada correctamente");
+        return redirect()->route('imagen.index');
     }
 
     /**

@@ -33,7 +33,6 @@ class ResenaController extends Controller
         $userList = User::all();
         $comercioList = Comercio::all();
         return view('resena.create',compact('userList','comercioList'));
-
     }
 
     /**

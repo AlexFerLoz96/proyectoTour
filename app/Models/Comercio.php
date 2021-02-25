@@ -9,15 +9,15 @@ class Comercio extends Model
 {
     use HasFactory;
 
-    public function Imagen() {
-        return $this->hasMany(Imagen::Class,'foreign_key');
+    public function imagen() {
+        return $this->hasMany(Imagen::Class);
     }
 
-    public function Resena() {
-        return $this->hasMany(Resena::Class,'foreign_key');
+    public function resena() {
+        return $this->hasMany(Resena::Class);
     }
 
-    public function Categoria() {
-        return $this->belongsTo(Categoria::Class,'foreign_key');
+    public function categoria() {
+        return $this->belongsTo(Categoria::Class);
     }
 }

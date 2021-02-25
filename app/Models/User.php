@@ -42,6 +42,6 @@ class User extends Authenticatable
     ];
 
     public function Resena() {
-        return $this->hasMany(Resena::Class,'foreign_key');
+        return $this->hasMany(Resena::Class);
     }
 }

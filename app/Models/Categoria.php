@@ -9,7 +9,7 @@ class Categoria extends Model
 {
     use HasFactory;
 
-    public function Comercio() {
-        return $this->hasMany(Comercio::Class,'foreign_key');
+    public function comercio() {
+        return $this->hasMany(Comercio::Class);
     }
 }
