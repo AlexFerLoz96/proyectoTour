@@ -53,7 +53,12 @@ class ComercioController extends Controller
             ->orderBy('id')
             //->take(1)
             ->get();
-        
+            
+        $imagenList = DB::table('imagens')
+        ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
+        ->select('imagens.*')
+        ->get();
+
         $contador = $consultaComercio->count();
         
         $consultaCategoria = DB::table('categorias')
@@ -63,7 +68,7 @@ class ComercioController extends Controller
 
 
 
-        return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria', 'palabraBusqueda', 'contador'));
+        return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria','imagenList', 'palabraBusqueda', 'contador'));
     }
 
     public function index()
