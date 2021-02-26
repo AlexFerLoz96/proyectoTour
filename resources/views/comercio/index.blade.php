@@ -25,8 +25,8 @@
             <td>{{$comercio->ubicacion}}</td>
             <td>{{$comercio->descripcion}}</td>
             <td>{{$comercio->prioridad}}</td>
-            <td><a href="{{route('comercio.edit', $comercio->id)}}" class="btn btn-warning">Edit</a></td>
             <td>{{$comercio->categoria->nombre}}</td>
+            <td><a href="{{route('comercio.edit', $comercio->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('comercio.destroy', $comercio->id)}}" method="POST" id="delete{{$comercio->id}}">
                     @csrf

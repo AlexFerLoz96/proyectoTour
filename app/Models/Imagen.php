@@ -18,10 +18,10 @@ class Imagen extends Model
     }
 
     public function comercio() {
-        $this->belongsTo(Comercio::Class);
+        return $this->belongsTo(Comercio::Class);
     }
 
     public function lugar() {
-        $this->belongsTo(Lugar::Class);
+        return $this->belongsTo(Lugar::Class);
     }
 }

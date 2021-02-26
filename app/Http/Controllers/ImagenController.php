@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Imagen;
-use App\Models\Comercio;
 use Faker\Provider\Image;
+use App\Models\Comercio;
+use App\Models\Lugar;
+
 
 use Iluminate\Support\Facades\Storage;
 
@@ -29,8 +31,9 @@ class ImagenController extends Controller
      */
     public function create()
     {
-        $imagenList = Imagen::all();
-        return view('imagen.create', compact('imagenList'));
+        $comercioList = Comercio::all();
+        $lugarList = Lugar::all();
+        return view('imagen.create', compact('comercioList', 'lugarList'));
     }
 
     /**
