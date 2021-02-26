@@ -11,15 +11,14 @@
                 justify-content: center;
                 align-items: center;
                 align-content: center;
-                height: 100%;
-                max-width:100%;
+                height: 50%;
+                max-width:50%;
                 
             }       
             #tilt {
                 z-index:2;
-                background-color:black;
-                width: 30rem;
-                height: 15rem;
+                width: 100%;
+                height: 100%;
 
                 transition: box-shadow 0.1s, transform 0.1s;
 
@@ -30,17 +29,13 @@
             box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
             cursor: pointer;
             }
+
     </style>
 
 @endsection
 
 @section("content")
 
-    <!--<div class="container">
-        <div id="tilt">
-          Container for our block  
-        </div>
-    </div>-->
 
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -50,7 +45,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="..." class="d-block w-100" alt="...">
+          <div class="container"><div id="tilt" style="background-image:url(/assets/imgs/inicio.jpg);background-size:cover;"></div></div>
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>Some representative placeholder content for the first slide.</p>

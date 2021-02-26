@@ -9,13 +9,11 @@ html{
 .col-3{
     border-radius: 6px;
     padding: 0;
+    
 }
 
 .col-3:hover{
-    box-shadow: 
-        1px 1px #53a7ea,
-        2px 2px #53a7ea,
-        3px 3px #53a7ea;
+    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.1), 10px 10px 10px rgba(255, 255, 255,0.01) !important;
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
     cursor: pointer;
@@ -73,7 +71,7 @@ html{
 
 .col-5{
     cursor: pointer;
-    box-shadow: -15px -15px 15px rgba(0, 0, 0, 0.1), 15px 15px 15px rgba(255, 255, 255,0.01);
+    
     background-color: rgb(255, 255, 255);
     border-radius:20px;
     padding:1%;
