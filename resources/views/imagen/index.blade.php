@@ -14,6 +14,7 @@
                 <th>Ruta</th>
                 <th>Descripción</th>
                 <th>comercio_id</th>
+                <th>Lugar_id</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -25,6 +26,7 @@
             <td>{{$imagen->ruta}}</td>
             <td>{{$imagen->descripcion}}</td>
             <td>{{$imagen->comercio_id}}</td>
+            <td>{{$imagen->lugar_id}}</td>
             <td><a href="{{route('imagen.edit', $imagen->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('imagen.destroy', $imagen->id)}}" method="POST" id="delete{{$imagen->id}}">

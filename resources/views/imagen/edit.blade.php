@@ -20,6 +20,12 @@
                 <option value="{{$comercio->id}}">{{$comercio->nombre}}</option>
             @endforeach
         </select><br>
+        Lugar: <select name="lugar_id" id="">
+            <option value="0">--Seleccionar un lugar--</option>
+            @foreach($imagenList as $imagen)
+                <option value="{{$imagen->lugar_id}}">{{$imagen->lugar->nombre}}</option>
+            @endforeach
+        </select> <br>
         <input type="submit">
         </form>
 

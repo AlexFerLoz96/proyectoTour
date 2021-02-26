@@ -9,11 +9,11 @@ class Resena extends Model
 {
     use HasFactory;
 
-    public function Comercio() {
+    public function comercio() {
         return $this->belongsTo(Comercio::Class);
     }
 
-    public function User() {
+    public function user() {
         return $this->belongsTo(User::Class);
     }
 }

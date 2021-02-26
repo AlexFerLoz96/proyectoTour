@@ -29,8 +29,8 @@ class ImagenController extends Controller
      */
     public function create()
     {
-        $comercioList=Comercio::all();
-        return view('imagen.create',['comercioList'=>$comercioList]);
+        $imagenList = Imagen::all();
+        return view('imagen.create', compact('imagenList'));
     }
 
     /**
@@ -82,7 +82,6 @@ class ImagenController extends Controller
     public function edit($id)
     {
         $imagen = Imagen::find($id);
-        $comercioList=Comercio::all();
         return view('imagen.edit', compact('imagen','comercioList'));    }
 
     /**

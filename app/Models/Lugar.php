@@ -9,11 +9,7 @@ class Lugar extends Model
 {
     use HasFactory;
 
-    public function Imagen() {
+    public function imagen() {
         return $this->hasMany(Imagen::Class);
-    }
-
-    public function Ciudad() {
-        return $this->belongsTo(Ciudad::Class);
     }
 }

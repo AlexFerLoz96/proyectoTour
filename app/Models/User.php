@@ -41,7 +41,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Resena() {
+    public function resena() {
         return $this->hasMany(Resena::Class);
     }
 }

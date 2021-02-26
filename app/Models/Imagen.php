@@ -17,11 +17,11 @@ class Imagen extends Model
         $this->attributes['ruta'] = json_encode($value);
     }
 
-    public function Comercio() {
+    public function comercio() {
         $this->belongsTo(Comercio::Class);
     }
 
-    public function Lugar() {
+    public function lugar() {
         $this->belongsTo(Lugar::Class);
     }
 }
