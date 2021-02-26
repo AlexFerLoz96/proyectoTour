@@ -22,7 +22,7 @@
     @foreach ($imagenList as $imagen)
         <tr>
             <td>{{$imagen->id}}</td>
-            <td style="width:20%;heigth:20%;"><img src="assets/imgs/comercio/{{$imagen->ruta}}" alt="" style="width:100%;heigth:100%;"></td>
+            <td style="width:20%;"><img src="assets/imgs/comercio/{{$imagen->ruta}}" alt="" style="width:100%;"></td>
             <td>{{$imagen->ruta}}</td>
             <td>{{$imagen->descripcion}}</td>
             <td>{{$imagen->comercio_id}}</td>

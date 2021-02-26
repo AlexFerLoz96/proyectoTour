@@ -2,10 +2,10 @@
 
 @section("librerias")
 <link rel="stylesheet" href="../assets/css/search.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 
-    <style>
+    <style>/*
             .container {
                 display: flex;
                 justify-content: center;
@@ -29,7 +29,7 @@
             box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
             cursor: pointer;
             }
-
+*/
     </style>
 
 @endsection
@@ -45,7 +45,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-          <div class="container"><div id="tilt" style="background-image:url(/assets/imgs/inicio.jpg);background-size:cover;"></div></div>
+          <img src="..." class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>Some representative placeholder content for the first slide.</p>
@@ -75,71 +75,6 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
-    <script>
-
-        /* Store the element in el */
-        let el = document.getElementById('tilt')
-
-        /* Get the height and width of the element */
-        const height = el.clientHeight
-        const width = el.clientWidth
-
-        /*
-        * Add a listener for mousemove event
-        * Which will trigger function 'handleMove'
-        * On mousemove
-        */
-        el.addEventListener('mousemove', handleMove)
-
-        /* Define function a */
-        function handleMove(e) {
-            /*
-            * Get position of mouse cursor
-            * With respect to the element
-            * On mouseover
-            */
-            /* Store the x position */
-            const xVal = e.layerX
-            /* Store the y position */
-            const yVal = e.layerY
-
-            /*
-            * Calculate rotation valuee along the Y-axis
-            * Here the multiplier 20 is to
-            * Control the rotation
-            * You can change the value and see the results
-            */
-            const yRotation = 20 * ((xVal - width / 2) / width)
-
-            /* Calculate the rotation along the X-axis */
-            const xRotation = -20 * ((yVal - height / 2) / height)
-
-            /* Generate string for CSS transform property */
-            const string = 'perspective(500px) scale(1.1) rotateX(0deg) rotateY(' + yRotation + 'deg)'
-
-            /* Apply the calculated transformation */
-            el.style.transform = string
-        }
-
-        /* Add listener for mouseout event, remove the rotation */
-        el.addEventListener('mouseout', function () {
-            el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
-        })
-
-        /* Add listener for mousedown event, to simulate click */
-        el.addEventListener('mousedown', function () {
-            el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
-        })
-
-        /* Add listener for mouseup, simulate release of mouse click */
-        el.addEventListener('mouseup', function () {
-            el.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
-        })
-
-        
-
-    </script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
