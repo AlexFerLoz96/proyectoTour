@@ -27,7 +27,6 @@ class ComercioController extends Controller
 
         $categoriaList = Categoria::all();
 
-        var_dump($categoriaList);
         $imagenList = DB::table('imagens')
             ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
             ->select('imagens.*')
@@ -76,14 +75,23 @@ class ComercioController extends Controller
         return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria','imagenList', 'palabraBusqueda', 'contador'));
     }
 
-    /*public function listaComercioCategoria(Request $r){
+    public function listaComercioCategoria(Request $r){
+        $nombreCategoria = $r->get('nombreCategoria');
 
-        $comercioCategoriaList = DB::table('comercios')
+        var_dump($nombreCategoria);
+
+        $categoriaId = DB::table('categorias')
+            ->select('categorias.id')
+            ->where($nombreCategoria, '=', 'categorias.nombre')
+            ->get();
+
+            var_dump($categoriaId);
+        /*$comercioCategoriaList = DB::table('comercios')
             ->select('comercios.*')
-            ->where
+            ->where*/
             
-        return view('comercio.search', compact('comercioCategoriaList'));
-    }*/
+        return view('comercio.search');
+    }
 
     public function index()
     {

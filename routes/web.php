@@ -21,8 +21,8 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('comercio/search', 'ComercioController@listaComercioCategoria')->name('comercio.searchCategoria');
-Route::get('comercio/search', 'ComercioController@search')->name('comercio.search');
+//Route::get('/comercio/search', 'ComercioController@listaComercioCategoria')->name('comercio.searchCategoria');
+Route::get('/comercio/search', 'ComercioController@search')->name('comercio.search');
 
 Route::get('/user', 'UserController@index')->name('user.index');
 Route::get('/user/create', 'UserController@create')->name('user.create');
