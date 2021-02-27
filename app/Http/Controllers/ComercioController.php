@@ -49,11 +49,13 @@ class ComercioController extends Controller
         $categoriaList = Categoria::all();
 
         $consultaComercio = DB::table('comercios')
-            ->where('nombre', 'like', "%{$key}%")
-            ->orWhere('ubicacion', 'like', "%{$key}%")
-            ->orWhere('descripcion', 'like', "%{$key}%")
-            ->orderBy('id')
-            //->take(1)
+            ->join('categorias', 'categorias.id', '=','comercios.categoria_id')
+            ->select('comercios.*')
+            ->where('comercios.nombre', 'like', "%{$key}%")
+            ->orWhere('comercios.ubicacion', 'like', "%{$key}%")
+            ->orWhere('comercios.descripcion', 'like', "%{$key}%")
+            ->orWhere('categorias.nombre','like',"%{$key}%")
+            ->orderBy('comercios.id')
             ->get();
             
         $imagenList = DB::table('imagens')
@@ -63,14 +65,10 @@ class ComercioController extends Controller
 
         $contador = $consultaComercio->count();
         
-        $consultaCategoria = DB::table('categorias')
-            ->where('nombre', 'like', "%{$key}%")
-            ->orderBy('id')
-            ->get();
+        
 
 
-
-        return view('comercio.search', compact('categoriaList', 'consultaComercio', 'consultaCategoria','imagenList', 'palabraBusqueda', 'contador'));
+        return view('comercio.search', compact('categoriaList', 'consultaComercio','imagenList', 'palabraBusqueda', 'contador'));
     }
 
     public function listaComercioCategoria(Request $r){

@@ -23,7 +23,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             @foreach ($categoriaList as $categoria)
-                                <li><a class="dropdown-item" name="nombreCategoria" href="/categoria">{{$categoria->nombre}}</a></li>
+                                <li><a class="dropdown-item" name="busqueda" href="/comercio/search?busqueda={{$categoria->nombre}}">{{$categoria->nombre}}</a></li>
                             @endforeach
                         </ul>
                     </li>
