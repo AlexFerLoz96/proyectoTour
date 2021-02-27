@@ -6,7 +6,6 @@
     cursor: pointer;
 }
 
-
 .row{
     opacity: 0;
     animation-name: bounceIn;

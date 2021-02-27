@@ -21,8 +21,6 @@ class ComercioController extends Controller
         ->where('prioridad','=','1')
         ->get();
 
-        
-
         $comercioList = Comercio::all();
 
         $categoriaList = Categoria::all();
