@@ -17,8 +17,8 @@
 
         @isset($comercioList)
             Comercio: <select name="comercio_id">
+            <option value="0">-- Seleccionar comercio_id --</option>
             @foreach($comercioList as $comercio)
-                <option value="0">-- Seleccionar comercio_id --</option>
                 <option value="{{$comercio->id}}">{{$comercio->nombre}}</option>
             @endforeach
             </select><br>
