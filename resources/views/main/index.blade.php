@@ -70,6 +70,12 @@
             <h3 class="p-2">{{$comercio->nombre ?? ''}}</h3>
             <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
             <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
+            @foreach ($resenaList as $resena)
+                @if($resena->id == $resena->comercio_id)
+                    <div name="resena" class="resena p-3" data-value="{{$resena->puntuacion}}"></div>
+                    @break
+                @endif
+            @endforeach
         </div>
         @endforeach
     </div>
@@ -102,6 +108,11 @@
     function mostrarComercio(id) {
         location.href = "/comercio/public/" + id;
     }
+    $(document).ready(function() {
+        valor = $(".resena").data("value");
+        estrella = "<img style='height:25px;width:25px;' src='https://www.flaticon.es/svg/vstatic/svg/1828/1828884.svg?token=exp=1614605058~hmac=71d559e03e83093b923c9f4424cbbe75'>";
+        $(".resena").html();
+    });
     /*
     function ellipsis_box(elemento, max_chars) {
         limite_text = $(elemento).text();

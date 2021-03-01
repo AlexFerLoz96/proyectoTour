@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Comercio;
 use App\Models\Categoria;
+use App\Models\Resena;
 use DB;
 
 class ComercioController extends Controller
@@ -25,6 +26,8 @@ class ComercioController extends Controller
 
         $categoriaList = Categoria::all();
 
+        $resenaList = Resena::all();
+
         $imagenList = DB::table('imagens')
             ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
             ->select('imagens.*')
@@ -37,7 +40,7 @@ class ComercioController extends Controller
             ->take(8)
             ->get();
         
-        return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','imagenList', 'imagenCiudad'));
+        return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','resenaList','imagenList', 'imagenCiudad'));
     }
 
     public function search(Request $r)
