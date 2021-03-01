@@ -70,6 +70,7 @@
             <h3 class="p-2">{{$comercio->nombre ?? ''}}</h3>
             <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
             <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
+            
             @foreach ($resenaList as $resena)
                 @if($resena->id == $resena->comercio_id)
                     <div name="resena" class="resena p-3" data-value="{{$resena->puntuacion}}"></div>
@@ -111,7 +112,25 @@
     $(document).ready(function() {
         valor = $(".resena").data("value");
         estrella = "<img style='height:25px;width:25px;' src='https://www.flaticon.es/svg/vstatic/svg/1828/1828884.svg?token=exp=1614605058~hmac=71d559e03e83093b923c9f4424cbbe75'>";
-        $(".resena").html();
+        
+        switch(valor){
+            case 1:
+            $(".resena").html(estrella);
+            break;
+            case 2:
+            $(".resena").html(estrella+estrella);
+            break;
+            case 3:
+            $(".resena").html(estrella+estrella+estrella);
+            break;
+            case 4:
+            $(".resena").html(estrella+estrella+estrella+estrella);
+            break;
+            case 5:
+            $(".resena").html(estrella+estrella+estrella+estrella+estrella);
+            break;
+        }
+        
     });
     /*
     function ellipsis_box(elemento, max_chars) {
