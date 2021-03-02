@@ -2,15 +2,6 @@
 
 @section("librerias")
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-<script src="/../../assets/js/carrusel.js"></script>
 <link rel="stylesheet" href="/../../assets/css/public.css">
 <link rel="stylesheet" href="/../../assets/css/carrusel.css">
 <style>
@@ -45,30 +36,46 @@
 
 @section("content")
 
-<div class="container" id="carrusel">
+<div class="container mb-5">
   <div class="row d-inline">
-    <h1 class="d-inline">{{$comercio->nombre}}</h1>
-    <h3 class="d-inline">{{$comercio->descripcion}}</h3>
+    <h1 class="d-block">{{$comercio->nombre}}</h1>
+  </div>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+    @foreach ($imagenList as $imagen)
+      <div class="carousel-item active">
+        <img src="/assets/imgs/comercio/{{$imagen->ruta}}" class="d-block w-100 h-50" alt="...">
+      </div>
+      @break
+    @endforeach
+    @foreach ($imagenList as $imagen)
+    <div class="carousel-item">
+      <img src="/assets/imgs/comercio/{{$imagen->ruta}}" class="d-block w-100 h-50" alt="...">
+    </div>
+    @endforeach
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
   
-  <section class="b1">
-    <div class="b1-slider">
-    @foreach ($imagenList as $imagen)
-      <div class="b1-slide">
-        <div class="b1-bg">
-            <img class="img-responsive w-100" style="height:100%;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
-        
-        </div>
-                <div class="wancho b1-cnt">
-                <figure class="b1-lanza-video">
-                    <i class="icon-SVG-11"></i>
-                </figure>
-          </div>
-        </div>
-        @endforeach
-      </div>      
-    </div>
-  </section>
+  <h3 class="">{{$comercio->descripcion}}</h3>
+
+  <h4 class="my-5">Otras sugerencias</h4>
+  <div class="row">
+    Aqui va un foreach con una lista de comercio(prioridad 1) que aparecerán en una sola row(col-3 o 2)
+  </div>
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
 
 @endsection
