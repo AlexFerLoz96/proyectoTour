@@ -57,7 +57,7 @@
 
 <h2 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
         @foreach ($comercioList as $comercio)
         <div class="col-3 mx-4 my-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
