@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Comercio;
 use App\Models\Categoria;
 use App\Models\Resena;
+use App\Models\Imagen;
 use DB;
 
 class ComercioController extends Controller
@@ -77,8 +78,6 @@ class ComercioController extends Controller
     public function listaComercioCategoria(Request $r){
         $nombreCategoria = $r->get('nombreCategoria');
 
-        var_dump($nombreCategoria);
-
         $categoriaId = DB::table('categorias')
             ->select('categorias.id')
             ->where($nombreCategoria, '=', 'categorias.nombre')
@@ -137,9 +136,10 @@ class ComercioController extends Controller
     public function show($id)
     {
         $comercio = Comercio::find($id);
+        $imagenList = Imagen::all();
         $categoriaList = Categoria::all();
 
-        return view('comercio.public', compact('categoriaList','comercio'));
+        return view('comercio.public', compact('categoriaList','comercio', 'imagenList'));
     }
 
     /**
