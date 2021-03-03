@@ -136,13 +136,19 @@ class ComercioController extends Controller
     public function show($id)
     {
         $comercio = Comercio::find($id);
-        $imagenList = DB::table('imagens')
-            ->select('*')
-            ->where('comercio_id', '=', $id)
-            ->get();
+
+        $imagenList = Imagen::all();
+
         $categoriaList = Categoria::all();
 
-        return view('comercio.public', compact('categoriaList','comercio', 'imagenList'));
+        $comercioPrioridad = DB::table('comercios')
+        ->select('*')
+        ->where('prioridad','=','1')
+        ->where('comercios.id', '!=', "{$id}")
+        ->take(4)
+        ->get();
+
+        return view('comercio.public', compact('categoriaList','comercio', 'imagenList', 'comercioPrioridad'));
     }
 
     /**

@@ -8,3 +8,13 @@
 .carousel-item.w-100{
     height: 60%;
 }
+
+.img-responsive.w-100{
+    height: 10rem;
+}
+
+div.col-3{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
