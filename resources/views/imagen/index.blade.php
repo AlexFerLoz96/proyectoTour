@@ -13,8 +13,8 @@
                 <th >Imagen</th>
                 <th>Ruta</th>
                 <th>Descripción</th>
-                <th>comercio_id</th>
-                <th>Lugar_id</th>
+                <th>Comercio</th>
+                <th>Lugar</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -25,8 +25,16 @@
             <td style="width:20%;"><img src="assets/imgs/comercio/{{$imagen->ruta}}" alt="" style="width:100%;"></td>
             <td>{{$imagen->ruta}}</td>
             <td>{{$imagen->descripcion}}</td>
-            <td>{{$imagen->comercio_id}}</td>
-            <td>{{$imagen->lugar_id}}</td>
+            @isset($imagen->comercio->nombre)
+                <td>{{$imagen->comercio->nombre}}</td>
+                @else
+                <td></td>
+            @endisset
+            @isset($imagen->lugar->nombre)
+                <td>{{$imagen->lugar->nombre}}</td>
+                @else
+                <td></td>
+            @endisset
             <td><a href="{{route('imagen.edit', $imagen->id)}}" class="btn btn-warning">Edit</a></td>
             <td>
                 <form action = "{{route('imagen.destroy', $imagen->id)}}" method="POST" id="delete{{$imagen->id}}">
