@@ -15,7 +15,7 @@
         
             @if(!@empty($consultaComercio))
                 @foreach ($consultaComercio as $comercio)
-                    <div class="row mb-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
+                    <div class="row justify-content-center mb-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
                         <div class="col-4 p-0">
                                 @foreach ($imagenList as $imagen)
                                     @if($comercio->id == $imagen->comercio_id)

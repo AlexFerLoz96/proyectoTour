@@ -57,7 +57,7 @@
 
 <h2 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row justify-content-center">
         @foreach ($comercioList as $comercio)
         <div class="col-3 mx-4 my-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
@@ -91,7 +91,7 @@
     </p>
     <div class="row justify-content-center">
         @foreach($lugarList as $lugar)
-        <div class="col-5 p-0 m-3">
+        <div class="col-5 p-0 m-3 mb-4 border">
             @foreach ($imagenList as $imagen)
             @if($lugar->id == $imagen->lugar_id)
             <img class="img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
@@ -151,12 +151,12 @@
         }
 
         $(".descripcion").each(function(index, e) {
-            ellipsis_box(this, 140);
+            ellipsis_box(this, 130);
         });
 
         $(window).on('resize', function(){
             var win = $(this); //this = window
-            if (win.width() <= 850) {  
+            if (win.width() <= 973) {  
                 $(".col-3").attr("class","col-8 mx-4 my-5 border shadow rounded");
             }else
                 $(".col-8").attr("class","col-3 mx-4 my-5 border shadow rounded");
