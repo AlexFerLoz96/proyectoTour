@@ -7,6 +7,7 @@ use App\Models\Comercio;
 use App\Models\Categoria;
 use App\Models\Resena;
 use App\Models\Imagen;
+use App\Models\Lugar;
 use DB;
 
 class ComercioController extends Controller
@@ -35,9 +36,9 @@ class ComercioController extends Controller
             ->get();
 
         $imagenCiudad = DB::table('imagens')
-            ->join('comercios', 'comercios.id', '=', 'imagens.comercio_id')
-            ->select('imagens.*')
-            ->where('comercios.nombre', '=', 'Almería')
+            ->join('lugars', 'lugars.id', '=', 'imagens.lugar_id')
+            ->select('lugars.*')
+            ->where('lugars.nombre', '=', 'Arturito')
             ->take(8)
             ->get();
         

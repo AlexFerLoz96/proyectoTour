@@ -22,6 +22,7 @@ html{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     height: 15rem;
+    box-shadow: initial !important;
 }
 
 .descripcion{
@@ -55,4 +56,3 @@ html{
       transform: scale(1) translate3d(0,0,0);
     }
   }
-  
