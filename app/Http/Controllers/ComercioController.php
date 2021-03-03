@@ -30,19 +30,14 @@ class ComercioController extends Controller
 
         $resenaList = Resena::all();
 
-        $imagenList = DB::table('imagens')
-            ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
-            ->select('imagens.*')
-            ->get();
+        $imagenList = Imagen::all();
 
-        $imagenCiudad = DB::table('imagens')
-            ->join('lugars', 'lugars.id', '=', 'imagens.lugar_id')
-            ->select('lugars.*')
-            ->where('lugars.nombre', '=', 'Arturito')
+        $lugarList = DB::table('lugars')
+            ->select('*')
             ->take(8)
             ->get();
         
-        return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','resenaList','imagenList', 'imagenCiudad'));
+        return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','resenaList','imagenList', 'lugarList'));
     }
 
     public function search(Request $r)

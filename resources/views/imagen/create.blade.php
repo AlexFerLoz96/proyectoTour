@@ -26,11 +26,11 @@
         
         @isset($lugarList)
             Lugar: <select name="lugar_id">
+            <option value="0">--Seleccionar un lugar--</option>
             @foreach($lugarList as $lugar)
-                <option value="0">--Seleccionar un lugar--</option>
                 <option value="{{$lugar->id}}">{{$lugar->nombre}}</option>
-            </select> <br>
             @endforeach
+            </select> <br>
         @endisset
         <input type="submit">
         </form>

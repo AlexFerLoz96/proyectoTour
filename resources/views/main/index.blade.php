@@ -91,16 +91,16 @@
         desenchufa en su larguísimas y sublimes playas y mézclate con los lugareños en la histórica ciudad de Almería.
     </p>
     <div class="row justify-content-center">
-        @foreach($imagenCiudad as $lugar)
-        <div class="col-5 p-0 m-3 border">
-
+        @foreach($lugarList as $lugar)
+        <div class="col-5 p-0 m-3">
         @foreach ($imagenList as $imagen)
                 @if($lugar->id == $imagen->lugar_id)
-                <img class="img-responsive w-100 shadow" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                <img class="img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                @break
                 @endif
                 @endforeach
             <h3 class="p-3">{{$lugar->nombre}}</h3>
-            <p class="p-3">{{$lugar->descripcion}}</p>
+            <p class="p-3 pt-0">{{$lugar->descripcion}}</p>
         </div>
         @endforeach
 
