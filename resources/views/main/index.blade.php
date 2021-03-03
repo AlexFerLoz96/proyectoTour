@@ -69,14 +69,13 @@
             @endforeach
             <h3 class="p-2">{{$comercio->nombre ?? ''}}</h3>
             <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
-            <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
-            
+            <div class="descripcion p-3" onload="ellipsis_box(elemento, max_chars)">{{$comercio->descripcion ?? ''}}</div>
+
             @foreach ($resenaList as $resena)
-                @if($comercio->id == $resena->comercio_id)
-                {{var_dump($resena->puntuacion)}}
-                    <div name="resena" class="resena p-3" data-value="{{$resena->puntuacion}}"></div>
-                    @break
-                @endif
+            @if($comercio->id == $resena->comercio_id)
+            <div name="resena" class="resena p-3" data-value="{{$resena->puntuacion}}"></div>
+            @break
+            @endif
             @endforeach
         </div>
         @endforeach
@@ -93,14 +92,14 @@
     <div class="row justify-content-center">
         @foreach($lugarList as $lugar)
         <div class="col-5 p-0 m-3">
-        @foreach ($imagenList as $imagen)
-                @if($lugar->id == $imagen->lugar_id)
-                <img class="img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
-                @break
-                @endif
-                @endforeach
+            @foreach ($imagenList as $imagen)
+            @if($lugar->id == $imagen->lugar_id)
+            <img class="img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+            @break
+            @endif
+            @endforeach
             <h3 class="p-3">{{$lugar->nombre}}</h3>
-            <p class="p-3 pt-0">{{$lugar->descripcion}}</p>
+            <div class="p-3 pt-0">{{$lugar->descripcion}}</div>
         </div>
         @endforeach
 
@@ -120,37 +119,43 @@
         valor = $(".resena").data("value");
         estrella = "<img style='height:25px;width:25px;' src='/assets/imgs/resena.svg'>";
         estrella_v = "<img style='height:25px;width:25px;opacity:0.4;' src='/assets/imgs/resena.svg'>"
-        switch(valor){
+        switch (valor) {
             case 1:
-            $(".resena").html(estrella+estrella_v+estrella_v+estrella_v+estrella_v+" 1/5");
-            break;
+                $(".resena").html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + " 1/5");
+                break;
             case 2:
-            $(".resena").html(estrella+estrella+estrella_v+estrella_v+estrella_v+" 2/5");
-            break;
+                $(".resena").html(estrella + estrella + estrella_v + estrella_v + estrella_v + " 2/5");
+                break;
             case 3:
-            $(".resena").html(estrella+estrella+estrella+estrella_v+estrella_v)+" 3/5";
-            break;
+                $(".resena").html(estrella + estrella + estrella + estrella_v + estrella_v) + " 3/5";
+                break;
             case 4:
-            $(".resena").html(estrella+estrella+estrella+estrella+estrella_v+" 4/5");
-            break;
+                $(".resena").html(estrella + estrella + estrella + estrella + estrella_v + " 4/5");
+                break;
             case 5:
-            $(".resena").html(estrella+estrella+estrella+estrella+estrella+" 5/5");
-            break;
+                $(".resena").html(estrella + estrella + estrella + estrella + estrella + " 5/5");
+                break;
         }
-        
+
+
+        //$(".p-3.pt-0").length()
+
+        function ellipsis_box(elemento, max_chars) {
+            limite_text = $(elemento).text();
+            if (limite_text.length > max_chars) {
+                limite = limite_text.substr(0, max_chars) + " ...";
+                $(elemento).text(limite);
+            }
+            limite_text = "";
+            limite = "";
+        }
+
+        $(".descripcion").each(function(index, e) {
+            ellipsis_box(this, 140);
+        });
     });
+
     /*
-    function ellipsis_box(elemento, max_chars) {
-        limite_text = $(elemento).text();
-        if (limite_text.length > max_chars) {
-            limite = limite_text.substr(0, max_chars) + " ...";
-            $(elemento).text(limite);
-        }
-    }
-    $(function() {
-        ellipsis_box(".descricion", 140);
-    });
-    
             $(document).ready(function() {
                 $("#login").mouseenter(function() {
                     $(this).css("border-bottom", "5px solid black").animate({
