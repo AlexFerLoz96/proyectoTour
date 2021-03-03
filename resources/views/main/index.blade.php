@@ -72,7 +72,8 @@
             <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
             
             @foreach ($resenaList as $resena)
-                @if($resena->id == $resena->comercio_id)
+                @if($comercio->id == $resena->comercio_id)
+                {{var_dump($resena->puntuacion)}}
                     <div name="resena" class="resena p-3" data-value="{{$resena->puntuacion}}"></div>
                     @break
                 @endif
@@ -117,23 +118,23 @@
     }
     $(document).ready(function() {
         valor = $(".resena").data("value");
-        estrella = "<img style='height:25px;width:25px;' src='https://www.flaticon.es/svg/vstatic/svg/1828/1828884.svg?token=exp=1614605058~hmac=71d559e03e83093b923c9f4424cbbe75'>";
-        
+        estrella = "<img style='height:25px;width:25px;' src='/assets/imgs/resena.svg'>";
+        estrella_v = "<img style='height:25px;width:25px;opacity:0.4;' src='/assets/imgs/resena.svg'>"
         switch(valor){
             case 1:
-            $(".resena").html(estrella);
+            $(".resena").html(estrella+estrella_v+estrella_v+estrella_v+estrella_v+" 1/5");
             break;
             case 2:
-            $(".resena").html(estrella+estrella);
+            $(".resena").html(estrella+estrella+estrella_v+estrella_v+estrella_v+" 2/5");
             break;
             case 3:
-            $(".resena").html(estrella+estrella+estrella);
+            $(".resena").html(estrella+estrella+estrella+estrella_v+estrella_v)+" 3/5";
             break;
             case 4:
-            $(".resena").html(estrella+estrella+estrella+estrella);
+            $(".resena").html(estrella+estrella+estrella+estrella+estrella_v+" 4/5");
             break;
             case 5:
-            $(".resena").html(estrella+estrella+estrella+estrella+estrella);
+            $(".resena").html(estrella+estrella+estrella+estrella+estrella+" 5/5");
             break;
         }
         

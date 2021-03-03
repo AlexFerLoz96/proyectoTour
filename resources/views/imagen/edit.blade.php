@@ -19,20 +19,18 @@
         Comercio: <select name="comercio_id" id="">
             <option value="0">--Seleccionar un comercio--</option>
             @foreach($comercioList as $comercio)
-            @isset($comercio->nombre)
-                @if($comercio->id == $imagen->comercio->id)
+            @if($imagen->comercio_id == $comercio->id)
                 <option value="{{$imagen->comercio_id}}" selected style="background-color:rgb(230, 230, 230);">{{$imagen->comercio->nombre}}</option>
                 @else
                 <option value="{{$comercio->id}}">{{$comercio->nombre}}</option>
-                @endif
-            @endisset
+            @endif
             @endforeach
         </select><br>
 
         Lugar: <select name="lugar_id" id="">
             <option value="0">--Seleccionar un lugar--</option>
             @foreach($lugarList as $lugar)
-            @isset($lugar->nombre)
+            @isset($lugar->id)
                 @if($lugar->id == $imagen->lugar_id)
                 <option value="{{$imagen->lugar_id}}" selected style="background-color:rgb(230, 230, 230);">{{$imagen->lugar->nombre}}</option>
                 @else
