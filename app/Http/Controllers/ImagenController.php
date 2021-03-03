@@ -85,8 +85,9 @@ class ImagenController extends Controller
     public function edit($id)
     {
         $imagen = Imagen::find($id);
-        $imagenList = Imagen::all();
-        return view('imagen.edit', compact('imagen','imagenList'));    }
+        $comercioList = Comercio::all();
+        $lugarList = Lugar::all();
+        return view('imagen.edit', compact('imagen','comercioList','lugarList'));    }
 
     /**
      * Update the specified resource in storage.
