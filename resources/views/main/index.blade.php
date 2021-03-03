@@ -153,6 +153,14 @@
         $(".descripcion").each(function(index, e) {
             ellipsis_box(this, 140);
         });
+
+        $(window).on('resize', function(){
+            var win = $(this); //this = window
+            if (win.width() <= 850) {  
+                $(".col-3").attr("class","col-8 mx-4 my-5 border shadow rounded");
+            }else
+                $(".col-8").attr("class","col-3 mx-4 my-5 border shadow rounded");
+        });
     });
 
     /*

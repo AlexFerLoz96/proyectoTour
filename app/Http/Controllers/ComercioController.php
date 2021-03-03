@@ -144,7 +144,13 @@ class ComercioController extends Controller
         ->take(4)
         ->get();
 
-        return view('comercio.public', compact('categoriaList','comercio', 'imagenList', 'comercioPrioridad'));
+        $imagenComercio = DB::table('imagens')
+        ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
+        ->select('imagens.*')
+        ->where('imagens.comercio_id','=',"{$id}")
+        ->get();
+
+        return view('comercio.public', compact('categoriaList','comercio', 'imagenList','imagenComercio', 'comercioPrioridad'));
     }
 
     /**

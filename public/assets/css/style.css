@@ -6,11 +6,11 @@ html{
     overflow-x: hidden;
 }
 
-.col-3.mx-4{
+.col-3.mx-4, .col-8{
     padding: 0;
 }
 
-.col-3:hover{
+.col-3:hover,.col-8:hover{
     background-color: rgb(248, 248, 248);
     box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.1), 10px 10px 10px rgba(255, 255, 255,0.01) !important;
     -webkit-transform: translateY(-4px);
@@ -30,7 +30,7 @@ html{
     text-overflow: ellipsis;
 }
 
-.col-3{
+.col-3,.col-8{
         opacity: 0;
         animation-name: bounceIn;
         animation-duration: 450ms;
@@ -38,6 +38,10 @@ html{
         animation-fill-mode: forwards;
       
 }
+
+
+
+
 @keyframes bounceIn{
     0%{
       opacity: 0;

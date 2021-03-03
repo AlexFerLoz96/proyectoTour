@@ -14,14 +14,15 @@
 
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      @foreach ($imagenList as $imagen)
+      @foreach ($imagenComercio as $imagen)
       <div class="carousel-item active w-100">
         <div class="w-100 h-100" style="position:absolute;background-image:url('/assets/imgs/comercio/{{$imagen->ruta}}');background-position:center;background-size:100%;filter:blur(5px);background-repeat:no-repeat"></div>
         <img src="/assets/imgs/comercio/{{$imagen->ruta}}" style="position:relative;z-index:2;left:50%;transform:translate(-50%);width:70%;" class="d-block h-100" alt="...">
       </div>
       @break
       @endforeach
-      @foreach ($imagenList as $imagen)
+      @foreach ($imagenComercio as $imagen)
+      @continue($loop->first)
       <div class="carousel-item w-100">
         <div class="w-100 h-100" style="position:absolute;background-image:url('/assets/imgs/comercio/{{$imagen->ruta}}');background-position:center;background-size:100%;filter:blur(5px);background-repeat:no-repeat"></div>
         <img src="/assets/imgs/comercio/{{$imagen->ruta}}" style="position:relative;z-index:2;left:50%;transform:translate(-50%);width:70%;" class="d-block h-100" alt="...">
