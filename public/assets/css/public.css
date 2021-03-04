@@ -11,8 +11,21 @@
 
 .img-responsive.w-100{
     height: 10rem;
+    overflow: hidden;
 }
 
 div.col.border:hover{
     cursor: pointer;
+}
+
+.imagen-cont{
+    overflow: hidden;
+}
+
+.zoom {
+    transition: transform 0.5s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.2, 1.2); 
 }

@@ -48,7 +48,9 @@
     <div class="col border mx-1 p-0" onclick="mostrarComercio({{$comercio->id}})">
       @foreach ($imagenList as $imagen)
       @if($comercio->id == $imagen->comercio_id)
-      <img class="img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+      <div class="imagen-cont">
+        <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+      </div>
       @break
       @endif
       @endforeach
