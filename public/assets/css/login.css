@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg");
+  background-image: url("https://www.65ymas.com/uploads/s1/11/91/7/almeria-capital-gastronomica-2019.jpeg");
 background-size: cover;
 overflow: auto;filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1d1f', endColorstr='#df405a', GradientType=1 );
 }
@@ -110,6 +110,7 @@ Login Box
   position: absolute;
   top: 50%;
   left: 50%;
+  opacity: 1;
   
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -122,7 +123,7 @@ Login Box
 }
 
 .box-login-tab {
-	width: 50%;
+	width: 60%;
 	height: 40px;
 	background: #fdfdfd;
 	position: relative;
@@ -146,7 +147,7 @@ Login Box
 }
 
 .box-login-title {
-	width: 35%;
+	width: 45%;
 	height: 40px;
 	position: absolute;
 	float: left;
@@ -156,7 +157,7 @@ Login Box
 .box-login {
   position: relative;
   top: -4px;
-  width: 320px;
+  width: 380px;
   background: #fdfdfd;
   text-align: center;
   overflow: hidden;

@@ -44,7 +44,7 @@
   <h4 class="my-5">Otras sugerencias</h4>
   <div class="row">
     @foreach($comercioPrioridad as $comercio)
-    <div class="col-3">
+    <div class="col-3" onclick="mostrarComercio({{$comercio->id}})">
     @foreach ($imagenList as $imagen)
       @if($comercio->id == $imagen->comercio_id)
       <img class="img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
@@ -58,6 +58,12 @@
   </div>
 </div>
 
+
+<script>
+      function mostrarComercio(id) {
+        location.href = "/comercio/public/" + id;
+    }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
