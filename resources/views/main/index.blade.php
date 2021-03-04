@@ -39,8 +39,7 @@
                 <div class="b1-center">
                     <div class="b1-text">
                         <h2>
-                            {{$comercio->nombre}}
-                            <strong>{{$comercio->ubicacion}}</strong>
+                            <strong>{{$comercio->nombre}}</strong>
                         </h2>
                     </div>
                     <a href="/comercio/public/{{$comercio->id}}" class="g-button">
@@ -94,11 +93,11 @@
         <div class="col-5 p-0 m-3 mb-4 border">
             @foreach ($imagenList as $imagen)
             @if($lugar->id == $imagen->lugar_id)
-            <img class="img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+            <img class="lugares img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
             @break
             @endif
             @endforeach
-            <h3 class="p-3">{{$lugar->nombre}}</h3>
+            <h3 class="p-3 pb-0"><strong>{{$lugar->nombre}}</strong></h3>
             <div class="p-3 pt-0">{{$lugar->descripcion}}</div>
         </div>
         @endforeach
@@ -137,8 +136,6 @@
                 break;
         }
 
-
-        //$(".p-3.pt-0").length()
 
         function ellipsis_box(elemento, max_chars) {
             limite_text = $(elemento).text();

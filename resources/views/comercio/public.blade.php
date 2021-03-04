@@ -1,13 +1,14 @@
 @extends("layouts.main")
 
 @section("librerias")
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <link rel="stylesheet" href="/../../assets/css/public.css">
 @endsection
 
 @section("content")
 
-<div class="container mb-5">
+<div class="container mb-5 p-0">
   <div class="row d-inline">
     <h1 class="d-block">{{$comercio->nombre}}</h1>
   </div>
@@ -44,13 +45,13 @@
   <h4 class="my-5">Otras sugerencias</h4>
   <div class="row">
     @foreach($comercioPrioridad as $comercio)
-    <div class="col-3" onclick="mostrarComercio({{$comercio->id}})">
-    @foreach ($imagenList as $imagen)
+    <div class="col border mx-1 p-0" onclick="mostrarComercio({{$comercio->id}})">
+      @foreach ($imagenList as $imagen)
       @if($comercio->id == $imagen->comercio_id)
       <img class="img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
       @break
       @endif
-    @endforeach
+      @endforeach
       <h5 class="p-2">{{$comercio->nombre ?? ''}}</h5>
       <p class="descripcion p-2">{{$comercio->descripcion ?? ''}}</p>
     </div>
@@ -60,9 +61,28 @@
 
 
 <script>
-      function mostrarComercio(id) {
-        location.href = "/comercio/public/" + id;
+  function mostrarComercio(id) {
+    location.href = "/comercio/public/" + id;
+  }
+
+
+  $(document).ready(function() {
+
+    function ellipsis_box(elemento, max_chars) {
+      limite_text = $(elemento).text();
+      if (limite_text.length > max_chars) {
+        limite = limite_text.substr(0, max_chars) + " ...";
+        $(elemento).text(limite);
+      }
+      limite_text = "";
+      limite = "";
     }
+
+    $(".descripcion").each(function(index, e) {
+      ellipsis_box(this, 100);
+    });
+
+  });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

@@ -25,6 +25,10 @@ html{
     box-shadow: initial !important;
 }
 
+.lugares.img-responsive{
+  height: 25rem;
+}
+
 .descripcion{
     word-wrap: break-word;
     text-overflow: ellipsis;

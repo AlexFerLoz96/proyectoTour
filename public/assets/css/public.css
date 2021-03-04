@@ -13,8 +13,6 @@
     height: 10rem;
 }
 
-div.col-3{
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+div.col.border:hover{
+    cursor: pointer;
 }

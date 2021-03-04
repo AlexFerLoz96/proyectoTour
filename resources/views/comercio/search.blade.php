@@ -5,7 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 @endsection
 @section("content")
-    <div class="container mx-5">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col mb-2">
                 <p class="fs-2 d-inline">{{$palabraBusqueda}} </p>
