@@ -29,11 +29,9 @@ class ComercioController extends Controller
         $categoriaList = Categoria::all();
 
         $resenaList = DB::table('resenas')
-            ->select(DB::raw('round(avg(puntuacion)) as puntuacion, comercio_id'))
+            ->select(DB::raw('round(avg(puntuacion), 1) as puntuacion, comercio_id'))
             ->groupBy('comercio_id')
             ->get();
-
-        var_dump($resenaList);
 
         $imagenList = Imagen::all();
 
@@ -42,7 +40,7 @@ class ComercioController extends Controller
             ->take(8)
             ->get();
         
-        return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','resenaList','imagenList', 'lugarList'));
+        return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','resenaList','imagenList', 'lugarList', 'contador'));
     }
 
     public function search(Request $r)

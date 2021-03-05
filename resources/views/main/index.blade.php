@@ -70,10 +70,11 @@
             @endforeach
             <h3 class="p-2">{{$comercio->nombre ?? ''}}</h3>
             <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
-            <div class="descripcion p-3" onload="ellipsis_box(elemento, max_chars)">{{$comercio->descripcion ?? ''}}</div>
+            <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
 
             @foreach ($resenaList as $resena)
             @if($comercio->id == $resena->comercio_id)
+            
             <div name="resena" class="resena p-3" data-value="{{$resena->puntuacion}}"></div>
             @break
             @endif
@@ -121,25 +122,25 @@
         function puntuacion(elemento, valor) {
             estrella = "<img style='height:25px;width:25px;' src='/assets/imgs/resena.svg'>";
             estrella_v = "<img style='height:25px;width:25px;opacity:0.4;' src='/assets/imgs/resena.svg'>";
-
+            valorDecimal = valor;
+            valor = Math.round(valor);
             switch (valor) {
                 case 1:
-                    $(elemento).html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + " 1/5");
+                    $(elemento).html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + valorDecimal);
                     break;
                 case 2:
-                    $(elemento).html(estrella + estrella + estrella_v + estrella_v + estrella_v + " 2/5");
+                    $(elemento).html(estrella + estrella + estrella_v + estrella_v + estrella_v + valorDecimal);
                     break;
                 case 3:
-                    $(elemento).html(estrella + estrella + estrella + estrella_v + estrella_v + " 3/5");
+                    $(elemento).html(estrella + estrella + estrella + estrella_v + estrella_v + valorDecimal);
                     break;
                 case 4:
-                    $(elemento).html(estrella + estrella + estrella + estrella + estrella_v + " 4/5");
+                    $(elemento).html(estrella + estrella + estrella + estrella + estrella_v + valorDecimal);
                     break;
                 case 5:
-                    $(elemento).html(estrella + estrella + estrella + estrella + estrella + " 5/5");
+                    $(elemento).html(estrella + estrella + estrella + estrella + estrella + valorDecimal);
                     break;
             }
-            valor = 0;
         }
 
         $(".resena").each(function(index, e) {
