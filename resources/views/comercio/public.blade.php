@@ -42,7 +42,7 @@
 
   <h5 class="">{{$comercio->descripcion}}</h5>
 
-  <h4 class="my-5">Otras sugerencias</h4>
+  <h4 class="text-center my-5">Otras sugerencias</h4>
   <div class="row">
     @foreach($comercioPrioridad as $comercio)
     <div class="col border mx-1 p-0" onclick="mostrarComercio({{$comercio->id}})">
@@ -59,6 +59,46 @@
     </div>
     @endforeach
   </div>
+  <div class="row">
+    @isset($resena)
+    <form action="{{ route('resena.update', ['id' => $resena->id]) }}" method="POST">
+      @method("PUT")
+      @else
+      <form action="{{ route('resena.store') }}" method="POST">
+          @endisset
+          @csrf
+          <div class="form-group">
+            <label for="comentario">Comentario</label>
+            <input type="textarea" name="comentario" value="{{$resena->comentario ?? '' }}"><br>
+
+          </div>
+          <div class="form-group">
+            
+            <label for="puntuacion">Puntuación</label>
+            <input type="number" min="1" max="5" name="puntuacion" value="{{$resena->puntuacion ?? ''}}"><br>
+
+          </div>
+          Fecha: <input type="date" name="fecha" value="{{$resena->fecha ?? '' }}"> <br>
+          <input type="submit">
+      </form>
+  </div>
+
+  <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="alejandro@gmail.com">
+  </div>
+  <div class="form-group">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Escriba una opinión</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+  </div>
+  <button type="button" class="btn btn-outline-success">Success</button>
+
+</form>
+
 </div>
 
 

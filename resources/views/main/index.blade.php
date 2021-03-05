@@ -62,7 +62,9 @@
         <div class="col-3 mx-4 my-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
             @foreach ($imagenList as $imagen)
             @if($comercio->id == $imagen->comercio_id)
-            <img class="img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+            <div class="imagen-cont">
+                <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+            </div>
             @break
             @endif
             @endforeach
@@ -115,32 +117,37 @@
         location.href = "/comercio/public/" + id;
     }
     $(document).ready(function() {
-        valor = $(".resena").data("value");
-        estrella = "<img style='height:25px;width:25px;' src='/assets/imgs/resena.svg'>";
-        estrella_v = "<img style='height:25px;width:25px;opacity:0.4;' src='/assets/imgs/resena.svg'>"
-        switch (valor) {
-            case 1:
-                $(".resena").html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + " 1/5");
-                break;
-            case 2:
-                $(".resena").html(estrella + estrella + estrella_v + estrella_v + estrella_v + " 2/5");
-                break;
-            case 3:
-                $(".resena").html(estrella + estrella + estrella + estrella_v + estrella_v) + " 3/5";
-                break;
-            case 4:
-                $(".resena").html(estrella + estrella + estrella + estrella + estrella_v + " 4/5");
-                break;
-            case 5:
-                $(".resena").html(estrella + estrella + estrella + estrella + estrella + " 5/5");
-                break;
-        }
+
+        $(".resena").each(function(indice, e) {
+            valor = $(".resena").data("value");
+            estrella = "<img style='height:25px;width:25px;' src='/assets/imgs/resena.svg'>";
+            estrella_v = "<img style='height:25px;width:25px;opacity:0.4;' src='/assets/imgs/resena.svg'>"
+
+            switch (valor) {
+                case 1:
+                    $(".resena").html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + " 1/5");
+                    break;
+                case 2:
+                    $(".resena").html(estrella + estrella + estrella_v + estrella_v + estrella_v + " 2/5");
+                    break;
+                case 3:
+                    $(".resena").html(estrella + estrella + estrella + estrella_v + estrella_v) + " 3/5";
+                    break;
+                case 4:
+                    $(".resena").html(estrella + estrella + estrella + estrella + estrella_v + " 4/5");
+                    break;
+                case 5:
+                    $(".resena").html(estrella + estrella + estrella + estrella + estrella + " 5/5");
+                    break;
+            }
+        });
+
 
 
         function ellipsis_box(elemento, max_chars) {
             limite_text = $(elemento).text();
             if (limite_text.length > max_chars) {
-                limite = limite_text.substr(0, max_chars) + " ...";
+                limite = limite_text.substr(0, max_chars) + "...";
                 $(elemento).text(limite);
             }
             limite_text = "";
@@ -151,12 +158,12 @@
             ellipsis_box(this, 130);
         });
 
-        $(window).on('resize', function(){
+        $(window).on('resize', function() {
             var win = $(this); //this = window
-            if (win.width() <= 973) {  
-                $(".col-3").attr("class","col-8 mx-4 my-5 border shadow rounded");
-            }else
-                $(".col-8").attr("class","col-3 mx-4 my-5 border shadow rounded");
+            if (win.width() <= 973) {
+                $(".col-3").attr("class", "col-8 mx-4 my-5 border shadow rounded");
+            } else
+                $(".col-8").attr("class", "col-3 mx-4 my-5 border shadow rounded");
         });
     });
 

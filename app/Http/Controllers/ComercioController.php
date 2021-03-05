@@ -28,7 +28,12 @@ class ComercioController extends Controller
 
         $categoriaList = Categoria::all();
 
-        $resenaList = Resena::all();
+        $resenaList = DB::table('resenas')
+            ->select(DB::raw('round(avg(puntuacion)) as puntuacion, comercio_id'))
+            ->groupBy('comercio_id')
+            ->get();
+
+        var_dump($resenaList);
 
         $imagenList = Imagen::all();
 
@@ -69,22 +74,6 @@ class ComercioController extends Controller
 
 
         return view('comercio.search', compact('categoriaList', 'consultaComercio','imagenList', 'palabraBusqueda', 'contador'));
-    }
-
-    public function listaComercioCategoria(Request $r){
-        $nombreCategoria = $r->get('nombreCategoria');
-
-        $categoriaId = DB::table('categorias')
-            ->select('categorias.id')
-            ->where($nombreCategoria, '=', 'categorias.nombre')
-            ->get();
-
-            var_dump($categoriaId);
-        /*$comercioCategoriaList = DB::table('comercios')
-            ->select('comercios.*')
-            ->where*/
-            
-        return view('comercio.search');
     }
 
     public function index()

@@ -14,7 +14,6 @@
         @csrf
         resena ruta:<input type="text" name="comentario" value="{{$resena->comentario ?? '' }}"><br>
         Puntuacion: <input type="number" min="1" max="5" name="puntuacion" value="{{$resena->puntuacion ?? ''}}"><br>
-        Fecha: <input type="date" name="fecha" value="{{$resena->fecha ?? '' }}"> <br>
         Usuario: <select name="user_id" id="">
             <option >-- Seleccionar usuario --</option>
             @foreach($userList as $user)

@@ -34,7 +34,7 @@
 
                             <!-- Password -->
                             <p class='field'>
-                                <x-label for="password" :value="__('Password')" />
+                                <x-label for="password" :value="__('Contraseña')" />
 
                                 <input id="pass" class="block mt-1 w-full" title="Password" type="password" name="password" required autocomplete="current-password" />
                                 <span id='valida' class='i i-close'></span>

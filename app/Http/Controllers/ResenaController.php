@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Resena;
 use App\Models\Comercio;
 use App\Models\User;
+use Illuminate\Support\Carbon;
 
 class ResenaController extends Controller
 {
@@ -46,7 +47,7 @@ class ResenaController extends Controller
         $resena = new Resena();
         $resena->comentario = $r->comentario;
         $resena->puntuacion = $r->puntuacion;
-        $resena->fecha = $r->fecha;
+        $resena->fecha = Carbon::now()->format('Y-m-d');
         $resena->user_id = $r->user_id;
         $resena->comercio_id = $r->comercio_id;
         $resena->save();
@@ -93,7 +94,6 @@ class ResenaController extends Controller
         $resena = Resena::find($r->id);
         $resena->comentario = $r->comentario;
         $resena->puntuacion = $r->puntuacion;
-        $resena->fecha = $r->fecha;
         $resena->user_id = $r->user_id;
         $resena->comercio_id = $r->comercio_id;
         $resena->save();

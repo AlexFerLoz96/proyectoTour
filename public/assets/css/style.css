@@ -40,8 +40,20 @@ html{
         animation-duration: 450ms;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
-      
 }
+
+.imagen-cont{
+  overflow: hidden;
+}
+
+.zoom {
+  transition: transform 0.5s; 
+}
+
+.zoom:hover {
+  transform: scale(1.2, 1.2); 
+}
+
 
 @keyframes bounceIn{
     0%{
