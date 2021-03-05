@@ -118,31 +118,34 @@
     }
     $(document).ready(function() {
 
-        $(".resena").each(function(indice, e) {
-            valor = $(".resena").data("value");
+        function puntuacion(elemento, valor) {
             estrella = "<img style='height:25px;width:25px;' src='/assets/imgs/resena.svg'>";
-            estrella_v = "<img style='height:25px;width:25px;opacity:0.4;' src='/assets/imgs/resena.svg'>"
+            estrella_v = "<img style='height:25px;width:25px;opacity:0.4;' src='/assets/imgs/resena.svg'>";
 
             switch (valor) {
                 case 1:
-                    $(".resena").html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + " 1/5");
+                    $(elemento).html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + " 1/5");
                     break;
                 case 2:
-                    $(".resena").html(estrella + estrella + estrella_v + estrella_v + estrella_v + " 2/5");
+                    $(elemento).html(estrella + estrella + estrella_v + estrella_v + estrella_v + " 2/5");
                     break;
                 case 3:
-                    $(".resena").html(estrella + estrella + estrella + estrella_v + estrella_v) + " 3/5";
+                    $(elemento).html(estrella + estrella + estrella + estrella_v + estrella_v + " 3/5");
                     break;
                 case 4:
-                    $(".resena").html(estrella + estrella + estrella + estrella + estrella_v + " 4/5");
+                    $(elemento).html(estrella + estrella + estrella + estrella + estrella_v + " 4/5");
                     break;
                 case 5:
-                    $(".resena").html(estrella + estrella + estrella + estrella + estrella + " 5/5");
+                    $(elemento).html(estrella + estrella + estrella + estrella + estrella + " 5/5");
                     break;
             }
+            valor = 0;
+        }
+
+        $(".resena").each(function(index, e) {
+            valor = $(this).data("value");
+            puntuacion(this, valor);
         });
-
-
 
         function ellipsis_box(elemento, max_chars) {
             limite_text = $(elemento).text();
