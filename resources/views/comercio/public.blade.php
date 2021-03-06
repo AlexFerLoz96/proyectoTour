@@ -2,8 +2,10 @@
 
 @section("librerias")
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <link rel="stylesheet" href="/../../assets/css/public.css">
+
 @endsection
 
 @section("content")
@@ -64,6 +66,8 @@
     <form action="{{ route('resena.update', ['id' => $resena->id]) }}" method="POST">
       @method("PUT")
       @else
+      <div class="cont">
+      <div class="stars">
       <form action="{{ route('resena.store') }}" method="POST">
           @endisset
           @csrf
@@ -73,14 +77,28 @@
 
           </div>
           <div class="form-group">
+            <!----------STARS----------->
             
+                    <input class="star star-5" id="star-5" type="radio" name="puntuacion"/>
+                    <label class="star star-5" for="star-5"></label>
+                    <input class="star star-4" id="star-4" type="radio" name="puntuacion"/>
+                    <label class="star star-4" for="star-4"></label>
+                    <input class="star star-3" id="star-3" type="radio" name="puntuacion"/>
+                    <label class="star star-3" for="star-3"></label>
+                    <input class="star star-2" id="star-2" type="radio" name="puntuacion"/>
+                    <label class="star star-2" for="star-2"></label>
+                    <input class="star star-1" id="star-1" type="radio" name="puntuacion"/>
+                    <label class="star star-1" for="star-1"></label>
+            
+            <!-------------------------->
             <label for="puntuacion">Puntuación</label>
             <input type="number" min="1" max="5" name="puntuacion" value="{{$resena->puntuacion ?? ''}}"><br>
-
           </div>
           Fecha: <input type="date" name="fecha" value="{{$resena->fecha ?? '' }}"> <br>
           <input type="submit">
       </form>
+    </div>  
+            </div>
   </div>
 
   <form>
