@@ -30,8 +30,7 @@ html{
 }
 
 .descripcion{
-    word-wrap: break-word;
-    text-overflow: ellipsis;
+  min-height: 8rem;
 }
 
 .col-3,.col-8{

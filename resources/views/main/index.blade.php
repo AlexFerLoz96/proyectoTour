@@ -76,7 +76,7 @@
             @foreach ($resenaList as $resena)
             @if($comercio->id == $resena->comercio_id)
             
-            <div name="resena" class="resena p-3" data-value="{{$resena->puntuacion}}"></div>
+                <div name="resena" class="resena absolute-bottom p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
             @break
             @endif
             @endforeach
@@ -121,8 +121,8 @@
     $(document).ready(function() {
 
         function puntuacion(elemento, valor) {
-            estrella = "<img style='height:25px;width:25px;' src='/assets/imgs/resena.svg'>";
-            estrella_v = "<img style='height:25px;width:25px;opacity:0.4;' src='/assets/imgs/resena.svg'>";
+            estrella = "<img style='width:1.4rem;' src='/assets/imgs/resena.svg'>";
+            estrella_v = "<img style='width:1.4rem; opacity:0.4;' src='/assets/imgs/resena.svg'>";
             valorDecimal = valor;
             valor = Math.round(valor);
             switch (valor) {
