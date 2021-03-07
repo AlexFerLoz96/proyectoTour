@@ -83,17 +83,17 @@
       </form>
   </div>
 
-  <form>
-  <div class="form-group">
+  <form class="border p-4">
+  <div class="form-group mb-4">
     <label for="exampleFormControlInput1">Email</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="alejandro@gmail.com">
+    <input type="email" class="form-control my-2" id="exampleFormControlInput1" placeholder="alejandro@gmail.com">
   </div>
   <div class="form-group">
     
   </div>
-  <div class="form-group">
+  <div class="form-group mb-4">
     <label for="exampleFormControlTextarea1">Escriba una opinión</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+    <textarea class="form-control my-2" id="exampleFormControlTextarea1" rows="4"></textarea>
   </div>
   <button type="button" class="btn btn-outline-success">Success</button>
 
