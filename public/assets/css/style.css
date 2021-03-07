@@ -33,13 +33,6 @@ html{
   min-height: 8rem;
 }
 
-.col-3,.col-8{
-        opacity: 0;
-        animation-name: bounceIn;
-        animation-duration: 450ms;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
-}
 
 .imagen-cont{
   overflow: hidden;
@@ -53,22 +46,62 @@ html{
   transform: scale(1.2, 1.2); 
 }
 
+/*Animación principal*/
+nav{
+  animation-name: animNav;
+  animation-duration: 1000ms;
+  animation-timing-function:cubic-bezier(.64,.02,.21,.98);
+  z-index: 100;
+}
+.seccion1{
+  animation-name: animSeccion1;
+  animation-duration: 1000ms;
+  animation-delay: 750ms;
+  animation-timing-function:cubic-bezier(.64,.02,.21,.98);
+}
+.seccion2{
+  animation-name: animSeccion2;
+  animation-duration: 1000ms;
+  animation-delay: 1500ms;
+  animation-timing-function:cubic-bezier(.64,.02,.21,.98);
+}
 
-@keyframes bounceIn{
-    0%{
-      opacity: 0;
-      transform: scale(0.3) translate3d(0,0,0);
-    }
-    50%{
-      opacity: 0.9;
-      transform: scale(1.1);
-    }
-    80%{
-      opacity: 1;
-      transform: scale(0.89);
-    }
-    100%{
-      opacity: 1;
-      transform: scale(1) translate3d(0,0,0);
-    }
+
+@keyframes animNav{
+  0%{
+    position: relative;
+    top:-10%;
+    opacity: 0;
   }
+  100%{
+    position: relative;
+    top:0%;
+    opacity: 1;
+  }
+}
+
+@keyframes animSeccion1{
+  0%{
+    position: relative;
+    top:-10%;
+    opacity: 0;
+  }
+  100%{
+    position: relative;
+    top:0%;
+    opacity: 1;
+  }
+}
+
+@keyframes animSeccion2{
+  0%{
+    position: relative;
+    top:-10%;
+    opacity: 0;
+  }
+  100%{
+    position: relative;
+    top:0%;
+    opacity: 1;
+  }
+}
