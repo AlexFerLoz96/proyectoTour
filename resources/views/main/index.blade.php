@@ -80,7 +80,7 @@
                 @foreach ($resenaList as $resena)
                 @if($comercio->id == $resena->comercio_id)
 
-                <div name="resena" class="resena absolute-bottom p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
+                <div class="resena absolute-bottom p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
                 @break
                 @endif
                 @endforeach

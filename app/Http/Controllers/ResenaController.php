@@ -51,7 +51,7 @@ class ResenaController extends Controller
         $resena->user_id = 1; //Modificar por variable de session de usuario
         $resena->comercio_id = $r->comercio_id;
         $resena->save();
-        return redirect()->route('resena.index');
+        return redirect()->route('comercio.public',$r->comercio_id);
     }
 
     /**
