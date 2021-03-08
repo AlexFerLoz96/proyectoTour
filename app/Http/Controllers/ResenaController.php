@@ -48,7 +48,7 @@ class ResenaController extends Controller
         $resena->comentario = $r->comentario;
         $resena->puntuacion = $r->puntuacion;
         $resena->fecha = Carbon::now()->format('Y-m-d');
-        $resena->user_id = $r->user_id;
+        $resena->user_id = 1; //Modificar por variable de session de usuario
         $resena->comercio_id = $r->comercio_id;
         $resena->save();
         return redirect()->route('resena.index');

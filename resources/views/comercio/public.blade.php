@@ -61,60 +61,31 @@
     </div>
     @endforeach
   </div>
-  <div class="row">
-    @isset($resena)
-    <form action="{{ route('resena.update', ['id' => $resena->id]) }}" method="POST">
-      @method("PUT")
-      @else
-      
-      <form action="{{ route('resena.store') }}" method="POST">
-          @endisset
-          @csrf
-          <div class="form-group">
-            <label for="comentario">Comentario</label>
-            <input type="textarea" name="comentario" value="{{$resena->comentario ?? '' }}"><br>
 
-          </div>
-          <div class="form-group">
-           
-            <label for="puntuacion">Puntuación</label>
-            <input type="number" min="1" max="5" name="puntuacion" value="{{$resena->puntuacion ?? ''}}"><br>
-          </div>
-          Fecha: <input type="date" name="fecha" value="{{$resena->fecha ?? '' }}"> <br>
-          <input type="submit">
-      </form>
-    </div>  
-  </div>
+  <form action="{{ route('resena.store') }}" method="POST" class="border p-4">
+  @csrf
+  <label style="width: 100%;" for="exampleFormControlTextarea1">Escriba una opinión:</label>
+    <input type="hidden" name="comercio_id" value="{{$comercio->id}}">
+    <div class="stars" id="stars" >
+      <input class="star star-5" id="star-5" type="radio" name="puntuacion" value="5"/>
+      <label class="star star-5" for="star-5"></label>
+      <input class="star star-4" id="star-4" type="radio" name="puntuacion" value="4"/>
+      <label class="star star-4" for="star-4"></label>
+      <input class="star star-3" id="star-3" type="radio" name="puntuacion" value="3"/>
+      <label class="star star-3" for="star-3"></label>
+      <input class="star star-2" id="star-2" type="radio" name="puntuacion" value="2"/>
+      <label class="star star-2" for="star-2"></label>
+      <input class="star star-1" id="star-1" type="radio" name="puntuacion" value="1"/>
+      <label class="star star-1" for="star-1"></label>
+    </div>
+    <div class="form-group mb-4">
+      <textarea class="form-control my-2" name="comentario" placeholder="Escriba su comentario..." id="exampleFormControlTextarea1" rows="4"></textarea>
+      <button type="submit" class="btn btn-outline-success">Success</button>
+    </div>
 
-  <form class="border p-4">
-  <div class="form-group mb-4">
-    <label for="exampleFormControlInput1">Email</label>
-    <input type="email" class="form-control my-2" id="exampleFormControlInput1" placeholder="alejandro@gmail.com">
-  </div>
-  <div class="form-group">
-    
-  </div>
-  <div class="form-group mb-4">
-    <label for="exampleFormControlTextarea1">Escriba una opinión</label>
-    <textarea class="form-control my-2" id="exampleFormControlTextarea1" rows="4"></textarea>
-  </div>
-        <!----------STARS----------->
-        <div class="stars">     
-        <input class="star star-5" id="star-5" type="radio" name="puntuacion"/>
-        <label class="star star-5" for="star-5"></label>
-        <input class="star star-4" id="star-4" type="radio" name="puntuacion"/>
-        <label class="star star-4" for="star-4"></label>
-        <input class="star star-3" id="star-3" type="radio" name="puntuacion"/>
-        <label class="star star-3" for="star-3"></label>
-        <input class="star star-2" id="star-2" type="radio" name="puntuacion"/>
-        <label class="star star-2" for="star-2"></label>
-        <input class="star star-1" id="star-1" type="radio" name="puntuacion"/>
-        <label class="star star-1" for="star-1"></label>
-        </div>
-        <!-------------------------->
-  <button type="button" class="btn btn-outline-success">Success</button>
+  </form>
+</div>
 
-</form>
 
 </div>
 
