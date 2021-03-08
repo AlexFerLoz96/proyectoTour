@@ -17,7 +17,7 @@
 
 
 @section("content")
-<div class="seccion1">
+<section class="seccion1">
 <section class="b1">
     <div class="b1-slider">
 
@@ -53,8 +53,7 @@
     </div>
     </div>
 </section>
-</div>
-<div class="seccion2">
+
 <h2 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
 
 <div class="container">
@@ -109,7 +108,8 @@
 
     </div>
 </div>
-</div>
+
+</section>
 
 
 
