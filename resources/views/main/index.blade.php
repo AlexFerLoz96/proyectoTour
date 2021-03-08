@@ -18,96 +18,101 @@
 
 @section("content")
 <section class="seccion1">
-<section class="b1">
-    <div class="b1-slider">
+    <section class="b1">
+        <div class="b1-slider">
 
-        @foreach($comercioPrioridad as $comercio)
-        <div class="b1-slide">
-            <div class="b1-bg">
+            @foreach($comercioPrioridad as $comercio)
+            <div class="b1-slide">
+                <div class="b1-bg">
+                    @foreach ($imagenList as $imagen)
+                    @if($comercio->id == $imagen->comercio_id)
+
+                    <img class="img-responsive w-100" style="height:100%;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                    @break
+                    @endif
+                    @endforeach
+
+                </div>
+                <div class="wancho b1-cnt">
+                    <figure class="b1-lanza-video">
+                        <i class="icon-SVG-11"></i>
+                    </figure>
+                    <div class="b1-center">
+                        <div class="b1-text">
+                            <h2>
+                                <strong>{{$comercio->nombre}}</strong>
+                            </h2>
+                        </div>
+                        <a href="/comercio/public/{{$comercio->id}}" class="g-button">
+                            <span>LEER MÁS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        </div>
+    </section>
+
+    <h1 class="mt-5 text-center" id="titulo"><u>Mejores sitios para visitar en Almería</u></h1>
+
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            @foreach ($comercioList as $comercio)
+            <div class="col-3 mx-4 my-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
                 @foreach ($imagenList as $imagen)
                 @if($comercio->id == $imagen->comercio_id)
-
-                <img class="img-responsive w-100" style="height:100%;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                <div class="imagen-cont">
+                    <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                </div>
                 @break
                 @endif
                 @endforeach
+                <h3 class="p-3">{{$comercio->nombre ?? ''}}</h3>
+                <svg style="margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
+                </svg>
+                <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
+                <div class="p-2"><svg style="margin-right: 0.6rem;" aria-hidden="true" width="25" focusable="false" data-prefix="fas" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x">
+                        <path fill="#0d6efd" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" class=""></path>
+                    </svg>{{$comercio->ubicacion ?? ''}}</div>
 
-            </div>
-            <div class="wancho b1-cnt">
-                <figure class="b1-lanza-video">
-                    <i class="icon-SVG-11"></i>
-                </figure>
-                <div class="b1-center">
-                    <div class="b1-text">
-                        <h2>
-                            <strong>{{$comercio->nombre}}</strong>
-                        </h2>
-                    </div>
-                    <a href="/comercio/public/{{$comercio->id}}" class="g-button">
-                        <span>LEER MÁS</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        @endforeach
-    </div>
-    </div>
-</section>
+                @foreach ($resenaList as $resena)
+                @if($comercio->id == $resena->comercio_id)
 
-<h2 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
-
-<div class="container">
-    <div class="row justify-content-center">
-        @foreach ($comercioList as $comercio)
-        <div class="col-3 mx-4 my-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
-            @foreach ($imagenList as $imagen)
-            @if($comercio->id == $imagen->comercio_id)
-            <div class="imagen-cont">
-                <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
-            </div>
-            @break
-            @endif
-            @endforeach
-            <h3 class="p-2">{{$comercio->nombre ?? ''}}</h3>
-            <div class="p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
-            <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
-
-            @foreach ($resenaList as $resena)
-            @if($comercio->id == $resena->comercio_id)
-            
                 <div name="resena" class="resena absolute-bottom p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
-            @break
-            @endif
+                @break
+                @endif
+                @endforeach
+            </div>
             @endforeach
         </div>
-        @endforeach
     </div>
-</div>
 
-<div class="container mt-5">
-    <hr>
-    <h2 class="my-6 mt-5 text-center">Sitios que tienes que visitar en Almería</h2>
-    <p class="text-center my-5">Una visita a la provincia de Almería ofrece todo lo necesario para unas vacaciones perfectas.
-        Aventúrate en su escarpado paisaje para disfrutar de sus maravillas naturales,
-        desenchufa en su larguísimas y sublimes playas y mézclate con los lugareños en la histórica ciudad de Almería.
-    </p>
-    <div class="row justify-content-center">
-        @foreach($lugarList as $lugar)
-        <div class="col-5 p-0 m-3 mb-4 border">
-            @foreach ($imagenList as $imagen)
-            @if($lugar->id == $imagen->lugar_id)
-            <img class="lugares img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
-            @break
-            @endif
+    <div class="container mt-5">
+        <hr>
+        <h2 class="my-6 mt-5 text-center">Sitios que tienes que visitar en Almería</h2>
+        <p class="text-center my-5">Una visita a la provincia de Almería ofrece todo lo necesario para unas vacaciones perfectas.
+            Aventúrate en su escarpado paisaje para disfrutar de sus maravillas naturales,
+            desenchufa en su larguísimas y sublimes playas y mézclate con los lugareños en la histórica ciudad de Almería.
+        </p>
+        <div class="row justify-content-center text-center">
+            @foreach($lugarList as $lugar)
+            <div class="col-5 p-0 m-3 mb-4 border">
+                @foreach ($imagenList as $imagen)
+                @if($lugar->id == $imagen->lugar_id)
+                <img class="lugares img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                @break
+                @endif
+                @endforeach
+                <h3 class="p-3 pb-3"><strong>{{$lugar->nombre}}</strong></h3>
+                <div class="p-3 pt-0">{{$lugar->descripcion}}</div>
+            </div>
             @endforeach
-            <h3 class="p-3 pb-0"><strong>{{$lugar->nombre}}</strong></h3>
-            <div class="p-3 pt-0">{{$lugar->descripcion}}</div>
+
+
         </div>
-        @endforeach
-
-
     </div>
-</div>
 
 </section>
 
@@ -127,19 +132,19 @@
             valor = Math.round(valor);
             switch (valor) {
                 case 1:
-                    $(elemento).html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + valorDecimal);
+                    $(elemento).html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
                     break;
                 case 2:
-                    $(elemento).html(estrella + estrella + estrella_v + estrella_v + estrella_v + valorDecimal);
+                    $(elemento).html(estrella + estrella + estrella_v + estrella_v + estrella_v + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
                     break;
                 case 3:
-                    $(elemento).html(estrella + estrella + estrella + estrella_v + estrella_v + valorDecimal);
+                    $(elemento).html(estrella + estrella + estrella + estrella_v + estrella_v + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
                     break;
                 case 4:
-                    $(elemento).html(estrella + estrella + estrella + estrella + estrella_v + valorDecimal);
+                    $(elemento).html(estrella + estrella + estrella + estrella + estrella_v + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
                     break;
                 case 5:
-                    $(elemento).html(estrella + estrella + estrella + estrella + estrella + valorDecimal);
+                    $(elemento).html(estrella + estrella + estrella + estrella + estrella + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
                     break;
             }
         }
