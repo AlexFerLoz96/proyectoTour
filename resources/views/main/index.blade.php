@@ -101,7 +101,7 @@
             <div class="col-5 p-0 m-3 mb-4 border">
                 @foreach ($imagenList as $imagen)
                 @if($lugar->id == $imagen->lugar_id)
-                <img class="lugares img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                <img class="lugares img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/lugares/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
                 @break
                 @endif
                 @endforeach
