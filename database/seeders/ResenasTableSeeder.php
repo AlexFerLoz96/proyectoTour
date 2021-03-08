@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Resena;
+use DB;
 
 class ResenasTableSeeder extends Seeder
 {
@@ -17,7 +19,7 @@ class ResenasTableSeeder extends Seeder
         DB::table('resenas')->insert([
         'comentario' => 'muy bueno',
         'puntuacion' => '4',
-        'fecha' => '10/10/2021',
+        'fecha' => '2021/10/10',
         'user_id' => '1',
         'comercio_id' => '1'
         ]);

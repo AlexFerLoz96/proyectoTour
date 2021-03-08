@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Comercio;
+use DB;
 
 class ComerciosTableSeeder extends Seeder
 {

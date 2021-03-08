@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Lugar;
+use DB;
 
 class LugarsTableSeeder extends Seeder
 {

@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Categoria;
+use DB;
 
 class CategoriasTableSeeder extends Seeder
 {
