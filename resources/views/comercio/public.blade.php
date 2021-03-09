@@ -3,8 +3,7 @@
 @section("librerias")
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <link rel="stylesheet" href="/../../assets/css/public.css">
 
 @endsection
@@ -20,34 +19,26 @@
         <div class="carousel-inner">
             @foreach ($imagenComercio as $imagen)
             <div class="carousel-item active w-100">
-                <div class="w-100 h-100"
-                    style="position:absolute;background-image:url('/assets/imgs/comercio/{{$imagen->ruta}}');background-position:center;background-size:100%;filter:blur(5px);background-repeat:no-repeat">
+                <div class="w-100 h-100" style="position:absolute;background-image:url('/assets/imgs/comercio/{{$imagen->ruta}}');background-position:center;background-size:100%;filter:blur(5px);background-repeat:no-repeat">
                 </div>
-                <img src="/assets/imgs/comercio/{{$imagen->ruta}}"
-                    style="position:relative;z-index:2;left:50%;transform:translate(-50%);width:70%;"
-                    class="d-block h-100" alt="...">
+                <img src="/assets/imgs/comercio/{{$imagen->ruta}}" style="position:relative;z-index:2;left:50%;transform:translate(-50%);width:70%;" class="d-block h-100" alt="...">
             </div>
             @break
             @endforeach
             @foreach ($imagenComercio as $imagen)
             @continue($loop->first)
             <div class="carousel-item w-100">
-                <div class="w-100 h-100"
-                    style="position:absolute;background-image:url('/assets/imgs/comercio/{{$imagen->ruta}}');background-position:center;background-size:100%;filter:blur(5px);background-repeat:no-repeat">
+                <div class="w-100 h-100" style="position:absolute;background-image:url('/assets/imgs/comercio/{{$imagen->ruta}}');background-position:center;background-size:100%;filter:blur(5px);background-repeat:no-repeat">
                 </div>
-                <img src="/assets/imgs/comercio/{{$imagen->ruta}}"
-                    style="position:relative;z-index:2;left:50%;transform:translate(-50%);width:70%;"
-                    class="d-block h-100" alt="...">
+                <img src="/assets/imgs/comercio/{{$imagen->ruta}}" style="position:relative;z-index:2;left:50%;transform:translate(-50%);width:70%;" class="d-block h-100" alt="...">
             </div>
             @endforeach
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -62,8 +53,7 @@
             @foreach ($imagenList as $imagen)
             @if($comercio->id == $imagen->comercio_id)
             <div class="imagen-cont">
-                <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}"
-                    alt="{{$imagen->descripcion}}">
+                <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
             </div>
             @break
             @endif
@@ -91,8 +81,7 @@
                 <label class="star star-1" for="star-1"></label>
             </div>
             <div class="form-group mb-4">
-                <textarea class="form-control my-2" name="comentario" placeholder="Escriba su comentario..."
-                    id="exampleFormControlTextarea1" rows="4"></textarea>
+                <textarea class="form-control my-2" name="comentario" placeholder="Escriba su comentario..." id="exampleFormControlTextarea1" rows="4"></textarea>
                 <button type="submit" class="btn btn-outline-success">Enviar</button>
             </div>
 
@@ -100,21 +89,27 @@
     </div>
 
     <div class="row justify-content-center">
+        <div class="d-flex align-items-baseline">
+            {{$resenaMedia}}
+            {{$contador}}
+        </div>
         @foreach($resenaList as $resena)
-        <div class="col-8  border mx-1 p-0">
-            <div class="resena">
+        <div class="col-7 mx-1 p-0">
+            <div>
+                <div class="resena d-inline p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
+                <div class="fecha d-inline">{{$resena->fecha}}</div>
+
                 @foreach($usuarioNombre as $user)
                 @if($user->id == $resena->user_id)
                 <div class="usuario">
-                    {{$user->name}}
+                    Realizada por: {{$user->name}}
                 </div>
                 @break
                 @endif
                 @endforeach
-                <div class="resena p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
-                <div class="fecha">{{$resena->fecha}}</div>
-                <div class="comentario">{{$resena->comentario}}</div>
+                <div class="comentario mb-4"><small>{{$resena->comentario}}</small></div>
             </div>
+            <hr>
         </div>
         @endforeach
 
@@ -124,59 +119,58 @@
 
 
 <script>
-function mostrarComercio(id) {
-    location.href = "/comercio/public/" + id;
-}
-
-
-$(document).ready(function() {
-
-    function ellipsis_box(elemento, max_chars) {
-        limite_text = $(elemento).text();
-        if (limite_text.length > max_chars) {
-            limite = limite_text.substr(0, max_chars) + " ...";
-            $(elemento).text(limite);
-        }
-        limite_text = "";
-        limite = "";
+    function mostrarComercio(id) {
+        location.href = "/comercio/public/" + id;
     }
 
-    $(".descripcion").each(function(index, e) {
-        ellipsis_box(this, 100);
-    });
 
-    function puntuacion(elemento, valor) {
-        estrella = "<img style='width:1.4rem;' src='/assets/imgs/resena.svg'>";
-        estrella_v = "<img style='width:1.4rem; opacity:0.4;' src='/assets/imgs/resena.svg'>";
-        switch (valor) {
-            case 1:
-                $(elemento).html(estrella + estrella_v + estrella_v + estrella_v + estrella_v);
-                break;
-            case 2:
-                $(elemento).html(estrella + estrella + estrella_v + estrella_v + estrella_v);
-                break;
-            case 3:
-                $(elemento).html(estrella + estrella + estrella + estrella_v + estrella_v);
-                break;
-            case 4:
-                $(elemento).html(estrella + estrella + estrella + estrella + estrella_v);
-                break;
-            case 5:
-                $(elemento).html(estrella + estrella + estrella + estrella + estrella);
-                break;
+    $(document).ready(function() {
+
+        function ellipsis_box(elemento, max_chars) {
+            limite_text = $(elemento).text();
+            if (limite_text.length > max_chars) {
+                limite = limite_text.substr(0, max_chars) + " ...";
+                $(elemento).text(limite);
+            }
+            limite_text = "";
+            limite = "";
         }
-    }
 
-    $(".resena").each(function(index, e) {
-        valor = $(this).data("value");
-        puntuacion(this, valor);
+        $(".descripcion").each(function(index, e) {
+            ellipsis_box(this, 100);
+        });
+
+        function puntuacion(elemento, valor) {
+            estrella = "<img style='width:1.4rem;' src='/assets/imgs/resena.svg'>";
+            estrella_v = "<img style='width:1.4rem; opacity:0.4;' src='/assets/imgs/resena.svg'>";
+            switch (valor) {
+                case 1:
+                    $(elemento).html(estrella + estrella_v + estrella_v + estrella_v + estrella_v);
+                    break;
+                case 2:
+                    $(elemento).html(estrella + estrella + estrella_v + estrella_v + estrella_v);
+                    break;
+                case 3:
+                    $(elemento).html(estrella + estrella + estrella + estrella_v + estrella_v);
+                    break;
+                case 4:
+                    $(elemento).html(estrella + estrella + estrella + estrella + estrella_v);
+                    break;
+                case 5:
+                    $(elemento).html(estrella + estrella + estrella + estrella + estrella);
+                    break;
+            }
+        }
+
+        $(".resena").each(function(index, e) {
+            valor = $(this).data("value");
+            puntuacion(this, valor);
+        });
+
     });
-
-});
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
 </script>
 
 

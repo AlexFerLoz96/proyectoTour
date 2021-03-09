@@ -126,28 +126,11 @@
     $(document).ready(function() {
 
         function puntuacion(elemento, valor) {
-            estrella = "<img style='width:1.4rem;' src='/assets/imgs/resena.svg'>";
-            estrella_v = "<img style='width:1.4rem; opacity:0.4;' src='/assets/imgs/resena.svg'>";
-            valorDecimal = valor;
-            valor = Math.round(valor);
-            switch (valor) {
-                case 1:
-                    $(elemento).html(estrella + estrella_v + estrella_v + estrella_v + estrella_v + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
-                    break;
-                case 2:
-                    $(elemento).html(estrella + estrella + estrella_v + estrella_v + estrella_v + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
-                    break;
-                case 3:
-                    $(elemento).html(estrella + estrella + estrella + estrella_v + estrella_v + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
-                    break;
-                case 4:
-                    $(elemento).html(estrella + estrella + estrella + estrella + estrella_v + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
-                    break;
-                case 5:
-                    $(elemento).html(estrella + estrella + estrella + estrella + estrella + "<div style='display: inline-block; margin-left: 1rem; font-size: 1.5rem;'>" + valorDecimal + "</div>");
-                    break;
-            }
+            estrella = "<img style='width:10rem;' src='/assets/imgs/estrellas.png'>";
+            estrella_v = "<div style='position:absolute;width:10rem;'><img style='width:10rem; opacity:0.4;' src='/assets/imgs/estrellas.png'></div> ";
+            $(elemento).html("<div style='width:10rem;'>"+estrella_v+"<div style='position:absolute;width:"+valor*2+"rem; overflow:hidden;'>"+estrella + "</div><div style='display: inline-block; right:0; margin-left: 1rem; font-size: 1.5rem;'>" + valor + "</div>");
         }
+        //meter las dos imagenes en un div col y la puntuacion dentro de una row
 
         $(".resena").each(function(index, e) {
             valor = $(this).data("value");

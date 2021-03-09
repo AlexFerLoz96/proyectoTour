@@ -106,4 +106,17 @@ input.star:checked ~ label.star:before {
     height: 125px;
     overflow: visible;
   }
+
+  /************************************** COMENTARIOS  **********************************/
+
+  .resena{
+    padding-left: 0 !important;
+  }
+
+  div.fecha{
+    float: right;
+  }
+
+  div.comentario{
+  }
   

@@ -141,12 +141,20 @@ class ComercioController extends Controller
         ->where('comercio_id','=',"{$id}")
         ->get();
 
+        $resenaMedia = DB::table('resenas')
+        ->select(DB::raw('round(avg(puntuacion), 1) as puntuacion'))
+        ->groupBy('comercio_id')
+        ->where('comercio_id','=',"{$id}")
+        ->get();
+
         $usuarioNombre = DB::table('users')
         ->join('resenas', 'resenas.user_id', '=','users.id')
         ->select('users.*')
         ->get();
 
-        return view('comercio.public', compact('categoriaList','comercio', 'imagenList','imagenComercio', 'comercioPrioridad','resenaList','usuarioNombre'));
+        $contador = $resenaList->count();
+
+        return view('comercio.public', compact('categoriaList','comercio', 'imagenList','imagenComercio', 'resenaMedia', 'comercioPrioridad','resenaList','usuarioNombre', 'contador'));
     }
 
     /**
