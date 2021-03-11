@@ -152,13 +152,7 @@
             ellipsis_box(this, 130);
         });
 
-        $(window).on('resize', function() {
-            var win = $(this); //this = window
-            if (win.width() <= 973) {
-                $(".col-3").attr("class", "col-8 mx-4 my-5 border shadow rounded");
-            } else
-                $(".col-8").attr("class", "col-3 mx-4 my-5 border shadow rounded");
-        });
+        
     });
 
     /*

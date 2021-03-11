@@ -108,6 +108,20 @@ input.star:checked ~ label.star:before {
   }
 
   /************************************** COMENTARIOS  **********************************/
+ 
+
+  .resenaMedia{
+    position: relative;
+    width: 10rem;
+  }
+  .valor{
+    display: inline-block; right:0; margin-left: 1rem; font-size: 1.5rem;
+    transform: translateX(9rem);
+  }
+
+  .comentarios{
+    transform: translateY(-2rem);
+  }
 
   .resena{
     padding-left: 0 !important;
