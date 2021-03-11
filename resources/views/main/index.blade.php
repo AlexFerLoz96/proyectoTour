@@ -54,7 +54,7 @@
         </div>
     </section>
 
-    <h1 class="mt-5 text-center" id="titulo"><u>Mejores sitios para visitar en Almería</u></h1>
+    <h1 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h1>
 
     <div class="container">
         <div class="row justify-content-center text-center">
@@ -65,9 +65,9 @@
                 <div class="imagen-cont">
                     <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
                 </div>
-                @break
                 @endif
                 @endforeach
+                
                 <h3 class="p-3">{{$comercio->nombre ?? ''}}</h3>
                 <svg style="margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
@@ -80,7 +80,7 @@
                 @foreach ($resenaList as $resena)
                 @if($comercio->id == $resena->comercio_id)
 
-                <div class="resena absolute-bottom p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
+                <div class="resena p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
                 @break
                 @endif
                 @endforeach
@@ -126,9 +126,9 @@
     $(document).ready(function() {
 
         function puntuacion(elemento, valor) {
-            estrella = "<img style='width:10rem;' src='/assets/imgs/estrellas.png'>";
-            estrella_v = "<div style='position:absolute;width:10rem;'><img style='width:10rem; opacity:0.4;' src='/assets/imgs/estrellas.png'></div> ";
-            $(elemento).html("<div style='width:10rem;'>"+estrella_v+"<div style='position:absolute;width:"+valor*2+"rem; overflow:hidden;'>"+estrella + "</div><div style='display: inline-block; right:0; margin-left: 1rem; font-size: 1.5rem;'>" + valor + "</div>");
+            estrella = "<img style='z-index:1000;width:10rem;' src='/assets/imgs/estrellas.png'>";
+            estrella_v = "<div style='position:absolute;width:auto;padding:0;'><img style='width:10rem; opacity:0.4;' src='/assets/imgs/estrellas.png'></div> ";
+            $(elemento).html("<div class='row' style='width:10rem;'>"+estrella_v+"<div class='col-12 p-0' style='position:absolute;width:"+valor*2+"rem; overflow:hidden;'>"+estrella + "</div><div class='valor col-12'>" + valor + "</div>");
         }
         //meter las dos imagenes en un div col y la puntuacion dentro de una row
 
