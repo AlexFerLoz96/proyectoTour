@@ -47,9 +47,9 @@
     <h5 class="">{{$comercio->descripcion}}</h5>
 
     <h4 class="text-center my-5">Otras sugerencias</h4>
-    <div class="row">
+    <div class="row mb-4">
         @foreach($comercioPrioridad as $comercio)
-        <div class="col border mx-1 p-0" onclick="mostrarComercio({{$comercio->id}})">
+        <div class="col mx-1 p-0" onclick="mostrarComercio({{$comercio->id}})">
             @foreach ($imagenList as $imagen)
             @if($comercio->id == $imagen->comercio_id)
             <div class="imagen-cont">
@@ -63,7 +63,7 @@
         </div>
         @endforeach
     </div>
-    <div class="row">
+    <div class="row mb-4">
         <form action="{{ route('resena.store') }}" method="POST" class="border p-4">
             @csrf
             <label style="width: 100%;" for="exampleFormControlTextarea1">Escriba una opinión:</label>
@@ -91,10 +91,10 @@
     <div class="row justify-content-center">
         <div class="d-flex align-items-baseline">
             @foreach($resenaMedia as $media)
-                {{$media->puntuacion}}
+            <div>Puntuacion media:{{$media->puntuacion}} basada en {{$contador}}
+                valoraciones</div>
             @endforeach
-            
-            {{$contador}}
+
         </div>
         @foreach($resenaList as $resena)
         <div class="col-7 mx-1 p-0">

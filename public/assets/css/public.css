@@ -111,6 +111,7 @@ input.star:checked ~ label.star:before {
 
   .resena{
     padding-left: 0 !important;
+    width: 10rem;
   }
 
   div.fecha{

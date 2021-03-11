@@ -65,6 +65,7 @@
                 <div class="imagen-cont">
                     <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
                 </div>
+                @break
                 @endif
                 @endforeach
                 
@@ -98,7 +99,7 @@
         </p>
         <div class="row justify-content-center text-center">
             @foreach($lugarList as $lugar)
-            <div class="col-5 p-0 m-3 mb-4 border">
+            <div class="col-xl-5 col-lg-10 col-md-10 col-sm-12 p-0 m-3 mb-4">
                 @foreach ($imagenList as $imagen)
                 @if($lugar->id == $imagen->lugar_id)
                 <img class="lugares img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/lugares/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
