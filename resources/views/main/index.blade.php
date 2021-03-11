@@ -59,7 +59,7 @@
     <div class="container">
         <div class="row justify-content-center text-center">
             @foreach ($comercioList as $comercio)
-            <div class="col-3 mx-4 my-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
+            <div class="col-xl-3 col-lg-5 col-md-8 col-sm-8 mx-4 my-5 p-0 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
                 @foreach ($imagenList as $imagen)
                 @if($comercio->id == $imagen->comercio_id)
                 <div class="imagen-cont">
@@ -69,7 +69,7 @@
                 @endif
                 @endforeach
                 
-                <h3 class="p-3">{{$comercio->nombre ?? ''}}</h3>
+                <h3 class="nombre p-3">{{$comercio->nombre ?? ''}}</h3>
                 <svg style="margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
                 </svg>
@@ -99,7 +99,7 @@
         </p>
         <div class="row justify-content-center text-center">
             @foreach($lugarList as $lugar)
-            <div class="col-xl-5 col-lg-10 col-md-10 col-sm-12 p-0 m-3 mb-4">
+            <div class="col-xl-5 col-lg-9 col-md-10 col-sm-12 p-0 m-3 mb-4">
                 @foreach ($imagenList as $imagen)
                 @if($lugar->id == $imagen->lugar_id)
                 <img class="lugares img-responsive w-100" style="border-radius: initial;" src="/assets/imgs/lugares/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">

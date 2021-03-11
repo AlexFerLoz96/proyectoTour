@@ -23,9 +23,13 @@ html{
   transform: translateX(50%);
 }
 
+.nombre{
+  min-height: 7rem;
+  margin: 0;
+}
 
 
-.col-3:hover,.col-8:hover{
+.col-xl-3.col-lg-5.col-md-8:hover{
     background-color: rgb(248, 248, 248);
     box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.1), 10px 10px 10px rgba(255, 255, 255,0.01) !important;
     -webkit-transform: translateY(-4px);
@@ -47,7 +51,6 @@ html{
 .descripcion{
   min-height: 8rem;
 }
-
 
 .imagen-cont{
   overflow: hidden;

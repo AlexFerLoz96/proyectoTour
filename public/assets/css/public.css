@@ -117,7 +117,4 @@ input.star:checked ~ label.star:before {
   div.fecha{
     float: right;
   }
-
-  div.comentario{
-  }
   
