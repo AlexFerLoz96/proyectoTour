@@ -90,7 +90,10 @@
 
     <div class="row justify-content-center">
         <div class="d-flex align-items-baseline">
-            {{$resenaMedia}}
+            @foreach($resenaMedia as $media)
+                {{$media->puntuacion}}
+            @endforeach
+            
             {{$contador}}
         </div>
         @foreach($resenaList as $resena)
