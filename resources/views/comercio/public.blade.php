@@ -74,7 +74,7 @@
         @endforeach
     </div>
     <div class="row mb-4">
-        <form action="{{ route('resena.store') }}" method="POST" class="border p-4">
+        <form action="{{ route('resena.store') }}" method="POST" class="bg-light border p-4">
             @csrf
             <label style="width: 100%;" for="exampleFormControlTextarea1">Escriba una opinión:</label>
             <input type="hidden" name="comercio_id" value="{{$valor}}">
@@ -102,7 +102,7 @@
     <div class="row justify-content-center">
         <div class="d-flex align-items-baseline">
             @foreach($resenaMedia as $media)
-            <div class="containerMedia row border p-1">
+            <div class="containerMedia row border p-1 bg-light">
                 <div class="resenaMedia col-8 p-3 mb-4" data-value="{{$media->puntuacion}}">
                 </div>
                 <div class="comentarios col-8">{{$contador}} comentarios</div>

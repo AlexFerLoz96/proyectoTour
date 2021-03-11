@@ -100,7 +100,13 @@ input.star:checked ~ label.star:before {
     transition:opacity .25s;
   }
   
-  
+  .col.mx-1{
+    border: 1px solid white;
+  }
+  .col.mx-1:hover{
+    border: 1px solid grey;
+    cursor: pointer;
+  }
   
   input.star:checked ~ .rev-box{
     height: 125px;
@@ -115,12 +121,12 @@ input.star:checked ~ label.star:before {
     width: 10rem;
   }
   .valor{
-    display: inline-block; right:0; margin-left: 1rem; font-size: 1.5rem;
+    display: inline-block; right:0; margin-left: 1rem; font-size: 2.8rem;
     transform: translateX(9rem);
   }
 
   .comentarios{
-    transform: translateY(-2rem);
+    transform: translateY(-4rem);
   }
 
   .resena{
