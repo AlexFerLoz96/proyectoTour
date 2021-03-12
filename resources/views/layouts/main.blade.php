@@ -5,14 +5,34 @@
     @yield('librerias')
 
     <style>
-        .navbar{
+        .navbar {
             height: 5rem;
         }
+
+        #arribaDiv{
+            position: fixed;
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            z-index: 999;
+            right: 2.4rem;
+            bottom: 4.2rem;
+        }
+
+        #arriba{
+            padding: 0.3rem;
+        }
+
+        #arriba:hover{
+            cursor: pointer;
+
+        }
+
     </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid mx-5">
             <a class="navbar-brand" href="/">Tour Almería</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +49,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             @foreach ($categoriaList as $categoria)
-                                <li><a class="dropdown-item" name="busqueda" href="/comercio/search?busqueda={{$categoria->nombre}}">{{$categoria->nombre}}</a></li>
+                            <li><a class="dropdown-item" name="busqueda" href="/comercio/search?busqueda={{$categoria->nombre}}">{{$categoria->nombre}}</a></li>
                             @endforeach
                         </ul>
                     </li>
@@ -56,13 +76,20 @@
             </div>
         </div>
     </nav>
-        @yield('content')
-    
-                    
+    @yield('content')
+
+    <div id="arribaDiv">
+        <svg aria-hidden="true" id="arriba" focusable="false" data-prefix="fad" data-icon="chevron-double-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-chevron-double-up fa-w-14 fa-3x">
+            <g class="fa-group">
+                <path fill="#0d6efd" opacity="0.5" d="M435 420.86a24 24 0 0 1 0 33.94l-22.63 22.67a23.93 23.93 0 0 1-33.85 0L224 323.5l-154.5 154a23.93 23.93 0 0 1-33.85 0L13 454.8a24 24 0 0 1 0-33.94l194-194.33a23.93 23.93 0 0 1 33.88 0z" class="fa-secondary"></path>
+                <path fill="#0d6efd" d="M435 228.86a24 24 0 0 1 0 33.94l-22.63 22.67a23.93 23.93 0 0 1-33.85 0L224 131.5l-154.5 154a23.93 23.93 0 0 1-33.85 0L13 262.8a24 24 0 0 1 0-33.94L207 34.53a23.93 23.93 0 0 1 33.88 0z" class="fa-primary"></path>
+            </g>
+        </svg>
+    </div>
 
 
-        <footer class="position-relative bottom-0 end-0 w-100 bg-dark text-center text-white">
-            <!--<div class="container p-4 pb-0">
+    <footer class="position-relative bottom-0 end-0 w-100 bg-dark text-center text-white">
+        <!--<div class="container p-4 pb-0">
                 <section class="mb-4">
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
 
@@ -78,11 +105,27 @@
                 </section>
             </div>
             -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2021 Copyright:
-                <a class="text-white" href="/">TourAlmeria.com</a>
-            </div>
-        </footer>
-    </body>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" href="/">TourAlmeria.com</a>
+        </div>
+    </footer>
+</body>
+
+<script>
+    $(document).ready(function(){
+        $("#arribaDiv").fadeOut();
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 1500){
+                $("#arribaDiv").fadeIn(1000);
+            } else{
+                $("#arribaDiv").fadeOut();
+            }
+        });
+        $("#arribaDiv").click(function(){
+            window.scrollTo(0, 0);
+        });
+    });
+</script>
 
 </html>

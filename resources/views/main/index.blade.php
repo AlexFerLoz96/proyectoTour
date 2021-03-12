@@ -152,6 +152,20 @@
             ellipsis_box(this, 130);
         });
 
+        function recortarNombre(elemento, max_chars) {
+            limite_text = $(elemento).text();
+            if (limite_text.length > max_chars) {
+                limite = limite_text.substr(0, max_chars) + "...";
+                $(elemento).text(limite);
+            }
+            limite_text = "";
+            limite = "";
+        }
+
+        $(".nombre").each(function(index, e) {
+            recortarNombre(this, 30);
+        });
+
         
     });
 
