@@ -19,14 +19,20 @@
                         <div class="col-4 p-0">
                                 @foreach ($imagenList as $imagen)
                                     @if($comercio->id == $imagen->comercio_id)
-                                        <img class="rounded p-0 w-100 h-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                                        <div class="imagen-cont"><img class="zoom rounded p-0 w-100 h-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}"></div>
                                         @break
                                     @endif
                                 @endforeach
                         </div>
                         <div class="col-8">
                             <div class="d-block p-2"><h3>{{$comercio->nombre ?? ''}}</h3></div>
-                            <div class="d-block p-2"><img src="https://svgsilh.com/svg/1093169.svg" style="height:25px;width:25px;">{{$comercio->ubicacion ?? ''}}</div>
+                            <div class="d-block p-2"><svg style="margin-right: 0.6rem;" aria-hidden="true" width="25" focusable="false"
+            data-prefix="fas" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x">
+            <path fill="#0d6efd"
+                d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+                class=""></path>
+        </svg>{{$comercio->ubicacion ?? ''}}</div>
                             <div class="d-block p-2">{{$comercio->descripcion ?? ''}}</div>
                         </div>
                     </div>

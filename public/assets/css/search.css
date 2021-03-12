@@ -13,9 +13,19 @@
 .row.mb-5:hover{
     background-color: rgb(248, 248, 248);
     box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.1), 10px 10px 10px rgba(255, 255, 255,0.01) !important;
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
     cursor: pointer;
+}
+
+.zoom {
+  transition: transform 0.5s; 
+}
+
+.zoom:hover {
+  transform: scale(1.2, 1.2); 
+}
+
+.imagen-cont{
+  overflow: hidden;
 }
 
 .col-4,.col-8{
