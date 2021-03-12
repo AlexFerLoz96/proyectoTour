@@ -14,12 +14,14 @@
                 <th>Nombre</th>
                 <th></th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
     @foreach ($userList as $user) 
         <tr>
             <td>{{$user->id}}</td>
             <td>{{$user->name}}</td>
+            <td>{{$user->password}}</td>
             <td>{{$user->email}}</td>
             <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-warning">Edit</a></td>
             <td>

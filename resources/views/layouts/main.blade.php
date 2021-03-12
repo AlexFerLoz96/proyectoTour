@@ -6,7 +6,7 @@
 
     <style>
         .navbar {
-            height: 5rem;
+            height: 6rem;
         }
 
         #arribaDiv{
@@ -38,7 +38,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse p-3" id="navbarScroll">
+            <div class="collapse navbar-collapse p-3 bg-light" id="navbarScroll">
                 <ul class="navbar-nav me-auto  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px; margin-right: 5% !important;">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/user">CRUD</a>

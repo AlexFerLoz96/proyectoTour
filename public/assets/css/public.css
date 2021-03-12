@@ -119,20 +119,23 @@ input.star:checked ~ label.star:before {
   /************************************** COMENTARIOS  **********************************/
  
 
-  .resenaMedia{
-    position: relative;
-    width: 10rem;
+  .resenaMedia {
+    transform: translateX(30%);
+  }
+  .comentarios{
+    transform: translate(3.5rem,10rem);
   }
   .valor{
     display: inline-block; 
     right:0; 
-    margin-left: 1rem; 
-    font-size: 2.8rem;
-    transform: translateX(9rem);
-    
+    padding: 0;
+    font-size: 5.8rem;
+    transform: translateX(-9rem);
   }
 
-
+nav{
+  z-index: 1;
+}
 
   .resena{
     padding-left: 0 !important;
@@ -143,3 +146,21 @@ input.star:checked ~ label.star:before {
     float: right;
   }
   
+  .seccion1{
+    animation-name: animSeccion1;
+    animation-duration: 1000ms;
+    animation-timing-function:cubic-bezier(.64,.02,.21,.98);
+  }
+
+  @keyframes animSeccion1{
+    0%{
+      position: relative;
+      top:-10%;
+      opacity: 0;
+    }
+    100%{
+      position: relative;
+      top:0%;
+      opacity: 1;
+    }
+  }
