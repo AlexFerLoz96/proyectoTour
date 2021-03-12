@@ -11,7 +11,7 @@
 
         #arribaDiv{
             position: fixed;
-            display: inline-block;
+            display: none;
             width: 3rem;
             height: 3rem;
             z-index: 999;
@@ -114,10 +114,10 @@
 
 <script>
     $(document).ready(function(){
-        $("#arribaDiv").fadeOut();
+        $("#arribaDiv").fadeOut(0);
         $(window).scroll(function(){
             if($(window).scrollTop() > 1500){
-                $("#arribaDiv").fadeIn(1000);
+                $("#arribaDiv").attr("display", "inline-block").fadeIn(1000);
             } else{
                 $("#arribaDiv").fadeOut();
             }
