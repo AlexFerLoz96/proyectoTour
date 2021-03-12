@@ -102,9 +102,12 @@ input.star:checked ~ label.star:before {
   
   .col.mx-1{
     border: 1px solid white;
+    border-bottom: 5px solid white;
   }
   .col.mx-1:hover{
-    border: 1px solid grey;
+    border: 1px solid black;
+    border-bottom: 5px solid black;
+    transition: 1.3s;
     cursor: pointer;
   }
   
@@ -121,13 +124,15 @@ input.star:checked ~ label.star:before {
     width: 10rem;
   }
   .valor{
-    display: inline-block; right:0; margin-left: 1rem; font-size: 2.8rem;
+    display: inline-block; 
+    right:0; 
+    margin-left: 1rem; 
+    font-size: 2.8rem;
     transform: translateX(9rem);
+    
   }
 
-  .comentarios{
-    transform: translateY(-4rem);
-  }
+
 
   .resena{
     padding-left: 0 !important;

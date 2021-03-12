@@ -116,9 +116,10 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="d-flex align-items-baseline">
+        <div class="col-9">
             @foreach($resenaMedia as $media)
             <div class="containerMedia row border p-1 bg-light">
+                <h1 class="text-center">Comentarios y valoraciones</h1>
                 <div class="resenaMedia col-8 p-3 mb-4" data-value="{{$media->puntuacion}}">
                 </div>
                 <div class="comentarios col-8">{{$contador}} comentarios</div>
