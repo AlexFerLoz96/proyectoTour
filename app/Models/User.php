@@ -44,4 +44,16 @@ class User extends Authenticatable
     public function resena() {
         return $this->hasMany(Resena::Class);
     }
+
+    public function isAdmin()
+{
+    if($this->id == 1)
+    { 
+        return true; 
+    } 
+    else 
+    { 
+        return false; 
+    }
+}
 }
