@@ -71,24 +71,7 @@
             d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z"
             clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
     </svg>
-    <h4 class="text-center my-5">Otras sugerencias</h4>
-    <div class="row mb-4">
-        @foreach($comercioPrioridad as $comercio)
-        <div class="col mx-1 p-0" onclick="mostrarComercio({{$comercio->id}})">
-            @foreach ($imagenList as $imagen)
-            @if($comercio->id == $imagen->comercio_id)
-            <div class="imagen-cont">
-                <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}"
-                    alt="{{$imagen->descripcion}}">
-            </div>
-            @break
-            @endif
-            @endforeach
-            <h5 class="p-2">{{$comercio->nombre ?? ''}}</h5>
-            <p class="descripcion p-2">{{$comercio->descripcion ?? ''}}</p>
-        </div>
-        @endforeach
-    </div>
+    
     <div class="row mb-4">
         <form action="{{ route('resena.store') }}" method="POST" class="bg-light border p-4">
             @csrf
@@ -126,8 +109,9 @@
             @endforeach
 
         </div>
+        
         @foreach($resenaList as $resena)
-        <div class="col-7 mx-1 p-0">
+        <div class="col-7 mx-1 p-0 mt-5">
             <div>
                 <div class="resena d-inline p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
                 <div class="fecha d-inline">{{$resena->fecha}}</div>
@@ -145,7 +129,25 @@
             <hr>
         </div>
         @endforeach
-
+        <h4 class="text-center my-5">Otras sugerencias</h4>
+        <hr>
+    <div class="row mb-4">
+        @foreach($comercioPrioridad as $comercio)
+        <div class="col mx-1 p-0" onclick="mostrarComercio({{$comercio->id}})">
+            @foreach ($imagenList as $imagen)
+            @if($comercio->id == $imagen->comercio_id)
+            <div class="imagen-cont">
+                <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}"
+                    alt="{{$imagen->descripcion}}">
+            </div>
+            @break
+            @endif
+            @endforeach
+            <h5 class="p-2">{{$comercio->nombre ?? ''}}</h5>
+            <p class="descripcion p-2">{{$comercio->descripcion ?? ''}}</p>
+        </div>
+        @endforeach
+    </div>
     </div>
 </div>
 <!--container mb-5 p-0-->
