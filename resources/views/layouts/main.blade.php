@@ -15,8 +15,8 @@
             width: 3rem;
             height: 3rem;
             z-index: 999;
-            right: 2.4rem;
-            bottom: 4.2rem;
+            right: 2.1rem;
+            bottom: 4.7rem;
         }
 
         #arriba{
@@ -25,7 +25,15 @@
 
         #arriba:hover{
             cursor: pointer;
+        }
 
+        .nav-item{
+            border-bottom: 3px solid #f8f9fa;
+        }
+
+        .nav-item:hover{
+            border-bottom: 3px solid #0d6efd;
+            transition: 1s;
         }
 
     </style>
