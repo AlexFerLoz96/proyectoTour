@@ -129,7 +129,7 @@ class ComercioController extends Controller
         ->select('*')
         ->where('prioridad','=','1')
         ->where('comercios.id', '!=', "{$id}")
-        ->take(4)
+        ->take(8)
         ->get();
 
         $imagenComercio = DB::table('imagens')
@@ -157,7 +157,7 @@ class ComercioController extends Controller
         $hayResena=true;
         if(isset(Auth::User()->id)){
         foreach($resenaList as $resena){
-                    if(Auth::User()->id==$resena->user_id){
+                    if(Auth::User()->id == $resena->user_id){
                         $hayResena=false;
                     }
                     else{

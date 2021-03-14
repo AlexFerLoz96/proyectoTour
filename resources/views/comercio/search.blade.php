@@ -9,7 +9,17 @@
         <div class="row justify-content-center">
             <div class="col mb-2">
                 <p class="fs-2 d-inline">{{$palabraBusqueda}} </p>
-                <p class="fs-6 d-inline">{{$contador}} resultados encontrados</p>
+                <p class="fs-6 d-inline">{{$contador}} 
+                @if($contador == 1)
+                    resultado encontrado
+                
+                @else
+                    resultados encontrados
+                
+                @endif
+                
+                
+                </p>
             </div>
         </div>
         

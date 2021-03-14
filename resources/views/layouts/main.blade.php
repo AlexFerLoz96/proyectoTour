@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse p-3 bg-light" id="navbarScroll">
                 <ul class="navbar-nav me-auto  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px; margin-right: 5% !important;">
                     @if(isset(Auth::User()->id))
-                    @if(Auth::User()->id == 1)
+                    @if(Auth::User()->id == 2)
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/user">CRUD</a>
                     </li>
@@ -68,7 +68,7 @@
                 </ul>
                 <form action="{{route('comercio.search')}}" class="d-flex my-2 ml-1" style="width: 40%;">
                     {{ csrf_field() }}
-                    <input class="form-control me-2" required type="search" placeholder="Search" aria-label="Search" name="busqueda">
+                    <input class="form-control me-2" required type="search" placeholder="¿Qué deseas buscar?" aria-label="Search" name="busqueda">
                     <button class="btn btn-outline-primary" type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
