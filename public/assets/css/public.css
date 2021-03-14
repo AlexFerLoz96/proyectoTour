@@ -164,3 +164,19 @@ nav{
       opacity: 1;
     }
   }
+
+  /***************************** TABLA ****************************/
+  body{
+    overflow-x: hidden;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0.6rem 0.2rem;
+    width: 200%;
+  }
+
+  td{
+    width: 12.5%;
+    border: 1px solid;
+  }
