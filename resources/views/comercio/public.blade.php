@@ -55,7 +55,7 @@
         <svg style="position:relative;left:50%;transform:translateX(-50%);margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
         </svg>
-       
+       @if($hayResena)
         <div class="row my-4">
             <form action="{{ route('resena.store') }}" method="POST" class="bg-light border p-4">
                 @csrf
@@ -84,7 +84,7 @@
 
             </form>
         </div>
-        
+        @endif
         <h1 class="text-center">Comentarios y valoraciones</h1>
 
         <div class="row justify-content-center mb-4 border-2 border-end border-start">

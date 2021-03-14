@@ -76,18 +76,34 @@
                     </button>
                 </form>
                 <ul class="navbar-nav ms-auto p-2">
-                    <li class="nav-item">
+                    
                     @if(isset(Auth::User()->id))
-                        <a class="nav-link active" id="login" href="/login">Bienvenido, {{Auth::User()->name}}</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bienvenido, {{Auth::User()->name}}</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li>
+                        <a href="#" class="dropdown-item">Perfil</a><!--Añadir opciones de usuario-->
+                        </li>                           
+                        <li>
+                        <a class="dropdown-item" href="/logout"><!--No funciona hay que arreglar-->
+                        <svg width="25" height="25" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sign-out-alt fa-w-16 fa-3x"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z" class=""></path></svg>
+                        Logout
+                        </a>
+                        </li>
+                        </ul>
+                    </li>
+                        
                     @else
+                    <li class="nav-item">
                     <a class="nav-link active" id="login" href="/login">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                             </svg>
                             Inicia sesión </a>
-                    @endif
                     </li>
+                    @endif
+                    
                 </ul>
             </div>
         </div>

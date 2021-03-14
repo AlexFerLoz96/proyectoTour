@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Comercio;
 use App\Models\Categoria;
@@ -152,9 +154,22 @@ class ComercioController extends Controller
         ->select('users.*')
         ->get();
 
+        $hayResena=true;
+        if(isset(Auth::User()->id)){
+        foreach($resenaList as $resena){
+                    if(Auth::User()->id==$resena->user_id){
+                        $hayResena=false;
+                    }
+                    else{
+                        $hayResena=true;
+                    }
+                }
+        }
+        
+
         $contador = $resenaList->count();
 
-        return view('comercio.public', compact('categoriaList','comercio', 'imagenList','imagenComercio', 'resenaMedia', 'comercioPrioridad','resenaList','usuarioNombre', 'contador'));
+        return view('comercio.public', compact('categoriaList','comercio', 'imagenList','imagenComercio', 'resenaMedia', 'comercioPrioridad','resenaList','usuarioNombre', 'contador','hayResena'));
     }
 
     /**

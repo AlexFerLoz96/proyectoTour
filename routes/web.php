@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'ComercioController@public')->name('comercio.public');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', 'ComercioController@public')->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
@@ -60,7 +58,7 @@ Route::delete('/imagen/{id}/borrar', 'ImagenController@destroy')->middleware(['a
 
 Route::get('/resena', 'ResenaController@index')->middleware(['admin'])->name('resena.index');
 Route::get('/resena/create', 'ResenaController@create')->middleware(['admin'])->name('resena.create');
-Route::post('/resena/store', 'ResenaController@store')->middleware(['admin'])->name('resena.store');
+Route::post('/resena/store', 'ResenaController@store')->name('resena.store');
 Route::get('/resena/{id}', 'ResenaController@show')->middleware(['admin'])->name('resena.show');
 Route::get('/resena/{id}/edit', 'ResenaController@edit')->middleware(['admin'])->name('resena.edit');
 Route::put('/resena/{id}', 'ResenaController@update')->middleware(['admin'])->name('resena.update');
