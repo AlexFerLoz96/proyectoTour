@@ -17,7 +17,37 @@ class CategoriasTableSeeder extends Seeder
     {
         Categoria::truncate(); // Optativo: vacía la tabla antes de rellenarla
         DB::table('categorias')->insert([
-        'nombre' => 'Restaurante'
+        'nombre' => 'Bar-Restaurante' //1
+        ]);
+
+        Categoria::truncate(); // Optativo: vacía la tabla antes de rellenarla
+        DB::table('categorias')->insert([
+        'nombre' => 'Alojamiento' //2
+        ]);
+
+        Categoria::truncate(); // Optativo: vacía la tabla antes de rellenarla
+        DB::table('categorias')->insert([
+        'nombre' => 'Alimentación' //3
+        ]);
+
+        Categoria::truncate(); // Optativo: vacía la tabla antes de rellenarla
+        DB::table('categorias')->insert([
+        'nombre' => 'Tienda de ropa' //4
+        ]);
+
+        Categoria::truncate(); // Optativo: vacía la tabla antes de rellenarla
+        DB::table('categorias')->insert([
+        'nombre' => 'Ocio' //5
+        ]);
+
+        Categoria::truncate(); // Optativo: vacía la tabla antes de rellenarla
+        DB::table('categorias')->insert([
+        'nombre' => 'Electrónica' //6
+        ]);
+
+        Categoria::truncate(); // Optativo: vacía la tabla antes de rellenarla
+        DB::table('categorias')->insert([
+        'nombre' => 'Deportes' //7 
         ]);
     }
 }

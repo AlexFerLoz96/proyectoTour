@@ -197,6 +197,10 @@
     width: 100%;
 }
 
+.img-responsive{
+    border-radius: initial;
+}
+
 @media screen and (max-width: 1440px) {
     .b1 .owl-dots {
         padding-right: 30px;

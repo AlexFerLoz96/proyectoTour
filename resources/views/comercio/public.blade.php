@@ -112,7 +112,7 @@
                     @break
                     @endif
                     @endforeach
-                    <div class="comentario mb-4"><small>{{$resena->comentario}}</small></div>
+                    <div class="comentario mt-2 mb-4"><small>{{$resena->comentario}}</small></div>
                 </div>
                 <hr>
             </div>

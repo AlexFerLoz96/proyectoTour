@@ -27,7 +27,7 @@
                     @foreach ($imagenList as $imagen)
                     @if($comercio->id == $imagen->comercio_id)
 
-                    <img class="img-responsive w-100" style="height:100%;" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                    <img class="img-responsive w-100 h-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
                     @break
                     @endif
                     @endforeach
@@ -87,6 +87,7 @@
                 @endforeach
             </div>
             @endforeach
+            <button class="btn btn-success">Cargar más</button>
         </div>
     </div>
 
@@ -124,6 +125,7 @@
     function mostrarComercio(id) {
         location.href = "/comercio/public/" + id;
     }
+
     $(document).ready(function() {
 
         function puntuacion(elemento, valor) {
