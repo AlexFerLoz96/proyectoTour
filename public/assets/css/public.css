@@ -171,12 +171,60 @@ nav{
   }
 
   table {
+    padding:3%;
     border-collapse: separate;
     border-spacing: 0.6rem 0.2rem;
     width: 200%;
+    transition: 0.7s;
+    margin-bottom: 5rem;
   }
 
   td{
+    padding:0;
     width: 12.5%;
-    border: 1px solid;
+    border: 1px solid white;
+    border-bottom:5px white solid;
   }
+  td:hover{
+    border: 1px solid grey;
+    border-bottom:5px grey solid;
+    cursor:pointer;
+    transition: 0.7s;
+  }
+
+  #tabla{
+    position: relative;
+    margin-right: 5%;
+    margin-left: 5%;
+    overflow: hidden;
+  }
+
+
+
+  #caja-izquierda-svg{
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    height: 13%;
+    width: 5%;
+    z-index: 99;
+  }
+
+  #caja-derecha-svg{
+    position: absolute;
+    top: 30%;
+    right: 1%;
+    height: 13%;
+    width: 5%;
+    z-index: 99;
+  } 
+  #derecha-svg, #izquierda-svg{
+    position: absolute;
+    z-index: 999;
+    width: 80%;
+    height: 100%;
+    background: white;
+    cursor: pointer;
+    border-radius: 100%;
+  }
+  

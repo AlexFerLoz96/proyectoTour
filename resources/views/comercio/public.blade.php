@@ -124,29 +124,47 @@
     </div>
     <!--container mb-5 p-0-->
 
-            <h4 class="text-center my-3">Otras sugerencias</h4>
+    <h4 class="text-center my-3">Otras sugerencias</h4>
 
-            <svg id="derecha-svg" aria-hidden="true" width="100" height="40" focusable="false" data-prefix="fad" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-angle-right fa-w-8 fa-3x"><g class="fa-group"><path fill="#0d6efd" opacity="0.4" d="M128.14 256l56.47 56.49L88.46 409a23.76 23.76 0 0 1-33.6.18l-.18-.18-22.51-22.68a23.92 23.92 0 0 1 0-33.84z" class="fa-secondary"></path><path fill="#0d6efd" d="M54.58 103.07L32 125.81a23.92 23.92 0 0 0 0 33.84L184.61 312.5 224 273l.06-.06a24 24 0 0 0-.16-33.94L88.37 103l-.17-.18a23.78 23.78 0 0 0-33.62.22z" class="fa-primary"></path></g></svg>
 
-            <svg id="izquierda-svg" aria-hidden="true" width="100" height="40" focusable="false" data-prefix="fad" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-angle-left fa-w-8 fa-3x"><g class="fa-group"><path fill="#0d6efd" opacity="0.4" d="M223.83 352.44a24 24 0 0 1 0 33.86L201.32 409l-.18.18a23.76 23.76 0 0 1-33.6-.18l-96.15-96.5 56.47-56.5z" class="fa-secondary"></path><path fill="#0d6efd" d="M167.81 102.87l-.17.18L32.11 239a24 24 0 0 0-.17 33.93l.06.07 39.39 39.51L224 159.66a23.92 23.92 0 0 0 0-33.84l-22.54-22.74a23.77 23.77 0 0 0-33.62-.23z" class="fa-primary"></path></g></svg>
-            <table id="tableta">
-                <tr>
-                    @foreach($comercioPrioridad as $comercio)
-                    <td onclick="mostrarComercio({{$comercio->id}})">
-                        @foreach ($imagenList as $imagen)
-                        @if($comercio->id == $imagen->comercio_id)
-                        <div class="imagen-cont">
-                            <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
-                        </div>
-                        @break
-                        @endif
-                        @endforeach
-                        <h5>{{$comercio->nombre ?? ''}}</h5>
-                        <p>{{$comercio->descripcion ?? ''}}</p>
-                    </td>
+    <div id="tabla">
+
+        <table id="tableta">
+            <div id="caja-derecha-svg">
+                <svg id="derecha-svg" aria-hidden="true" width="50%" focusable="false" data-prefix="fad" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-angle-right fa-w-8 fa-3x">
+                    <g class="fa-group">
+                        <path fill="#0d6efd" opacity="0.4" d="M128.14 256l56.47 56.49L88.46 409a23.76 23.76 0 0 1-33.6.18l-.18-.18-22.51-22.68a23.92 23.92 0 0 1 0-33.84z" class="fa-secondary"></path>
+                        <path fill="#0d6efd" d="M54.58 103.07L32 125.81a23.92 23.92 0 0 0 0 33.84L184.61 312.5 224 273l.06-.06a24 24 0 0 0-.16-33.94L88.37 103l-.17-.18a23.78 23.78 0 0 0-33.62.22z" class="fa-primary"></path>
+                    </g>
+                </svg>
+            </div>
+
+            <div id="caja-izquierda-svg">
+                <svg id="izquierda-svg" style="display:none;" width="50%" aria-hidden="true" width="100" height="40" focusable="false" data-prefix="fad" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-angle-left fa-w-8 fa-3x">
+                    <g class="fa-group">
+                        <path fill="#0d6efd" opacity="0.4" d="M223.83 352.44a24 24 0 0 1 0 33.86L201.32 409l-.18.18a23.76 23.76 0 0 1-33.6-.18l-96.15-96.5 56.47-56.5z" class="fa-secondary"></path>
+                        <path fill="#0d6efd" d="M167.81 102.87l-.17.18L32.11 239a24 24 0 0 0-.17 33.93l.06.07 39.39 39.51L224 159.66a23.92 23.92 0 0 0 0-33.84l-22.54-22.74a23.77 23.77 0 0 0-33.62-.23z" class="fa-primary"></path>
+                    </g>
+                </svg>
+            </div>
+            <tr>
+                @foreach($comercioPrioridad as $comercio)
+                <td onclick="mostrarComercio({{$comercio->id}})">
+                    @foreach ($imagenList as $imagen)
+                    @if($comercio->id == $imagen->comercio_id)
+                    <div class="imagen-cont">
+                        <img class="zoom img-responsive w-100" src="/assets/imgs/comercio/{{$imagen->ruta}}" alt="{{$imagen->descripcion}}">
+                    </div>
+                    @break
+                    @endif
                     @endforeach
-                </tr>
-            </table>
+                    <h5>{{$comercio->nombre ?? ''}}</h5>
+                    <p>{{$comercio->descripcion ?? ''}}</p>
+                </td>
+                @endforeach
+            </tr>
+        </table>
+    </div>
 
 </div>
 <script>
@@ -213,12 +231,31 @@
             puntuacion(this, valor);
         });
 
-        $("#derecha-svg").click(function(){
-            $("#tableta").css("transform", "translateX(-50%)");
+        posicion = 0;
+
+        $("#derecha-svg").click(function() {
+            posicion -= 25;
+            $("#tableta").css("transform", "translateX(" + posicion + "%)");
+
+            if (posicion == -25) {
+                $("#derecha-svg").fadeIn(500);
+                $("#izquierda-svg").fadeIn(500);
+            }
+            if (posicion == -50) {
+                $("#derecha-svg").fadeOut(500);
+            }
         });
 
-        $("#izquierda-svg").click(function(){
-            $("#tableta").css("transform", "translateX(0%)");
+        $("#izquierda-svg").click(function() {
+            posicion += 25;
+            $("#tableta").css("transform", "translateX(" + posicion + "%)");
+
+            if (posicion == 0) {
+                $("#izquierda-svg").fadeOut(500);
+            }
+            if (posicion == -25) {
+                $("#derecha-svg").fadeIn(500);
+            }
         });
     });
 </script>
