@@ -58,7 +58,7 @@
 
     <div class="container">
         <div class="row justify-content-center text-center">
-            @foreach ($comercioList as $comercio)
+            @foreach ($comercioPrioridad as $comercio)
             <div class="col-xl-3 col-lg-5 col-md-8 col-sm-8 mx-4 my-5 p-0 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
                 @foreach ($imagenList as $imagen)
                 @if($comercio->id == $imagen->comercio_id)

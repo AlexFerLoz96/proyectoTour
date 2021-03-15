@@ -17,7 +17,7 @@ class CreateComerciosTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('ubicacion');
-            $table->string('descripcion');
+            $table->longText('descripcion');
             $table->integer('prioridad');
             $table->integer('categoria_id');
             $table->timestamps();

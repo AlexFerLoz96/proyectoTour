@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse p-3 bg-light" id="navbarScroll">
                 <ul class="navbar-nav me-auto  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px; margin-right: 5% !important;">
                     @if(isset(Auth::User()->id))
-                    @if(Auth::User()->id == 2)
+                    @if(Auth::User()->id == 1)
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/user">CRUD</a>
                     </li>
