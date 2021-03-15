@@ -44,6 +44,21 @@ class ComercioController extends Controller
         return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','resenaList','imagenList', 'lugarList'));
     }
 
+
+//*****************************Cargar datos por AJAX****************************
+
+
+    public function cargarDatos($prioridad){
+        $comercioPrioridad = DB::table('comercios')
+        ->select('*')
+        ->where('prioridad','=',"{$prioridad}")
+        ->get();
+        
+        return response()->json($comercioPrioridad);
+    }
+
+
+
     public function search(Request $r)
     {
         $key = trim($r->get('busqueda'));
