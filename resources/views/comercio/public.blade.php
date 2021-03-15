@@ -48,7 +48,7 @@
         </svg>
         <h5 class="">{{$comercio->descripcion}}</h5>
         <hr>
-        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q={{$comercio->ubicacion}}+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q={{$comercio->ubicacion}}+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
         </div>
         <hr>
         <br>
@@ -159,7 +159,7 @@
                     @endif
                     @endforeach
                     <h5>{{$comercio->nombre ?? ''}}</h5>
-                    <p>{{$comercio->descripcion ?? ''}}</p>
+                    <p class="descripcion">{{$comercio->descripcion ?? ''}}</p>
                 </td>
                 @endforeach
             </tr>

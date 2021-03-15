@@ -192,17 +192,16 @@ $(document).ready(function() {
     });
 
     //Cargar datos por AJAX
+    var prioridad = 2;
 
     $("#cargarDatos").click(function() {
-        debugger;
-        var prioridad = 2;
+        
         $.ajax({
-            url: "{{ route('comercio.cargarDatos',"+prioridad+") }}",//error aqui
+            url: "/cargarDatos/"+prioridad,
             method: 'GET',
             dataType: 'JSON',
             success: function(datos) {
                 console.log(datos);
-                $("#mostrarDatos").html("{{ route('comercio.cargarDatos',"+prioridad+") }}");
             },
             error: function(xhr, status, error){
                         console.log(xhr);
@@ -210,7 +209,7 @@ $(document).ready(function() {
                         console.log(error);
                     }
         });
-
+        prioridad++;
     })
 });
 </script>

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'ComercioController@public')->name('comercio.public');
 
-Route::get('/cargarDatos/{prioridad}', 'ComercioController@cargarDatos')->name('comercio.cargarDatos');
+Route::get('/cargarDatos/{prioridad}', 'ComercioController@cargarDatos')->name('cargarDatos');
 
 Route::get('/dashboard', 'ComercioController@public')->middleware(['auth'])->name('dashboard');
 
