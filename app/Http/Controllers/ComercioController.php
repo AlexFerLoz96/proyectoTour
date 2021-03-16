@@ -60,7 +60,9 @@ class ComercioController extends Controller
         ->groupBy('comercio_id')
         ->get();
 
-        return response()->json(compact('comercioPrioridad', 'resena'));
+        $imgs = Imagen::all();
+
+        return response()->json(compact('comercioPrioridad', 'resena','imgs'));
     }
 
 

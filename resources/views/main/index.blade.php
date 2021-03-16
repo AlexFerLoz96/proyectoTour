@@ -103,9 +103,11 @@
                 @endforeach
             </div>
             @endforeach
-            <div id="mostrarDatos"></div>
-            <button class="btn btn-success" id="cargarDatos">Cargar más</button>
+            
+            
         </div>
+        <div id="mostrarDatos" class="row justify-content-center text-center"></div>
+        <button class="btn btn-success" id="cargarDatos">Cargar más</button>
     </div>
 
     <div class="container mt-5">
@@ -147,7 +149,7 @@ function mostrarComercio(id) {
 }
 
 $(document).ready(function() {
-
+    /*************************Puntuacion de reseñas************************/
     function puntuacion(elemento, valor) {
         estrella = "<img style='z-index:1000;width:10rem;' src='/assets/imgs/estrellas.png'>";
         estrella_v =
@@ -156,13 +158,13 @@ $(document).ready(function() {
             "<div class='col-12 p-0' style='position:absolute;width:" + valor * 2 +
             "rem; overflow:hidden;'>" + estrella + "</div><div class='valor col-12'>" + valor + "</div>");
     }
-    //meter las dos imagenes en un div col y la puntuacion dentro de una row
 
     $(".resena").each(function(index, e) {
         valor = $(this).data("value");
         puntuacion(this, valor);
     });
-
+/****************************************************************************/
+/*****************Límite de caracteres en descripcion y nombre************************/
     function ellipsis_box(elemento, max_chars) {
         limite_text = $(elemento).text();
         if (limite_text.length > max_chars) {
@@ -175,23 +177,13 @@ $(document).ready(function() {
 
     $(".descripcion").each(function(index, e) {
         ellipsis_box(this, 130);
-    });
-
-    function recortarNombre(elemento, max_chars) {
-        limite_text = $(elemento).text();
-        if (limite_text.length > max_chars) {
-            limite = limite_text.substr(0, max_chars) + "...";
-            $(elemento).text(limite);
-        }
-        limite_text = "";
-        limite = "";
-    }
-
+    });   
+    
     $(".nombre").each(function(index, e) {
-        recortarNombre(this, 30);
+        ellipsis_box(this, 30);
     });
-
-    //Cargar datos por AJAX
+/****************************************************************************/
+/************************Cargar datos por AJAX*******************************/
     var prioridad = 2;
 
     $("#cargarDatos").click(function() {
@@ -201,18 +193,70 @@ $(document).ready(function() {
             method: 'GET',
             dataType: 'JSON',
             success: function(datos) {
-                $.each(datos, function(indice, comercioList){
-                        //$("#mostrarDatos").html(comercio.);
-                        console.log(datos[0].comercioPrioridad.nombre);
-                });
+                var mostrar="";
+                for (var i = 0; i < Object.keys(datos.comercioPrioridad).length; i++){
+                        mostrar+="<div class='col-xl-3 col-lg-5 col-md-8 col-sm-8 mx-4 my-5 p-0 border shadow rounded' onclick='mostrarComercio("+datos.comercioPrioridad[i].id+")'>";
+                    for(var j= 0;j < Object.keys(datos.imgs).length; j++){
+                        if(datos.comercioPrioridad[i].id == datos.imgs[j].comercio_id){
+                            mostrar+="<div class='imagen-cont'><img class='zoom img-responsive w-100' src='/assets/imgs/comercio/"+datos.imgs[j].ruta+"'alt='"+datos.imgs[j].descripcion+"'></div>";
+                        break;
+                        }
+                        
+                    }
+                    mostrar+="<h3 class='nombre p-3'>"+datos.comercioPrioridad[i].nombre+"</h3>";
+                    mostrar+="<svg style='margin-bottom: 1rem;' fill='none' width='60' height='25' viewBox='0 0 35 10' xmlns='http://www.w3.org/2000/svg'>";
+                    mostrar+="<path d='M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z' clip-rule='evenodd' fill='#0d6efd' fill-rule='evenodd'></path></svg>";
+                    mostrar+="<div class='descripcion p-3'>"+datos.comercioPrioridad[i].descripcion+"</div>";
+                    mostrar+="<div class='p-2'><svg style='margin-right: 0.6rem;' aria-hidden='true' width='25' focusable='false' data-prefix='fas' data-icon='map-marker-alt' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' class='svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x'><path fill='#0d6efd' d='M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z'></path></svg>";
+                    mostrar+=datos.comercioPrioridad[i].ubicacion+"</div>";
+                    for(var j= 0;j < Object.keys(datos.resena).length; j++){
+                        if(datos.comercioPrioridad[i].id == datos.resena[j].comercio_id){
+                            mostrar+="<div class='resena p-3 mb-4' data-value='"+datos.resena[j].puntuacion+"'></div>";
+                            break;
+                        }
+                    }
+                    
+                    mostrar+="</div>";
+                }
+                $("#mostrarDatos").append(mostrar);
+                
             },
             error: function(xhr, status, error){
                         console.log(xhr);
                         console.log(status);
                         console.log(error);
                     }
+
+                    /*<svg style="margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z"
+                        clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
+                </svg>
+                <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
+                <div class="p-2"><svg style="margin-right: 0.6rem;" aria-hidden="true" width="25" focusable="false"
+                        data-prefix="fas" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x">
+                        <path fill="#0d6efd"
+                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+                            class=""></path>
+                    </svg>{{$comercio->ubicacion ?? ''}}</div>
+
+                @foreach ($resenaList as $resena)
+                @if($comercio->id == $resena->comercio_id)
+
+                <div class="resena p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
+                @break
+                @endif
+                @endforeach
+            </div>*/
         });
         prioridad++;
+        
+
+        $(".descripcion").each(function(index, e) {
+            ellipsis_box(this, 130);
+        });
     })
 });
 </script>

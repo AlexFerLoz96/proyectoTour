@@ -63,7 +63,7 @@ class ComerciosTableSeeder extends Seeder
             'ubicacion' => 'Plaza De Las Flores, 5, 04001 Almería',
             'descripcion' => 'El AC Hotel Almería está ubicado en el corazón del centro histórico y comercial de la provincia y localidad de Almería, cerca de la Alcazaba, y permite un fácil acceso al aeropuerto, Museo Arqueológico, estación de tren, recinto ferial, playa y mar. -Paseo lateral. Aproveche la conexión inalámbrica a internet gratuita en todo el hotel. Nuestro hotel de 4 estrellas también cuenta con 8 salones de eventos, habitaciones para no fumadores, cajas de seguridad, instalaciones para negocios y un restaurante, "El Asador".',
             'prioridad' => '1',
-            'categoria_id' => '4'
+            'categoria_id' => '3'
         ]);
 
         DB::table('comercios')->insert([
@@ -103,7 +103,7 @@ class ComerciosTableSeeder extends Seeder
             'ubicacion' => 'Urbanización El Toyo, Calle de los Juegos de Casablanca, 04131 Retamar, Almería',
             'descripcion' => 'Hotel frente al mar con piscinas, restaurantes, spa y habitaciones y suites con balcón.',
             'prioridad' => '2',
-            'categoria_id' => '4'
+            'categoria_id' => '3'
         ]);
 
         DB::table('comercios')->insert([
@@ -131,7 +131,7 @@ class ComerciosTableSeeder extends Seeder
 
             El hotel sirve desayuno por un suplemento y dispone de un bar abierto las 24 horas, un restaurante de cocina mediterránea con terraza, un solárium en la azotea con bañera de hidromasaje y tumbonas, gimnasio y aparcamiento.',
             'prioridad' => '2',
-            'categoria_id' => '4'
+            'categoria_id' => '3'
         ]);
 
         DB::table('comercios')->insert([
@@ -183,7 +183,7 @@ class ComerciosTableSeeder extends Seeder
 
             El hotel dispone de un bar restaurante refinado de cocina regional, piscina exterior, aparcamiento de pago y espacio para eventos y reuniones. Se admiten mascotas.',
             'prioridad' => '2',
-            'categoria_id' => '4'
+            'categoria_id' => '3'
             ]);
     }
 }

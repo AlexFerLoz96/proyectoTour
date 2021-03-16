@@ -28,29 +28,60 @@
   overflow: hidden;
 }
 
-.col-4,.col-8{
+
+
+
+
+
+.row:nth-child(odd){
+  animation-name: izq;
+  animation-duration: 1000ms;
+  animation-timing-function:cubic-bezier(.64,.02,.21,.98);
+}
+.row:nth-child(even){
+  animation-name: der;
+  animation-duration: 1000ms;
+  animation-timing-function:cubic-bezier(.64,.02,.21,.98);
+}
+
+@keyframes animSeccion1{
+  0%{
+    position: relative;
+    top:-10%;
     opacity: 0;
-    animation-name: bounceIn;
-    animation-duration: 450ms;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  
+  }
+  100%{
+    position: relative;
+    top:0%;
+    opacity: 1;
+  }
 }
-@keyframes bounceIn{
-0%{
-  opacity: 0;
-  transform: scale(0.3) translate3d(0,0,0);
+
+@keyframes izq{
+  0%{
+    position: relative;
+    left:-10%;
+    opacity: 0;
+  }
+  100%{
+    position: relative;
+    left:0%;
+    opacity: 1;
+  }
 }
-50%{
-  opacity: 0.9;
-  transform: scale(1.1);
+
+
+@keyframes der{
+  0%{
+    position: relative;
+    right:-10%;
+    opacity: 0;
+  }
+  100%{
+    position: relative;
+    right:0%;
+    opacity: 1;
+  }
 }
-80%{
-  opacity: 1;
-  transform: scale(0.89);
-}
-100%{
-  opacity: 1;
-  transform: scale(1) translate3d(0,0,0);
-}
-}
+
+
