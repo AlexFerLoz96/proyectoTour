@@ -34,6 +34,7 @@ class ComercioController extends Controller
             ->select(DB::raw('round(avg(puntuacion), 1) as puntuacion, comercio_id'))
             ->groupBy('comercio_id')
             ->get();
+
         $imagenList = Imagen::all();
 
         $lugarList = DB::table('lugars')
@@ -54,7 +55,12 @@ class ComercioController extends Controller
         ->where('prioridad','=',"{$prioridad}")
         ->get();
         
-        return response()->json($comercioPrioridad);
+        $resena = DB::table('resenas')
+        ->select(DB::raw('round(avg(puntuacion), 1) as puntuacion, comercio_id'))
+        ->groupBy('comercio_id')
+        ->get();
+
+        return response()->json(compact('comercioPrioridad', 'resena'));
     }
 
 

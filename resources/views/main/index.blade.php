@@ -201,7 +201,10 @@ $(document).ready(function() {
             method: 'GET',
             dataType: 'JSON',
             success: function(datos) {
-                console.log(datos);
+                $.each(datos, function(indice, comercioList){
+                        //$("#mostrarDatos").html(comercio.);
+                        console.log(datos[0].comercioPrioridad.nombre);
+                });
             },
             error: function(xhr, status, error){
                         console.log(xhr);

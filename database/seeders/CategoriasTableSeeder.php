@@ -21,23 +21,23 @@ class CategoriasTableSeeder extends Seeder
         ]);
 
         DB::table('categorias')->insert([
-        'nombre' => 'Cafeterías' //3
+        'nombre' => 'Cafeterías' //2
         ]);
 
         DB::table('categorias')->insert([
-        'nombre' => 'Hoteles' //4
+        'nombre' => 'Hoteles' //3
         ]);
 
         DB::table('categorias')->insert([
-        'nombre' => 'Academias' //5
+        'nombre' => 'Academias' //4
         ]);
 
         DB::table('categorias')->insert([
-        'nombre' => 'Tiendas de alimentación' //6
+        'nombre' => 'Tiendas de alimentación' //5
         ]);
 
         DB::table('categorias')->insert([
-        'nombre' => 'Tiendas de ropa' //7 
+        'nombre' => 'Tiendas de ropa' //6
         ]);
     }
 }
