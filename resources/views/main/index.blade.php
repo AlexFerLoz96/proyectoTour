@@ -165,7 +165,7 @@ $(document).ready(function() {
     });
 /****************************************************************************/
 /*****************Límite de caracteres en descripcion y nombre************************/
-    function ellipsis_box(elemento, max_chars) {
+    function limitarCaracteres(elemento, max_chars) {
         limite_text = $(elemento).text();
         if (limite_text.length > max_chars) {
             limite = limite_text.substr(0, max_chars) + "...";
@@ -176,11 +176,11 @@ $(document).ready(function() {
     }
 
     $(".descripcion").each(function(index, e) {
-        ellipsis_box(this, 130);
+        limitarCaracteres(this, 130);
     });   
     
     $(".nombre").each(function(index, e) {
-        ellipsis_box(this, 30);
+        limitarCaracteres(this, 30);
     });
 /****************************************************************************/
 /************************Cargar datos por AJAX*******************************/
@@ -221,11 +221,16 @@ $(document).ready(function() {
                 $("#mostrarDatos").append(mostrar);
                 
             },
-            error: function(xhr, status, error){
-                        console.log(xhr);
-                        console.log(status);
-                        console.log(error);
-                    }
+            complete: function(){
+                $(".descripcion").each(function(index, e) {
+                    limitarCaracteres(this, 130);
+                });
+                
+                $(".resena").each(function(index, e) {
+                    valor = $(this).data("value");
+                    puntuacion(this, valor);
+                });
+            }
 
                     /*<svg style="margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10"
                     xmlns="http://www.w3.org/2000/svg">
@@ -254,9 +259,7 @@ $(document).ready(function() {
         prioridad++;
         
 
-        $(".descripcion").each(function(index, e) {
-            ellipsis_box(this, 130);
-        });
+        
     })
 });
 </script>
