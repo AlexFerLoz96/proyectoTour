@@ -107,7 +107,7 @@
             
         </div>
         <div id="mostrarDatos" class="row justify-content-center text-center"></div>
-        <button class="btn btn-success" id="cargarDatos">Cargar más</button>
+        <div class="text-center"><button class="btn btn-outline-primary w-25" type="button" id="cargarDatos">Cargar más</button></div>
     </div>
 
     <div class="container mt-5">
@@ -133,14 +133,9 @@
                 <div class="p-3 pt-0">{{$lugar->descripcion}}</div>
             </div>
             @endforeach
-
-
         </div>
     </div>
-
 </section>
-
-
 
 
 <script>
@@ -192,6 +187,7 @@ $(document).ready(function() {
             url: "/cargarDatos/"+prioridad,
             method: 'GET',
             dataType: 'JSON',
+
             success: function(datos) {
                 var mostrar="";
                 for (var i = 0; i < Object.keys(datos.comercioPrioridad).length; i++){
@@ -201,14 +197,15 @@ $(document).ready(function() {
                             mostrar+="<div class='imagen-cont'><img class='zoom img-responsive w-100' src='/assets/imgs/comercio/"+datos.imgs[j].ruta+"'alt='"+datos.imgs[j].descripcion+"'></div>";
                         break;
                         }
-                        
                     }
+
                     mostrar+="<h3 class='nombre p-3'>"+datos.comercioPrioridad[i].nombre+"</h3>";
                     mostrar+="<svg style='margin-bottom: 1rem;' fill='none' width='60' height='25' viewBox='0 0 35 10' xmlns='http://www.w3.org/2000/svg'>";
                     mostrar+="<path d='M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z' clip-rule='evenodd' fill='#0d6efd' fill-rule='evenodd'></path></svg>";
                     mostrar+="<div class='descripcion p-3'>"+datos.comercioPrioridad[i].descripcion+"</div>";
                     mostrar+="<div class='p-2'><svg style='margin-right: 0.6rem;' aria-hidden='true' width='25' focusable='false' data-prefix='fas' data-icon='map-marker-alt' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' class='svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x'><path fill='#0d6efd' d='M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z'></path></svg>";
                     mostrar+=datos.comercioPrioridad[i].ubicacion+"</div>";
+
                     for(var j= 0;j < Object.keys(datos.resena).length; j++){
                         if(datos.comercioPrioridad[i].id == datos.resena[j].comercio_id){
                             mostrar+="<div class='resena p-3 mb-4' data-value='"+datos.resena[j].puntuacion+"'></div>";
@@ -219,8 +216,8 @@ $(document).ready(function() {
                     mostrar+="</div>";
                 }
                 $("#mostrarDatos").append(mostrar);
-                
             },
+
             complete: function(){
                 $(".descripcion").each(function(index, e) {
                     limitarCaracteres(this, 130);
@@ -231,36 +228,9 @@ $(document).ready(function() {
                     puntuacion(this, valor);
                 });
             }
-
-                    /*<svg style="margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z"
-                        clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
-                </svg>
-                <div class="descripcion p-3">{{$comercio->descripcion ?? ''}}</div>
-                <div class="p-2"><svg style="margin-right: 0.6rem;" aria-hidden="true" width="25" focusable="false"
-                        data-prefix="fas" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x">
-                        <path fill="#0d6efd"
-                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
-                            class=""></path>
-                    </svg>{{$comercio->ubicacion ?? ''}}</div>
-
-                @foreach ($resenaList as $resena)
-                @if($comercio->id == $resena->comercio_id)
-
-                <div class="resena p-3 mb-4" data-value="{{$resena->puntuacion}}"></div>
-                @break
-                @endif
-                @endforeach
-            </div>*/
         });
         prioridad++;
-        
-
-        
-    })
+    });
 });
 </script>
 

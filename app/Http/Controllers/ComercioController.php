@@ -92,8 +92,6 @@ class ComercioController extends Controller
 
         $contador = $consultaComercio->count();
         
-        
-
 
         return view('comercio.search', compact('categoriaList', 'consultaComercio','imagenList', 'palabraBusqueda', 'contador'));
     }

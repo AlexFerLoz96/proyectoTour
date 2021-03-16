@@ -2,6 +2,7 @@
 
 @section("librerias")
     <link rel="stylesheet" href="../assets/css/search.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 @endsection
 @section("content")
@@ -42,21 +43,35 @@
             viewBox="0 0 384 512" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x">
             <path fill="#0d6efd"
                 d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
-                class=""></path>
-        </svg>{{$comercio->ubicacion ?? ''}}</div>
-                            <div class="d-block p-2">{{$comercio->descripcion ?? ''}}</div>
+                class=""></path></svg>{{$comercio->ubicacion ?? ''}}</div>
+                            <div class="descripcion d-block p-2">{{$comercio->descripcion ?? ''}}</div>
                         </div>
                     </div>
                 @endforeach
             @endif
     </div>
-
 </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <script>
         function mostrarComercio(id) {
             location.href = "/comercio/public/" + id;
         }
+
+        function limitarCaracteres(elemento, max_chars) {
+            limite_text = $(elemento).text();
+            if (limite_text.length > max_chars) {
+                limite = limite_text.substr(0, max_chars) + "...";
+                $(elemento).text(limite);
+            }
+            limite_text = "";
+            limite = "";
+        }
+
+        $(".descripcion").each(function(index, e) {
+            limitarCaracteres(this, 400);
+        });   
+
     </script>
 @endsection
