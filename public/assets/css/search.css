@@ -44,18 +44,6 @@
   animation-timing-function:cubic-bezier(.64,.02,.21,.98);
 }
 
-@keyframes animSeccion1{
-  0%{
-    position: relative;
-    top:-10%;
-    opacity: 0;
-  }
-  100%{
-    position: relative;
-    top:0%;
-    opacity: 1;
-  }
-}
 
 @keyframes izq{
   0%{

@@ -75,6 +75,46 @@ nav{
   animation-timing-function:cubic-bezier(.64,.02,.21,.98);
 }
 
+.seccion2:nth-child(odd){
+  animation-name: izq;
+  animation-duration: 1000ms;
+  animation-timing-function:cubic-bezier(.64,.02,.21,.98);
+}
+.seccion2:nth-child(even){
+  animation-name: der;
+  animation-duration: 1000ms;
+  animation-timing-function:cubic-bezier(.64,.02,.21,.98);
+}
+
+@keyframes izq{
+  0%{
+    position: relative;
+    left:-10%;
+    opacity: 0;
+  }
+  100%{
+    position: relative;
+    left:0%;
+    opacity: 1;
+  }
+}
+
+
+@keyframes der{
+  0%{
+    position: relative;
+    right:-10%;
+    opacity: 0;
+  }
+  100%{
+    position: relative;
+    right:0%;
+    opacity: 1;
+  }
+}
+
+
+
 @keyframes animNav{
   0%{
     position: relative;

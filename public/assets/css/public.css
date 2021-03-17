@@ -145,7 +145,7 @@ nav{
   div.fecha{
     float: right;
   }
-  
+  /***************************** Animacion ****************************/
   .seccion1{
     animation-name: animSeccion1;
     animation-duration: 1000ms;
