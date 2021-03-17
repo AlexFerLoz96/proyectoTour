@@ -16,7 +16,7 @@ class ComerciosTableSeeder extends Seeder
     public function run()
     {
         Comercio::truncate(); // Optativo: vacía la tabla antes de rellenarla
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//1
             'nombre' => 'La consentida',
             'ubicacion' => 'Plaza Antonio González Egea, 04001 Almería',
             'descripcion' => 'Sed bienvenidos a la Brasería la Consentida. Nuestra filosofía de trabajo se basa en hacer sentir a nuestros clientes unos auténticos consentid@s. Somos especialistas en carnes a la brasa pero no por ello nuestras tapas son solo de carne, disponemos de una de la más amplia variedad de tapas en Almería. ¡Os esperamos a tod@s!',
@@ -24,7 +24,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//2
             'nombre' => 'Taberna El Andaluz',
             'ubicacion' => 'Calle Marín, 14, 04003 Almería',
             'descripcion' => 'Nos complace darle la bienvenida a nuestro comercio e invitarle a conocer más de cerca nuestro local y nuestra excelente cocina. Tanto si se decanta por los platos clásicos como por las innovaciones: nuestros menús y la oferta de temporada satisfarán al paladar más exigente.',
@@ -32,7 +32,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//3
             'nombre' => 'La Tahona Bar & Tapas',
             'ubicacion' => 'Plaza de la Constitución, 3, 04003 Almería',
             'descripcion' => 'En Restaurantes La Tahona llevamos muchos años trabajando para mejorar la calidad en nuestros productos y servicios. Elaboramos tapas selectas de la mejor calidad y merecedoras de los inumerables premios de los certámentes Ruta de Tapas y Tapas de Película. Elaboramos nuestra propia cerveza artesanal tostada con un toque a mandarina. Además estamos situados en un sitio emblemático de la ciudad, la Plaza Vieja de Almería.',
@@ -40,7 +40,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//4
             'nombre' => 'Goiko',
             'ubicacion' => 'Calle Rambla Obispo Orberá, 11, 04001 Almería',
             'descripcion' => 'GOIKO es el lugar donde puedes dejarte llevar por el placer de las burgers más irresistibles y de mejor calidad, donde puedes rendirte a tus impulsos y disfrutar del chorreo sin que te importe mancharte las manos. ... Si te preguntan «¿Te hace un GOIKO?» solo podrás responder «F*CK YEAH!»',
@@ -48,7 +48,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//5
             'nombre' => 'El Chilecito',
             'ubicacion' => 'Av. Federico García Lorca, 117, 04004 Almería',
             'descripcion' => 'Este restaurante se ha especializado en cocina mexicana. El Chilecito te ofrece sus singulares tacos, su bien trabajado laing y sus generosos nachos. Empieza tu comida con una deliciosa cerveza.
@@ -58,7 +58,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//6
             'nombre' => 'AC Hotel Almeria',
             'ubicacion' => 'Plaza De Las Flores, 5, 04001 Almería',
             'descripcion' => 'El AC Hotel Almería está ubicado en el corazón del centro histórico y comercial de la provincia y localidad de Almería, cerca de la Alcazaba, y permite un fácil acceso al aeropuerto, Museo Arqueológico, estación de tren, recinto ferial, playa y mar. -Paseo lateral. Aproveche la conexión inalámbrica a internet gratuita en todo el hotel. Nuestro hotel de 4 estrellas también cuenta con 8 salones de eventos, habitaciones para no fumadores, cajas de seguridad, instalaciones para negocios y un restaurante, "El Asador".',
@@ -66,7 +66,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '3'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//7
             'nombre' => 'Restaurante La Cala',
             'ubicacion' => 'Calle Navarro Rodrigo, 8, 04001 Almería',
             'descripcion' => 'Los platos de sus cocinas mediterránea y española están muy bien elaborados en este bar. Te va a encantar su comida, especialmente su bien trabajado pescado, sus sabrosas tapas y su sorprendente laing. Merece la pena degustar aquí una buena cerveza o un sensacional vino.
@@ -76,7 +76,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//8
             'nombre' => 'Taberna',
             'ubicacion' => 'Calle la Unión, 7, 04001 Almería',
             'descripcion' => 'Si la lluvia te ha sorprendido de camino a Parroquia de San Pedro Apostol, refúgiate en este restaurante. Las cocinas española y vegetariana son excelentes en El Candil. Ofrecer unas magníficas tapas, un bien trabajado hummus y unos fascinantes salmorejo es la principal característica de este lugar. Prueba su singular milhojas. Degusta una excelente cerveza o un buen vino en este lugar.
@@ -88,7 +88,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//9
             'nombre' => 'La Mala',
             'ubicacion' => 'Calle Martínez Almagro, 6, 04001 Almería',
             'descripcion' => 'Una de las atracciones turísticas locales, Iglesia de la Virgen del Mar, está muy cerca de este bar, y forma parte de la cultura única de la ciudad. En La mala, te servirán cocina española. Su famosa tortilla de patata, sabrosa tortilla de champiñones y extraordinario tataki de atún te van a saber estupendamente. Una serie de clientes han notado que puedes comer aquí con confianza unos bien preparados brownies, una casera tarta y una generosa tarta de queso. Este lugar te ofrece su insuperable cerveza artesanal, su delicioso vino y su sorprendente cordial. Es estupendo poder pedir un espectacular café cortado o una excelente limonada.
@@ -98,7 +98,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//10
             'nombre' => 'Barceló Cabo de Gata',
             'ubicacion' => 'Urbanización El Toyo, Calle de los Juegos de Casablanca, 04131 Retamar, Almería',
             'descripcion' => 'Hotel frente al mar con piscinas, restaurantes, spa y habitaciones y suites con balcón.',
@@ -106,7 +106,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '3'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//11
             'nombre' => 'Restaurante La Tagliatella',
             'ubicacion' => 'Calle Ribera de las Almadrabillas, 2, 04004 Almería',
             'descripcion' => 'Iluminación cálida y adornos hogareños antiguos en cadena de restaurantes de gastronomía tradicional italiana.',
@@ -114,7 +114,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//12
             'nombre' => 'Tetería Almedina',
             'ubicacion' => 'Calle Paz, 2, 04002 Almería',
             'descripcion' => 'Ambiente íntimo, artesanía, sofás y taburetes y mesas bajos en restaurante halal y tetería con dulces árabes.',
@@ -122,7 +122,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//13
             'nombre' => 'Hotel Nuevo Torreluz Almeria',
             'ubicacion' => 'Plaza Flores, 10, 04001 Almería',
             'descripcion' => 'Este hotel sin pretensiones se encuentra en el centro de la ciudad, a 1 km de la estación de tren de Almería y de la Alcazaba, y a 5 minutos a pie de la catedral.
@@ -134,7 +134,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '3'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//14
             'nombre' => 'El Quinto Toro',
             'ubicacion' => 'Calle Juan Leal, 6, 04001 Almería',
             'descripcion' => 'Una de las atracciones turísticas locales, Paseo de Almeria, está muy cerca de este bar, y forma parte de la cultura original de esta ciudad. Entre otros establecimientos de cocina española en los que comer, El Quinto Toro puede estar entre los más reconocidos. Invita a tus personas queridas y tomad sus sabrosas tapas, sus famosos patatas y su perfectamente elaborado laing. Es estupendo poder pedir una insuperable cerveza de grifo, un buen vino o un sensacional fino. Su extraordinaria limonada es el punto clave de este lugar.
@@ -144,7 +144,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//15
             'nombre' => 'Mini Bar',
             'ubicacion' => 'Calle Rueda López, 19, 04004 Almería',
             'descripcion' => 'Una vez que hayas disfrutado de Paseo de Almeria, visita este restaurante, que no está muy lejos. Si disfrutas de las cocinas mediterránea y española, completa tu colección en Mini Bar. Prueba sus magníficas tapas, su fascinante cerdo y sus singulares gambas.
@@ -154,7 +154,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//16
             'nombre' => 'La Cabaña del Tio Tom',
             'ubicacion' => 'Calle Joaquín Vázquez, 2, Almería',
             'descripcion' => 'En este bar van a ofrecerte una carta variada basada en la cocina española. Sus sabrosas tapas, generoso entrecot y sorprendente entrecote te van a saber increíblemente bien. Muchos críticos se han dado cuenta de que aquí puedes comer con confianza un bien valorado pudin. Pide su insuperable cerveza, sus deliciosos tinto de verano o sus espectaculares tinto de verano. La limonada que podrás pedir aquí es sensacional.
@@ -164,7 +164,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//17
             'nombre' => 'Taberna El Andaluz',
             'ubicacion' => 'Calle Felipe II 80 04009, Almería',
             'descripcion' => 'Los clientes recomiendan los platos de la cocina española de este bar. Con sus famosas tapas, su perfectamente elaborado laing y su singular teriyaki de atún te llevarás una espléndida impresión. Si todavía no has degustado la sabrosa tarta, la generosa tarta de chocolate o el delicado milhojas de Taberna El Andaluz, entonces no has disfrutado aún de la vida.
@@ -174,7 +174,7 @@ class ComerciosTableSeeder extends Seeder
             'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([
+        DB::table('comercios')->insert([//18
             'nombre' => 'Ohtels Gran Hotel Almería',
             'ubicacion' => 'Calle Reina Regente, 8, 04001 Almería',
             'descripcion' => 'Este sofisticado hotel, con vistas al puerto de Almería, se encuentra a 11 minutos a pie de la estación de tren, a 14 de la playa del Zapillo y a 2 km de la Alcazaba.
