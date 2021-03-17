@@ -185,5 +185,105 @@ class ComerciosTableSeeder extends Seeder
             'prioridad' => '2',
             'categoria_id' => '3'
             ]);
+
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
+        DB::table('comercios')->insert([//19
+            'nombre' => '',
+            'ubicacion' => '',
+            'descripcion' => '',
+            'prioridad' => '',
+            'categoria_id' => ''
+        ]);
     }
 }

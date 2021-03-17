@@ -59,7 +59,7 @@
         <div class="row my-4">
             <form action="{{ route('resena.store') }}" method="POST" class="bg-light border p-4">
                 @csrf
-                <label style="width: 100%;" for="exampleFormControlTextarea1">Escriba una opinión:</label>
+                <label style="width: 100%;" for="exampleFormControlTextarea1"><h5>Escriba una opinión:</h5></label>
                 <input type="hidden" name="comercio_id" value="{{$valor}}">
                 <div class="stars" id="stars">
                     <input class="star star-5" required id="star-5" type="radio" name="puntuacion" value="5" />
@@ -74,11 +74,11 @@
                     <label class="star star-1" for="star-1"></label>
                 </div>
                 <div class="form-group mb-4">
-                    <textarea class="form-control my-2" name="comentario" required placeholder="Escriba su comentario..." id="exampleFormControlTextarea1" rows="4"></textarea>
+                    <textarea class="form-control mt-2 mb-4" name="comentario" required placeholder="Escriba su comentario..." id="exampleFormControlTextarea1" rows="4"></textarea>
                     @if(isset(Auth::User()->id))
                     <div class="text-center"><button type="submit" class="btn btn-outline-success w-25 text-center">Enviar</button></div>
                     @else
-                    <a href="/login" class="btn btn-outline-success">Login</a>
+                    <div class="text-center"><a href="/login" class="btn btn-outline-success w-25">Login</a></div>
                     @endif
                 </div>
 
