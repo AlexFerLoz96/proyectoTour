@@ -19,7 +19,7 @@ Route::get('/cargarDatos/{prioridad}', 'ComercioController@cargarDatos')->name('
 
 Route::get('/dashboard', 'ComercioController@public')->middleware(['auth'])->name('dashboard');
 
-
+Route::get('/logout', '\App\Http\Controllers\Auth\AuthenticatedSessionController@destroy');
 
 require __DIR__.'/auth.php';
 

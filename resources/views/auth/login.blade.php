@@ -8,6 +8,11 @@
         <x-slot name="logo">
         </x-slot>
 
+        <!-- The video -->
+        <video autoplay muted loop id="myVideo">
+            <source src="/assets/imgs/lugares/login.mp4" type="video/mp4">
+        </video>
+
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 

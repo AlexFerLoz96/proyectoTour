@@ -22,11 +22,19 @@ html {
   overflow: hidden;
 }
 
-body {
-  background-image: url("https://www.65ymas.com/uploads/s1/11/91/7/almeria-capital-gastronomica-2019.jpeg");
-background-size: cover;
-overflow: auto;filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1d1f', endColorstr='#df405a', GradientType=1 );
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
+/*body {
+background-image: url("https://www.65ymas.com/uploads/s1/11/91/7/almeria-capital-gastronomica-2019.jpeg");
+background-size: cover;
+overflow: auto;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1d1f', endColorstr='#df405a', GradientType=1 );
+}*/
 
 /*--------------------
 Text

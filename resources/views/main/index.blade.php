@@ -63,7 +63,7 @@
 
     <h1 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h1>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center text-center">
             @foreach ($comercioPrioridad as $comercio)
             <div class="col-xl-3 col-lg-5 col-md-8 col-sm-8 mx-4 my-5 p-0 border shadow rounded"
@@ -78,7 +78,7 @@
                 @endif
                 @endforeach
 
-                <h3 class="nombre p-3">{{$comercio->nombre ?? ''}}</h3>
+                <h3 class="nombre p-3 pb-0">{{$comercio->nombre ?? ''}}</h3>
                 <svg style="margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -92,7 +92,7 @@
                         <path fill="#0d6efd"
                             d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
                             class=""></path>
-                    </svg>{{$comercio->ubicacion ?? ''}}</div>
+                    </svg><small>{{$comercio->ubicacion ?? ''}}</small></div>
 
                 @foreach ($resenaList as $resena)
                 @if($comercio->id == $resena->comercio_id)
@@ -139,6 +139,7 @@
 
 
 <script>
+/****************** Al pinchar en un comercio de lleva al comercio con dicho id*********************/
 function mostrarComercio(id) {
     location.href = "/comercio/public/" + id;
 }
@@ -159,6 +160,9 @@ $(document).ready(function() {
         puntuacion(this, valor);
     });
 /****************************************************************************/
+
+
+
 /*****************Límite de caracteres en descripcion y nombre************************/
     function limitarCaracteres(elemento, max_chars) {
         limite_text = $(elemento).text();
@@ -178,6 +182,9 @@ $(document).ready(function() {
         limitarCaracteres(this, 30);
     });
 /****************************************************************************/
+
+
+
 /************************Cargar datos por AJAX*******************************/
     var prioridad = 2;
 
