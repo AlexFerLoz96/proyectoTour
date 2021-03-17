@@ -61,7 +61,7 @@
         </div>
     </section>
 
-    <h1 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h1>
+    <h2 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
 
     <div class="container-fluid">
         <div class="row justify-content-center text-center">

@@ -62,7 +62,7 @@
                 <label style="width: 100%;" for="exampleFormControlTextarea1">Escriba una opinión:</label>
                 <input type="hidden" name="comercio_id" value="{{$valor}}">
                 <div class="stars" id="stars">
-                    <input class="star star-5" id="star-5" type="radio" name="puntuacion" value="5" />
+                    <input class="star star-5" required id="star-5" type="radio" name="puntuacion" value="5" />
                     <label class="star star-5" for="star-5"></label>
                     <input class="star star-4" id="star-4" type="radio" name="puntuacion" value="4" />
                     <label class="star star-4" for="star-4"></label>
@@ -74,9 +74,9 @@
                     <label class="star star-1" for="star-1"></label>
                 </div>
                 <div class="form-group mb-4">
-                    <textarea class="form-control my-2" name="comentario" placeholder="Escriba su comentario..." id="exampleFormControlTextarea1" rows="4"></textarea>
+                    <textarea class="form-control my-2" name="comentario" required placeholder="Escriba su comentario..." id="exampleFormControlTextarea1" rows="4"></textarea>
                     @if(isset(Auth::User()->id))
-                    <button type="submit" class="btn btn-outline-success">Enviar</button>
+                    <div class="text-center"><button type="submit" class="btn btn-outline-success w-25 text-center">Enviar</button></div>
                     @else
                     <a href="/login" class="btn btn-outline-success">Login</a>
                     @endif
@@ -85,7 +85,7 @@
             </form>
         </div>
         @endif
-        <h1 class="text-center">Comentarios y valoraciones</h1>
+        <h2 class="text-center">Comentarios y valoraciones</h2>
 
         <div class="row justify-content-center mb-4 border-2 border-end border-start">
             <div class="col-9">
@@ -124,7 +124,7 @@
     </div>
     <!--container mb-5 p-0-->
 
-    <h4 class="text-center my-3">Otras sugerencias</h4>
+    <h2 class="text-center my-3">Otras sugerencias</h2>
 
 
     <div id="tabla">
@@ -158,8 +158,13 @@
                     @break
                     @endif
                     @endforeach
-                    <h5>{{$comercio->nombre ?? ''}}</h5>
-                    <p class="descripcion">{{$comercio->descripcion ?? ''}}</p>
+                    <div class="p-2 text-center">
+                        <h5>{{$comercio->nombre ?? ''}}</h5>
+                        <svg fill="none" width="30" height="12" viewBox="0 0 35 10" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
+                        </svg>
+                        <p class="descripcion">{{$comercio->descripcion ?? ''}}</p>
+                    </div>
                 </td>
                 @endforeach
             </tr>
