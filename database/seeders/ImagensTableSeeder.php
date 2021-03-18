@@ -304,5 +304,99 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Ohtels Gran Hotel',
             'comercio_id' => '18'
         ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'puga1.jpg',
+            'descripcion' => 'Casa Puga',
+            'comercio_id' => '19'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'vecinas1.jpg',
+            'descripcion' => 'Patio de Vecinas',
+            'comercio_id' => '20'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'sevilla1.jpg',
+            'descripcion' => 'Casa Sevilla',
+            'comercio_id' => '21'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'valentin1.jpg',
+            'descripcion' => 'Restaurante Valentin',
+            'comercio_id' => '22'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'perla1.jpg',
+            'descripcion' => 'Hotel la Perla',
+            'comercio_id' => '23'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'bambalina1.jpg',
+            'descripcion' => 'Restaurante La Bambalina',
+            'comercio_id' => '24'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'hormiguita1.jpg',
+            'descripcion' => 'Bar La hormiguita',
+            'comercio_id' => '25'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'china1.jpg',
+            'descripcion' => 'Restaurante China City',
+            'comercio_id' => '26'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'parque1.jpg',
+            'descripcion' => 'Cafe bar restaurante el parque',
+            'comercio_id' => '27'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'bagua1.jpg',
+            'descripcion' => 'Restaurante Bagua ALmeria',
+            'comercio_id' => '28'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'colombia1.jpg',
+            'descripcion' => 'Cafe Colombia',
+            'comercio_id' => '29'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'tamayo1.jpg',
+            'descripcion' => 'Cafetería tamayo29',
+            'comercio_id' => '30'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'sagunto1.jpg',
+            'descripcion' => 'Cafetería Sagunto',
+            'comercio_id' => '31'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'collage1.jpg',
+            'descripcion' => 'Collage Cafe',
+            'comercio_id' => '32'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'clasijazz1.jpg',
+            'descripcion' => 'Cafetería clasijazz',
+            'comercio_id' => '33'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'lubrin1.jpg',
+            'descripcion' => 'Lubrin Cafetería Cerveceria',
+            'comercio_id' => '34'
+        ]);
     }
 }
