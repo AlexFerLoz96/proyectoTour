@@ -15,6 +15,7 @@ class ResenasTableSeeder extends Seeder
      */
     public function run()
     {
+        Resena::truncate(); // Optativo: vacía la tabla antes de rellenarla
         DB::table('resenas')->insert([
             'comentario' => 'Muy buena calidad en las tapas, trato excelente y local muy bien acondicionado',
             'puntuacion' => '5',
