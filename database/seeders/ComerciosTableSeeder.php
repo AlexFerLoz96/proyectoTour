@@ -77,7 +77,7 @@ class ComerciosTableSeeder extends Seeder
         ]);
 
         DB::table('comercios')->insert([//8
-            'nombre' => 'Taberna',
+            'nombre' => 'La Taberna',
             'ubicacion' => 'Calle la Unión, 7, 04001 Almería',
             'descripcion' => 'Si la lluvia te ha sorprendido de camino a Parroquia de San Pedro Apostol, refúgiate en este restaurante. Las cocinas española y vegetariana son excelentes en El Candil. Ofrecer unas magníficas tapas, un bien trabajado hummus y unos fascinantes salmorejo es la principal característica de este lugar. Prueba su singular milhojas. Degusta una excelente cerveza o un buen vino en este lugar.
 
@@ -187,103 +187,144 @@ class ComerciosTableSeeder extends Seeder
             ]);
 
         DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+            'nombre' => 'Casa Puga',
+            'ubicacion' => 'Calle Jovellanos, 7, 04003 Almería',
+            'descripcion' => 'rimero, disfruta de Centro de Interpretacion Patrimonial de Almeria y, después, come algo en Casa Puga. La cocina española es algo que no hay que dejar de probar en este bar. En este establecimiento, sus comensales disfrutan entre deliciosos platos y degustan sus famosas tapas españolas, su extraordinario atún y sus bien trabajadas gambas fritas. Aquí puedes pedir un sorprendente vino de la casa, un sensacional cordial o un insuperable jerez. Este lugar es famoso por su delicioso café cortado y su estupenda limonada.
+
+            El ambiente hogareño de Casa Puga permite a sus clientes relajarse tras un duro día de trabajo. Los serviciales camareros y camareras de este lugar muestra lo mucho que aprecian a sus visitantes. Su magnífico servicio es siempre un placer. Aquí vas a pagar unos precios interesantes.',
+            'prioridad' => '3',
+            'categoria_id' => '1'
         ]);
 
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//20
+            'nombre' => 'Patio de Vecinas',
+            'ubicacion' => 'Calle Arco, 3, 04003 Almería',
+            'descripcion' => 'Imagínate que por fin has llegado a Patio De Vecinas tras visitar Parroquia de San Pedro Apostol. La cocina española es excelente en este bar. Puedes pedir unas famosas tapas, un generoso laing y unas bien trabajadas empanadas. Patio De Vecinas te agradará con su atrayente tarta, su delicada tarta de queso y sus bien preparados brownies. Para que tu almuerzo esté aún mejor, prueba una cerveza, que dicen que es sensacional. Este lugar te ofrece su espectacular café.
+
+            El ambiente hogareño de este lugar permite a sus clientes relajarse tras un duro día de trabajo. Muchos comensales indican que el personal es extraordinario. Su divino servicio te hará sentirte especial. Podemos recomendar este establecimiento por sus precios bajos. Aquí te vas a encontrar con una excepcional decoración.',
+            'prioridad' => '3',
+            'categoria_id' => '1'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//21
+            'nombre' => 'Casa Sevilla',
+            'ubicacion' => 'Calle Rueda López, 04004 Almería',
+            'descripcion' => 'Seguro que vas a visitar Paseo de Almeria: la recomendación de sus clientes es que vengas también a este bar. Casa Sevilla es famoso por tener cocinas mediterránea y española. Pedir su famoso pulpo, su extraordinario tartar de atún o su exquisito jamón es, con seguridad, una buena idea. Si todavía no has degustado la atrayente tarta, los sorprendentes helados o la delicada leche frita de este lugar, entonces no has disfrutado aún de la vida.
+
+            La carta de vinos es muy variada: hay que satisfacer las necesidades de todos los invitados. Empieza tu comida con un magnífico café cortado. Muchos comensales aseguran que los camareros y camareras son serviciales. Su fascinante servicio es siempre un placer. Pagarás unos precios buenos por la comida. En este lugar podrás disfrutar de su cuidada decoración y de un agradable ambiente.',
+            'prioridad' => '3',
+            'categoria_id' => '1'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//22
+            'nombre' => 'Restaurante Valentín',
+            'ubicacion' => 'Calle Tenor Iribarne, 19, 04001 Almería',
+            'descripcion' => 'Las vistas de Arabic Aljibes desde las ventanas de este restaurante te dejan un recuerdo imborrable. En Valentín sirven platos de las cocinas mediterránea y española. Este lugar te agradará con su sabroso pulpo, sus magníficas tapas y sus famosos zarzuela. Aquí podrás degustar un atrayente helado.
+
+            La carta de vinos es muy variada: hay que satisfacer las necesidades de todos los invitados. Su extraordinaria limonada y su buen café están entre las bebidas más solicitadas de este lugar. Se comenta que aquí el personal esta bien preparado. Su servicio siempre es fascinante, no lo olvides. Sabemos que aquí los precios son interesantes. Una decoración hogareña y su ambiente encantador ayudan a sus clientes a sentirse relajados. Este restaurante ha sido seleccionado por Michelin y ha sido premiado con 2 símbolos negros del cuchillo y el tenedor: los expertos destacan que Valentín garantiza un óptimo nivel de confort.',
+            'prioridad' => '3',
+            'categoria_id' => '1'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//23
+            'nombre' => 'Hotel la Perla',
+            'ubicacion' => 'Plaza del Carmen, 7, 04003 Almería',
+            'descripcion' => 'Hotel la Perla es un alojamiento familiar y acogedor situado en pleno centro de Almería, en La Puerta Purchena, junto a lugares de gran interés turístico como La Alcazaba y La Catedral.
+            Con más de 140 años de historia, contamos con una larga trayectoria a nuestras espaldas, ofreciendo el mejor servicio y profesionalidad a nuestros clientes.
+            Entre nuestros huéspedes contamos con muchos actores como Clint Eastwood y Lee Van Cleef y directores como Sergio Leone, protagonistas de los Spaguetti Western que se rodaban en Almería en los años 60 y 70.
+            El hotel fue completamente reformado en 2017 para poder ofrecer a nuestros clientes una estancia más confortable. Además ofrecemos otros servicios como Parking concertado, Recepción 24 horas e información turística.',
+            'prioridad' => '3',
+            'categoria_id' => '3'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//24
+            'nombre' => 'Restaurante La Bambalina',
+            'ubicacion' => 'Calle Padre Alfonso Torres, 14, 04001 Almería',
+            'descripcion' => 'Imagínate que por fin has llegado a la bambalina tras visitar Parroquia de San Pedro Apostol. En este bar te servirán recetas de cocinas mediterránea y española. Muchos visitan la bambalina para saborear sus famosas tapas de pescado, su extraordinario bacalao y sus atrayentes calamares. Es una buena idea pedir una singular tarta. Su buena cerveza, su irresistible vino y su estupendo cordial son el rasgo distintivo de este lugar.
+
+            Vas a llevarte un buen recuerdo de este lugar, puesto que es famoso por su gran servicio y su amable personal, siempre dispuesto a ayudar. Pagarás unos precios interesantes por la comida. En este bar podrás disfrutar de su festiva decoración y de un encantador ambiente.',
+            'prioridad' => '3',
+            'categoria_id' => '1'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//25
+            'nombre' => 'La Hormiguita',
+            'ubicacion' => 'Parque de Nicolás Salmerón, Almería',
+            'descripcion' => 'Visita este bar y come algo si tienes hambre tras disfrutar de Centro Andaluz de la Fotografia. Lo que aquí te van a pedir que tomes es su cocina española. De acuerdo con las opiniones de los clientes, los camareros te sirven aquí unas caseras tapas de pescado, una atrayente sardina y un generoso laing. No puedes dejar de probar su buena cerveza siempre que vengas a La Hormiguita. Según las opiniones de los usuarios, aquí sus camareros ofrecen un excelente café.
+
+            Es fácil encontrar este lugar gracias a su estupenda ubicación. Comprueba por ti mismo lo eficiente que es su personal. El servicio en este lugar se podría describir como algo magnífico. Según el punto de vista de los clientes, sus precios son interesantes. Con toda seguridad vas a disfrutar de su distendido ambiente.',
+            'prioridad' => '3',
+            'categoria_id' => '3'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//26
+            'nombre' => 'Restaurante China City',
+            'ubicacion' => 'Calle Álvarez De Castro, 21, Almería, Andalucía, España',
+            'descripcion' => 'Visita este restaurante y come algo si tienes hambre tras disfrutar de Iglesia de la Virgen del Mar. Prueba algo distinto de la cocina china. Aquí sirven un tierno pollo al limón. Algunos de sus visitantes aconsejan probar la excelente limonada de China City.
+
+            Por si todo esto fuera poco, su personal es extraordinario. Tal y como un gran número de críticos observan, el servicio es bueno.',
+            'prioridad' => '3',
+            'categoria_id' => '1'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//27
+            'nombre' => 'Café bar restaurante El parque',
+            'ubicacion' => 'Parque de Nicolás Salmerón, 9, 04001 Almería',
+            'descripcion' => 'Si pasas por Iglesia de la Virgen del Mar, visita este restaurante. Relájate y ven a probar la cocina mediterránea. Ahora relájate y degusta un perfectamente elaborado pulpo, un magnífico pescado frito o una fascinante frita. Su generosa tarta te va a saber estupendamente. Los amantes del vino comprobarán que es sensacional. El Parque tiene entre sus bebidas un excelente café.
+
+            Muchos clientes dicen que el personal es servicial. Descansar y comer aquí es siempre un placer, principalmente por su buen servicio. Los precios son interesantes para la calidad que recibes. Sin duda vas a disfrutar de su agradable ambiente y su festiva decoración.',
+            'prioridad' => '3',
+            'categoria_id' => '1'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//28
+            'nombre' => 'Restaurante Bagua Almería',
+            'ubicacion' => 'Av. Federico García Lorca, 5, 04004 Almería',
+            'descripcion' => 'En el mismo centro de la ciudad de Almería, enclavado en la parte baja de la Rambla Federico García Lorca se encuentra el Restaurante Bagua, un lugar ideal par dejar pasar el tiempo. Cualquier momento es bueno para hacer una parada en la rutina del día a día y encontrar en este establecimiento un ambiente ideal para descansar la mente, almorzar o cenar con un producto de primera calidad, disfrutar de un café, un aperitivo o una buena copa.
+
+            La decoración vanguardista no es lo más destacado de nuestro establecimiento, sino que se ha hecho pensando en la comodidad del cliente. Sillas confortables, mesas amplias, espacio amplio y todo ello aderezado con música buena música. Además, dispone de una terraza en la misma acera de la Rambla de Almería.
+            
+            Restaurante Bagua se llena de gente de negocios y personal administrativo de nuestra ciudad que lo elige para reponer fuerzas en este ambiente idílico, un balcón de oxigeno para poder completar la jornada de trabajo. Por la tarde y la noche el local se adapta al reloj y cuida desde la copa, hasta una cena en compañía de los tuyos.',
+            'prioridad' => '3',
+            'categoria_id' => '1'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//29
+            'nombre' => 'Café Colombia',
+            'ubicacion' => 'Av. Federico García Lorca, 6, 04004 Almería',
+            'descripcion' => 'Si coincide que estás cerca de Biblioteca Publica Provincial Francisco Villaespesa, visita este café. Cafeteria Colombia sirve cocina española. La receta del éxito de este lugar está en su perfectamente elaborado laing. Empieza tu comida con un magnífico café.
+
+            Es fácil encontrar este lugar gracias a su estupenda ubicación. Su preparado personal recibe a los comensales todo el año. Este café es conocido por su fascinante servicio. Muchos visitantes han reparado en el hecho de que los platos que ofrecen tienen unos precios aceptables.',
+            'prioridad' => '4',
+            'categoria_id' => '2'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//30
+            'nombre' => 'Cafetería tamayo29',
+            'ubicacion' => 'Calle general Tamayo,numero29, bajo, 04001 Almería',
+            'descripcion' => 'Un paseo admirando Escuela de Arte de Almeria es lo menos que puedes esperar tras cenar en este café. La comida española merece aquí la pena. Sus famosas tapas son una estupenda elección que merece la pena probar. De acuerdo con las opiniones de los críticos, aquí sus camareros ofrecen un magnífico café.',
+            'prioridad' => '4',
+            'categoria_id' => '2'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//31
+            'nombre' => 'Cafetería Sagunto',
+            'ubicacion' => 'Calle Sagunto, 04004 Almería',
+            'descripcion' => 'Este café te ofrece buenos platos y un lugar donde descansar tras un largo paseo alrededor de Biblioteca Publica Provincial Francisco Villaespesa. Prueba sus generosas tapas para hacerte una idea de cómo es Cafetería Sagunto. Una serie de usuarios estiman que en este establecimiento el personal es atento. Su divino servicio es prueba del alto nivel de calidad de este lugar. Disfruta de su espectacular ambiente.',
+            'prioridad' => '4',
+            'categoria_id' => '2'
         ]);
-        DB::table('comercios')->insert([//19
-            'nombre' => '',
-            'ubicacion' => '',
-            'descripcion' => '',
-            'prioridad' => '',
-            'categoria_id' => ''
+        DB::table('comercios')->insert([//32
+            'nombre' => 'Collage Café',
+            'ubicacion' => 'Calle Sagunto, 6, 04004 Almería',
+            'descripcion' => 'Visita Biblioteca Publica Provincial Francisco Villaespesa y ven a esta cafetería. Collage Café brinda un divino servicio a sus clientes.',
+            'prioridad' => '4',
+            'categoria_id' => '2'
+        ]);
+        DB::table('comercios')->insert([//33
+            'nombre' => 'Cafetería Clasijazz',
+            'ubicacion' => 'Calle Maestro Serrano, 9, Almería, Andalucía, España',
+            'descripcion' => 'Ven a beber algo tras ese largo paseo por Biblioteca Publica Provincial Francisco Villaespesa. Clasijazz te ofrece estupendos platos de la cocina mediterránea. El laing es aquí atrayente, y eso es lo que los comensales habituales de este lugar suelen asegurar. Empieza tu comida con una sensacional cerveza. Este lugar es conocido por su magnífico café.
+
+            La buenísima ubicación de este lugar hace que llegar a él incluso en hora punta sea muy sencillo. El éxito de Clasijazz sería imposible sin unos corteses camareros y camareras. Sus clientes afirman que aquí el servicio es abnegado. Tienes garantizado un encantador ambiente en este lugar. ',
+            'prioridad' => '4',
+            'categoria_id' => '2'
+        ]);
+        DB::table('comercios')->insert([//33
+            'nombre' => 'Lubrin Cafetería Cervecería',
+            'ubicacion' => 'Calle de Rafael Alberti 9, Almería, Andalucía, España, 04004',
+            'descripcion' => 'Si quieres tener un buen recuerdo de Biblioteca Publica Provincial Francisco Villaespesa, ven primero a este café. Las cocinas mediterránea y española son buenas en Cafeteria Lubrin. Siempre puedes degustar unas caseras tapas, unos sorprendentes patatas o un generoso laing en este lugar. Su buen café hará que tu comida sea más sabrosa, lo que, seguramente, te hará volver.',
+            'prioridad' => '4',
+            'categoria_id' => '2'
         ]);
     }
 }
