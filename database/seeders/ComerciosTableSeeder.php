@@ -277,7 +277,7 @@ class ComerciosTableSeeder extends Seeder
             La decoración vanguardista no es lo más destacado de nuestro establecimiento, sino que se ha hecho pensando en la comodidad del cliente. Sillas confortables, mesas amplias, espacio amplio y todo ello aderezado con música buena música. Además, dispone de una terraza en la misma acera de la Rambla de Almería.
             
             Restaurante Bagua se llena de gente de negocios y personal administrativo de nuestra ciudad que lo elige para reponer fuerzas en este ambiente idílico, un balcón de oxigeno para poder completar la jornada de trabajo. Por la tarde y la noche el local se adapta al reloj y cuida desde la copa, hasta una cena en compañía de los tuyos.',
-            'prioridad' => '3',
+            'prioridad' => '4',
             'categoria_id' => '1'
         ]);
         DB::table('comercios')->insert([//29
@@ -319,11 +319,11 @@ class ComerciosTableSeeder extends Seeder
             'prioridad' => '4',
             'categoria_id' => '2'
         ]);
-        DB::table('comercios')->insert([//33
+        DB::table('comercios')->insert([//34
             'nombre' => 'Lubrin Cafetería Cervecería',
             'ubicacion' => 'Calle de Rafael Alberti 9, Almería, Andalucía, España, 04004',
             'descripcion' => 'Si quieres tener un buen recuerdo de Biblioteca Publica Provincial Francisco Villaespesa, ven primero a este café. Las cocinas mediterránea y española son buenas en Cafeteria Lubrin. Siempre puedes degustar unas caseras tapas, unos sorprendentes patatas o un generoso laing en este lugar. Su buen café hará que tu comida sea más sabrosa, lo que, seguramente, te hará volver.',
-            'prioridad' => '4',
+            'prioridad' => '5',
             'categoria_id' => '2'
         ]);
     }
