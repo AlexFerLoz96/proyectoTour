@@ -148,5 +148,161 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'AC Hotel Almeria',
             'comercio_id' => '6'
         ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'cala1.jpg',
+            'descripcion' => 'La cala',
+            'comercio_id' => '7'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'cala2.jpg',
+            'descripcion' => 'La cala',
+            'comercio_id' => '7'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'taberna1.jpg',
+            'descripcion' => 'La taberna',
+            'comercio_id' => '8'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'taberna2.jpg',
+            'descripcion' => 'La taberna',
+            'comercio_id' => '8'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'mala1.jpg',
+            'descripcion' => 'La mala',
+            'comercio_id' => '9'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'mala2.jpg',
+            'descripcion' => 'La mala',
+            'comercio_id' => '9'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'barcelo1.jpg',
+            'descripcion' => 'Hotel Barcelo',
+            'comercio_id' => '10'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'barcelo2.jpg',
+            'descripcion' => 'Hotel Barcelo',
+            'comercio_id' => '10'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'barcelo3.jpg',
+            'descripcion' => 'Hotel Barcelo',
+            'comercio_id' => '10'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'barcelo4.jpg',
+            'descripcion' => 'Hotel Barcelo',
+            'comercio_id' => '10'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'barcelo5.jpg',
+            'descripcion' => 'Hotel Barcelo',
+            'comercio_id' => '10'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'tagli1.jpg',
+            'descripcion' => 'Tagliatella',
+            'comercio_id' => '11'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'tagli2.jpg',
+            'descripcion' => 'Tagliatella',
+            'comercio_id' => '11'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'almedina1.jpg',
+            'descripcion' => 'Teteria Almedina',
+            'comercio_id' => '12'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'almedina2.jpg',
+            'descripcion' => 'Teteria Almedina',
+            'comercio_id' => '12'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'torreluz1.jpg',
+            'descripcion' => 'Hotel Nuevo Torreluz',
+            'comercio_id' => '13'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'torreluz2.jpg',
+            'descripcion' => 'Hotel Nuevo Torreluz',
+            'comercio_id' => '13'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'toro1.jpg',
+            'descripcion' => 'El quinto toro',
+            'comercio_id' => '14'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'toro2.jpg',
+            'descripcion' => 'El quinto toro',
+            'comercio_id' => '14'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'minibar1.jpg',
+            'descripcion' => 'Minibar',
+            'comercio_id' => '15'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'minibar2.jpg',
+            'descripcion' => 'Minibar',
+            'comercio_id' => '15'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'tom1.jpg',
+            'descripcion' => 'La cabaña del tio Tom',
+            'comercio_id' => '16'
+        ]);
+        DB::table('imagens')->insert([
+            'ruta' => 'tom2.jpg',
+            'descripcion' => 'La cabaña del tio Tom',
+            'comercio_id' => '16'
+        ]);
+        
+        DB::table('imagens')->insert([
+            'ruta' => 'andaluz1.jpg',
+            'descripcion' => 'Taberna el Andaluz',
+            'comercio_id' => '17'
+        ]);
+        
+        DB::table('imagens')->insert([
+            'ruta' => 'andaluz2.jpg',
+            'descripcion' => 'Taberna el Andaluz',
+            'comercio_id' => '17'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'andaluz3.jpg',
+            'descripcion' => 'Taberna el Andaluz',
+            'comercio_id' => '17'
+        ]);
+        
+        DB::table('imagens')->insert([
+            'ruta' => 'granhotel1.jpg',
+            'descripcion' => 'Ohtels Gran Hotel',
+            'comercio_id' => '18'
+        ]);
+
+        DB::table('imagens')->insert([
+            'ruta' => 'granhotel2.jpg',
+            'descripcion' => 'Ohtels Gran Hotel',
+            'comercio_id' => '18'
+        ]);
     }
 }
