@@ -149,7 +149,7 @@
             </div>
             <tr>
                 @foreach($comercioPrioridad as $comercio)
-                <td onclick="mostrarComercio({{$comercio->id}})">
+                <td onclick="mostrarComercio({{$comercio->id}}) ">
                     @foreach ($imagenList as $imagen)
                     @if($comercio->id == $imagen->comercio_id)
                     <div class="imagen-cont">

@@ -112,8 +112,8 @@
 
     <div class="container mt-5">
         <hr>
-        <h2 class="my-6 mt-5 text-center">Sitios que tienes que visitar en Almería</h2>
-        <p class="text-center my-5">Una visita a la provincia de Almería ofrece todo lo necesario para unas vacaciones
+        <h2 class="mt-5 text-center">Sitios que tienes que visitar en Almería</h2>
+        <p class="text-center mt-4 mb-5">Una visita a la provincia de Almería ofrece todo lo necesario para unas vacaciones
             perfectas.
             Aventúrate en su escarpado paisaje para disfrutar de sus maravillas naturales,
             desenchufa en su larguísimas y sublimes playas y mézclate con los lugareños en la histórica ciudad de
@@ -129,7 +129,7 @@
                 @break
                 @endif
                 @endforeach
-                <h3 class="p-3 pb-3"><strong>{{$lugar->nombre}}</strong></h3>
+                <h3 class="p-3 pb-2"><strong>{{$lugar->nombre}}</strong></h3>
                 <div class="p-3 pt-0">{{$lugar->descripcion}}</div>
             </div>
             @endforeach
