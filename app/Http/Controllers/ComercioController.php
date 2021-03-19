@@ -125,6 +125,7 @@ class ComercioController extends Controller
     public function store(Request $r)
     {
         $comercio = new Comercio();
+        $comercio->orden = $r->orden;
         $comercio->nombre = $r->nombre;
         $comercio->ubicacion = $r->ubicacion;
         $comercio->descripcion = $r->descripcion;
@@ -209,6 +210,7 @@ class ComercioController extends Controller
     public function update(Request $r)
     {
         $comercio = Comercio::find($r->id);
+        $comercio->orden = $r->orden;
         $comercio->nombre = $r->nombre;
         $comercio->ubicacion = $r->ubicacion;
         $comercio->descripcion = $r->descripcion;
