@@ -24,6 +24,7 @@ class ComercioController extends Controller
         $comercioPrioridad = DB::table('comercios')
         ->select('*')
         ->where('prioridad','=','1')
+        ->orderBy('orden')
         ->get();
 
         $comercioList = Comercio::all();

@@ -20,6 +20,7 @@ class CreateComerciosTable extends Migration
             $table->longText('descripcion');
             $table->integer('prioridad');
             $table->integer('categoria_id');
+            $table->integer('orden')->nullable();
             $table->timestamps();
         });
     }

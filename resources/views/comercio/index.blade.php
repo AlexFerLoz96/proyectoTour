@@ -8,6 +8,7 @@
     <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
+                <th>Orden</th>
                 <th>Comercios</th>
                 <th>Ubicación</th>
                 <th>Descripción</th>
@@ -21,6 +22,7 @@
     @foreach ($comercioList as $comercio)
         <tr>
             <td>{{$comercio->id}}</td>
+            <td>{{$comercio->orden}}</td>
             <td>{{$comercio->nombre}}</td>
             <td>{{$comercio->ubicacion}}</td>
             <td>{{$comercio->descripcion}}</td>
@@ -34,9 +36,10 @@
                     <input type="button"  onclick="question({{ $comercio->id }})" value="Delete" class="btn btn-danger">
                 </form> 
             </td>
-        <br>
+        
     @endforeach
     </table>
+    </div>
 @endsection
 <script>
     function question(id){

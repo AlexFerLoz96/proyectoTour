@@ -21,7 +21,8 @@ class ComerciosTableSeeder extends Seeder
             'ubicacion' => 'Plaza Antonio González Egea, 04001 Almería',
             'descripcion' => 'Sed bienvenidos a la Brasería la Consentida. Nuestra filosofía de trabajo se basa en hacer sentir a nuestros clientes unos auténticos consentid@s. Somos especialistas en carnes a la brasa pero no por ello nuestras tapas son solo de carne, disponemos de una de la más amplia variedad de tapas en Almería. ¡Os esperamos a tod@s!',
             'prioridad' => '1',
-            'categoria_id' => '1'
+            'categoria_id' => '1',
+            'orden' => '10'
         ]);
 
         DB::table('comercios')->insert([//2
@@ -29,7 +30,8 @@ class ComerciosTableSeeder extends Seeder
             'ubicacion' => 'Calle Marín, 14, 04003 Almería',
             'descripcion' => 'Nos complace darle la bienvenida a nuestro comercio e invitarle a conocer más de cerca nuestro local y nuestra excelente cocina. Tanto si se decanta por los platos clásicos como por las innovaciones: nuestros menús y la oferta de temporada satisfarán al paladar más exigente.',
             'prioridad' => '1',
-            'categoria_id' => '1'
+            'categoria_id' => '1',
+            'orden' => '20'
         ]);
 
         DB::table('comercios')->insert([//3
@@ -37,7 +39,8 @@ class ComerciosTableSeeder extends Seeder
             'ubicacion' => 'Plaza de la Constitución, 3, 04003 Almería',
             'descripcion' => 'En Restaurantes La Tahona llevamos muchos años trabajando para mejorar la calidad en nuestros productos y servicios. Elaboramos tapas selectas de la mejor calidad y merecedoras de los inumerables premios de los certámentes Ruta de Tapas y Tapas de Película. Elaboramos nuestra propia cerveza artesanal tostada con un toque a mandarina. Además estamos situados en un sitio emblemático de la ciudad, la Plaza Vieja de Almería.',
             'prioridad' => '1',
-            'categoria_id' => '1'
+            'categoria_id' => '1',
+            'orden' => '30'
         ]);
 
         DB::table('comercios')->insert([//4
@@ -45,7 +48,8 @@ class ComerciosTableSeeder extends Seeder
             'ubicacion' => 'Calle Rambla Obispo Orberá, 11, 04001 Almería',
             'descripcion' => 'GOIKO es el lugar donde puedes dejarte llevar por el placer de las burgers más irresistibles y de mejor calidad, donde puedes rendirte a tus impulsos y disfrutar del chorreo sin que te importe mancharte las manos. ... Si te preguntan «¿Te hace un GOIKO?» solo podrás responder «F*CK YEAH!»',
             'prioridad' => '1',
-            'categoria_id' => '1'
+            'categoria_id' => '1',
+            'orden' => '40'
         ]);
 
         DB::table('comercios')->insert([//5
@@ -55,7 +59,8 @@ class ComerciosTableSeeder extends Seeder
 
         Se comenta que aquí el personal es extraordinario. Este lugar brinda un magnífico servicio a sus comensales. Se dice que aquí los precios son interesantes. En este lugar, sus invitados disfrutan de un ambiente encantador y de una decoración divina.',
             'prioridad' => '1',
-            'categoria_id' => '1'
+            'categoria_id' => '1',
+            'orden' => '50'
         ]);
 
         DB::table('comercios')->insert([//6
@@ -63,7 +68,8 @@ class ComerciosTableSeeder extends Seeder
             'ubicacion' => 'Plaza De Las Flores, 5, 04001 Almería',
             'descripcion' => 'El AC Hotel Almería está ubicado en el corazón del centro histórico y comercial de la provincia y localidad de Almería, cerca de la Alcazaba, y permite un fácil acceso al aeropuerto, Museo Arqueológico, estación de tren, recinto ferial, playa y mar. -Paseo lateral. Aproveche la conexión inalámbrica a internet gratuita en todo el hotel. Nuestro hotel de 4 estrellas también cuenta con 8 salones de eventos, habitaciones para no fumadores, cajas de seguridad, instalaciones para negocios y un restaurante, "El Asador".',
             'prioridad' => '1',
-            'categoria_id' => '3'
+            'categoria_id' => '3',
+            'orden' => '60'
         ]);
 
         DB::table('comercios')->insert([//7
@@ -73,7 +79,8 @@ class ComerciosTableSeeder extends Seeder
 
         Su alegre personal demuestra un alto nivel de calidad en La Cala. Su magnífico servicio es algo que estos restauradores saben cuidar. Los adecuados precios de este lugar siempre son una buena noticia para sus comensales. Sin duda vas a agradecer su silencioso ambiente y su agradable decoración.',
             'prioridad' => '1',
-            'categoria_id' => '1'
+            'categoria_id' => '1',
+            'orden' => '70'
         ]);
 
         DB::table('comercios')->insert([//8
@@ -85,7 +92,8 @@ class ComerciosTableSeeder extends Seeder
         Un encuentro con una culttura desconocida, cocina tradicional india, cocina fusión y toques mediterráneos.
         Naan, currys, y biryanis son algunas cosas que os podeis encontrar sin tener que volar.',
             'prioridad' => '1',
-            'categoria_id' => '1'
+            'categoria_id' => '1',
+            'orden' => '80'
         ]);
 
         DB::table('comercios')->insert([//9
@@ -95,7 +103,8 @@ class ComerciosTableSeeder extends Seeder
 
             El ambiente cálido de este lugar permite a sus invitados relajarse tras un duro día de trabajo. Se comenta que aquí el personal es exquisito. Su divino servicio demuestra el alto nivel de calidad de este bar. La mayoría de usuarios se han dado cuenta de que los precios son interesantes para lo que te dan. Su excepcional decoración te sorprenderá gratamente.',
             'prioridad' => '1',
-            'categoria_id' => '1'
+            'categoria_id' => '1',
+            'orden' => '90'
         ]);
 
         DB::table('comercios')->insert([//10
