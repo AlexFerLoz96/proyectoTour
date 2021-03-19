@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Comercio extends Model
 {
     use HasFactory;
-
+/*-------------------------------------------------------------------------------
+------------------------FUNCIONES DE FOREIGN KEYS--------------------------------
+--------------------------------------------------------------------------------*/
     public function imagen() {
         return $this->hasMany(Imagen::Class);
     }

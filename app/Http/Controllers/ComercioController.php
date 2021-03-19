@@ -14,11 +14,9 @@ use DB;
 
 class ComercioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+--------------------------CONSULTAS DE LA PÁGINA PRINCIPAL-----------------------
+--------------------------------------------------------------------------------*/
     public function public()
     {
         $comercioPrioridad = DB::table('comercios')
@@ -46,8 +44,9 @@ class ComercioController extends Controller
         return view('main.index',compact('comercioPrioridad','categoriaList','comercioList','resenaList','imagenList', 'lugarList'));
     }
 
-
-//*****************************Cargar datos por AJAX****************************
+/*-------------------------------------------------------------------------------
+-------------------------------Cargar datos por AJAX-----------------------------
+--------------------------------------------------------------------------------*/
 
 
     public function cargarDatos($prioridad){
@@ -66,7 +65,9 @@ class ComercioController extends Controller
         return response()->json(compact('comercioPrioridad', 'resena','imgs'));
     }
 
-
+/*-------------------------------------------------------------------------------
+------------------------CONSULTAS DE LA VISTA DE BÚSQUEDA------------------------
+--------------------------------------------------------------------------------*/
 
     public function search(Request $r)
     {
@@ -97,17 +98,20 @@ class ComercioController extends Controller
         return view('comercio.search', compact('categoriaList', 'consultaComercio','imagenList', 'palabraBusqueda', 'contador'));
     }
 
+/*-------------------------------------------------------------------------------
+-------------------------------CONSULTA DEL CRUD---------------------------------
+--------------------------------------------------------------------------------*/
+
     public function index()
     {
         $comercioList = Comercio::all();
         return view('comercio.index', compact('comercioList'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+-------------------------CONSULTAS PARA VISTA DE CREACIÓN------------------------
+--------------------------------------------------------------------------------*/
+
     public function create()
     {
         $comercioList = Comercio::all();
@@ -115,12 +119,9 @@ class ComercioController extends Controller
         return view('comercio.create', compact('comercioList','categoriaList'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+-------------------------------GUARDADO DE NUEVO COMERCIO------------------------
+--------------------------------------------------------------------------------*/
     public function store(Request $r)
     {
         $comercio = new Comercio();
@@ -133,12 +134,9 @@ class ComercioController extends Controller
         return redirect()->route('comercio.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+---------------------CONSULTAS DE LA VISTA DE CADA COMERCIO----------------------
+--------------------------------------------------------------------------------*/
     public function show($id)
     {
         $comercio = Comercio::find($id);
@@ -194,12 +192,10 @@ class ComercioController extends Controller
         return view('comercio.public', compact('categoriaList','comercio', 'imagenList','imagenComercio', 'resenaMedia', 'comercioPrioridad','resenaList','usuarioNombre', 'contador','hayResena'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+-----------------------CONSULTAS PARA EDITAR CADA COMERCIO-----------------------
+--------------------------------------------------------------------------------*/
+
     public function edit($id)
     {
         $comercio = Comercio::find($id);
@@ -207,13 +203,9 @@ class ComercioController extends Controller
         return view('comercio.edit', compact('comercio','categoriaList'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+-------------------------------ACTUALIZAR CADA COMERCIO--------------------------
+--------------------------------------------------------------------------------*/
     public function update(Request $r)
     {
         $comercio = Comercio::find($r->id);
@@ -226,12 +218,9 @@ class ComercioController extends Controller
         return redirect()->route('comercio.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+-------------------------ELIMINACIÓN DE CADA COMERCIO----------------------------
+--------------------------------------------------------------------------------*/
     public function destroy($id)
     {
         $comercio = Comercio::find($id);

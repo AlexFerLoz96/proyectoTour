@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Resena extends Model
 {
     use HasFactory;
-
+/*-------------------------------------------------------------------------------
+------------------------FUNCIONES DE FOREIGN KEYS--------------------------------
+--------------------------------------------------------------------------------*/
     public function comercio() {
         return $this->belongsTo(Comercio::Class);
     }

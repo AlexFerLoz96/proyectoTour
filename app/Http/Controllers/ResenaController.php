@@ -11,11 +11,9 @@ use Illuminate\Support\Carbon;
 
 class ResenaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+------------------------CONSULTAS DEL CRUD --------------------------------------
+--------------------------------------------------------------------------------*/
     public function index()
     {
         $resenaList = Resena::all();
@@ -24,11 +22,10 @@ class ResenaController extends Controller
         return view('resena.index', compact('resenaList','userList','comercioList'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+------------------------CONSULTAS DE CREACION------------------------------------
+--------------------------------------------------------------------------------*/
+
     public function create()
     {
 
@@ -37,12 +34,10 @@ class ResenaController extends Controller
         return view('resena.create',compact('userList','comercioList'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+------------------------GUARDADO DE RESEÑAS--------------------------------------
+--------------------------------------------------------------------------------*/
+
     public function store(Request $r)
     {
         $resena = new Resena();
@@ -55,12 +50,10 @@ class ResenaController extends Controller
         return redirect()->route('comercio.public',$r->comercio_id);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+------------------------CONSULTAS DE CADA RESEÑA---------------------------------
+--------------------------------------------------------------------------------*/
+
     public function show($id)
     {
         $resena = Resena::find($id);
@@ -69,12 +62,10 @@ class ResenaController extends Controller
         return view('resena.show', $data);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+------------------------CONSULTAS DE LA EDICION DE CADA RESEÑA-------------------
+--------------------------------------------------------------------------------*/
+
     public function edit($id)
     {
         $resena = Resena::find($id);
@@ -83,13 +74,10 @@ class ResenaController extends Controller
         return view('resena.edit',compact('resena','userList','comercioList'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+------------------------ACTUALIZACION DE CADA RESEÑA-----------------------------
+--------------------------------------------------------------------------------*/
+
     public function update(Request $r)
     {
         $resena = Resena::find($r->id);
@@ -100,12 +88,10 @@ class ResenaController extends Controller
         $resena->save();
         return redirect()->route('resena.index');    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+/*-------------------------------------------------------------------------------
+------------------------ELIMINACION DE CADA RESEÑA-------------------------------
+--------------------------------------------------------------------------------*/
+
     public function destroy($id)
     {
         $resena = Resena::find($id);

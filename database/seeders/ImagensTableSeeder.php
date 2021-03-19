@@ -21,6 +21,7 @@ class ImagensTableSeeder extends Seeder
         'descripcion' => 'Alcazaba',
         'lugar_id' => '1'
         ]);
+        //LUGARES
         DB::table('imagens')->insert([
             'ruta' => 'catedral.jpg',
             'descripcion' => 'Catedral de Almería',
@@ -56,7 +57,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Museo de Almeria',
             'lugar_id' => '8'
         ]);
-
+        //COMERCIO 1
         DB::table('imagens')->insert([
             'ruta' => 'consentida1.jpg',
             'descripcion' => 'La consentida',
@@ -68,7 +69,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'La consentida',
             'comercio_id' => '1'
         ]);
-
+        //COMERCIO 2
         DB::table('imagens')->insert([
             'ruta' => 'andaluz1.jpg',
             'descripcion' => 'Taberna el Andaluz',
@@ -86,7 +87,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Taberna el Andaluz',
             'comercio_id' => '2'
         ]);
-
+        //COMERCIO 3
         DB::table('imagens')->insert([
             'ruta' => 'tahona1.jpg',
             'descripcion' => 'La Tahona',
@@ -97,7 +98,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'La Tahona',
             'comercio_id' => '3'
         ]);
-
+        //COMERCIO 4
         DB::table('imagens')->insert([
             'ruta' => 'goiko1.jpg',
             'descripcion' => 'Goiko',
@@ -119,7 +120,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Goiko',
             'comercio_id' => '4'
         ]);
-
+        //COMERCIO 5
         DB::table('imagens')->insert([
             'ruta' => 'chilecito1.jpg',
             'descripcion' => 'El chilecito',
@@ -130,7 +131,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'El chilecito',
             'comercio_id' => '5'
         ]);
-        
+        //COMERCIO 6
         DB::table('imagens')->insert([
             'ruta' => 'achotel1.jpg',
             'descripcion' => 'AC Hotel Almeria',
@@ -148,7 +149,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'AC Hotel Almeria',
             'comercio_id' => '6'
         ]);
-
+        //COMERCIO 7
         DB::table('imagens')->insert([
             'ruta' => 'cala1.jpg',
             'descripcion' => 'La cala',
@@ -159,7 +160,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'La cala',
             'comercio_id' => '7'
         ]);
-
+        //COMERCIO 8
         DB::table('imagens')->insert([
             'ruta' => 'taberna1.jpg',
             'descripcion' => 'La taberna',
@@ -170,7 +171,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'La taberna',
             'comercio_id' => '8'
         ]);
-
+        //COMERCIO 9
         DB::table('imagens')->insert([
             'ruta' => 'mala1.jpg',
             'descripcion' => 'La mala',
@@ -181,7 +182,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'La mala',
             'comercio_id' => '9'
         ]);
-
+        //COMERCIO 10
         DB::table('imagens')->insert([
             'ruta' => 'barcelo1.jpg',
             'descripcion' => 'Hotel Barcelo',
@@ -207,7 +208,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Hotel Barcelo',
             'comercio_id' => '10'
         ]);
-
+        //COMERCIO 11
         DB::table('imagens')->insert([
             'ruta' => 'tagli1.jpg',
             'descripcion' => 'Tagliatella',
@@ -218,7 +219,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Tagliatella',
             'comercio_id' => '11'
         ]);
-
+        //COMERCIO 12
         DB::table('imagens')->insert([
             'ruta' => 'almedina1.jpg',
             'descripcion' => 'Teteria Almedina',
@@ -229,6 +230,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Teteria Almedina',
             'comercio_id' => '12'
         ]);
+        //COMERCIO 13
         DB::table('imagens')->insert([
             'ruta' => 'torreluz1.jpg',
             'descripcion' => 'Hotel Nuevo Torreluz',
@@ -240,7 +242,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Hotel Nuevo Torreluz',
             'comercio_id' => '13'
         ]);
-
+        //COMERCIO 14
         DB::table('imagens')->insert([
             'ruta' => 'toro1.jpg',
             'descripcion' => 'El quinto toro',
@@ -251,7 +253,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'El quinto toro',
             'comercio_id' => '14'
         ]);
-
+        //COMERCIO 15
         DB::table('imagens')->insert([
             'ruta' => 'minibar1.jpg',
             'descripcion' => 'Minibar',
@@ -263,7 +265,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Minibar',
             'comercio_id' => '15'
         ]);
-
+        //COMERCIO 16
         DB::table('imagens')->insert([
             'ruta' => 'tom1.jpg',
             'descripcion' => 'La cabaña del tio Tom',
@@ -274,7 +276,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'La cabaña del tio Tom',
             'comercio_id' => '16'
         ]);
-        
+        //COMERCIO 17
         DB::table('imagens')->insert([
             'ruta' => 'andaluz1.jpg',
             'descripcion' => 'Taberna el Andaluz',
@@ -292,7 +294,7 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Taberna el Andaluz',
             'comercio_id' => '17'
         ]);
-        
+        //COMERCIO 18
         DB::table('imagens')->insert([
             'ruta' => 'granhotel1.jpg',
             'descripcion' => 'Ohtels Gran Hotel',
@@ -304,95 +306,97 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Ohtels Gran Hotel',
             'comercio_id' => '18'
         ]);
-
+        //COMERCIO 19
         DB::table('imagens')->insert([
             'ruta' => 'puga1.jpg',
             'descripcion' => 'Casa Puga',
             'comercio_id' => '19'
         ]);
-
+        //COMERCIO 20
         DB::table('imagens')->insert([
             'ruta' => 'vecinas1.jpg',
             'descripcion' => 'Patio de Vecinas',
             'comercio_id' => '20'
         ]);
+        //COMERCIO 21
         DB::table('imagens')->insert([
             'ruta' => 'sevilla1.jpg',
             'descripcion' => 'Casa Sevilla',
             'comercio_id' => '21'
         ]);
+        //COMERCIO 22
         DB::table('imagens')->insert([
             'ruta' => 'valentin1.jpg',
             'descripcion' => 'Restaurante Valentin',
             'comercio_id' => '22'
         ]);
-
+        //COMERCIO 23
         DB::table('imagens')->insert([
             'ruta' => 'perla1.jpg',
             'descripcion' => 'Hotel la Perla',
             'comercio_id' => '23'
         ]);
-
+        //COMERCIO 24
         DB::table('imagens')->insert([
             'ruta' => 'bambalina1.jpg',
             'descripcion' => 'Restaurante La Bambalina',
             'comercio_id' => '24'
         ]);
-
+        //COMERCIO 25
         DB::table('imagens')->insert([
             'ruta' => 'hormiguita1.jpg',
             'descripcion' => 'Bar La hormiguita',
             'comercio_id' => '25'
         ]);
-
+        //COMERCIO 26
         DB::table('imagens')->insert([
             'ruta' => 'china1.jpg',
             'descripcion' => 'Restaurante China City',
             'comercio_id' => '26'
         ]);
-
+        //COMERCIO 27
         DB::table('imagens')->insert([
             'ruta' => 'parque1.jpg',
             'descripcion' => 'Cafe bar restaurante el parque',
             'comercio_id' => '27'
         ]);
-
+        //COMERCIO 28
         DB::table('imagens')->insert([
             'ruta' => 'bagua1.jpg',
             'descripcion' => 'Restaurante Bagua ALmeria',
             'comercio_id' => '28'
         ]);
-
+        //COMERCIO 29
         DB::table('imagens')->insert([
             'ruta' => 'colombia1.jpg',
             'descripcion' => 'Cafe Colombia',
             'comercio_id' => '29'
         ]);
-
+        //COMERCIO 30
         DB::table('imagens')->insert([
             'ruta' => 'tamayo1.jpg',
             'descripcion' => 'Cafetería tamayo29',
             'comercio_id' => '30'
         ]);
-
+        //COMERCIO 31
         DB::table('imagens')->insert([
             'ruta' => 'sagunto1.jpg',
             'descripcion' => 'Cafetería Sagunto',
             'comercio_id' => '31'
         ]);
-
+        //COMERCIO 32
         DB::table('imagens')->insert([
             'ruta' => 'collage1.jpg',
             'descripcion' => 'Collage Cafe',
             'comercio_id' => '32'
         ]);
-
+        //COMERCIO 33
         DB::table('imagens')->insert([
             'ruta' => 'clasijazz1.jpg',
             'descripcion' => 'Cafetería clasijazz',
             'comercio_id' => '33'
         ]);
-
+        //COMERCIO 34
         DB::table('imagens')->insert([
             'ruta' => 'lubrin1.jpg',
             'descripcion' => 'Lubrin Cafetería Cerveceria',
