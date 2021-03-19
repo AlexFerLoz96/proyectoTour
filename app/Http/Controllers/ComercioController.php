@@ -11,6 +11,7 @@ use App\Models\Resena;
 use App\Models\Imagen;
 use App\Models\Lugar;
 use DB;
+use PHPUnit\Framework\SkippedTest;
 
 class ComercioController extends Controller
 {
@@ -65,6 +66,29 @@ class ComercioController extends Controller
         return response()->json(compact('comercioPrioridad', 'resena','imgs'));
     }
 
+
+    public function cargarDatosSearch($key){
+
+        $comercio = DB::table('comercios')
+        ->join('categorias', 'categorias.id', '=','comercios.categoria_id')
+        ->select('comercios.*')
+        ->where('comercios.nombre', 'like', "%{$key}%")
+        ->orWhere('comercios.ubicacion', 'like', "%{$key}%")
+        ->orWhere('comercios.descripcion', 'like', "%{$key}%")
+        ->orWhere('categorias.nombre','like',"%{$key}%")
+        ->orderBy('comercios.id')
+        ->get();
+        
+        $resena = DB::table('resenas')
+        ->select(DB::raw('round(avg(puntuacion), 1) as puntuacion, comercio_id'))
+        ->groupBy('comercio_id')
+        ->get();
+
+        $imgs = Imagen::all();
+
+        return response()->json(compact('comercio', 'resena','imgs'));
+    }
+
 /*-------------------------------------------------------------------------------
 ------------------------CONSULTAS DE LA VISTA DE BÚSQUEDA------------------------
 --------------------------------------------------------------------------------*/
@@ -85,14 +109,26 @@ class ComercioController extends Controller
             ->orWhere('comercios.descripcion', 'like', "%{$key}%")
             ->orWhere('categorias.nombre','like',"%{$key}%")
             ->orderBy('comercios.id')
+            ->take(10)
             ->get();
+
+        $consultaComercioAll = DB::table('comercios')
+            ->join('categorias', 'categorias.id', '=','comercios.categoria_id')
+            ->select('comercios.*')
+            ->where('comercios.nombre', 'like', "%{$key}%")
+            ->orWhere('comercios.ubicacion', 'like', "%{$key}%")
+            ->orWhere('comercios.descripcion', 'like', "%{$key}%")
+            ->orWhere('categorias.nombre','like',"%{$key}%")
+            ->orderBy('comercios.id')
+            ->get();
+            
             
         $imagenList = DB::table('imagens')
         ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
         ->select('imagens.*')
         ->get();
 
-        $contador = $consultaComercio->count();
+        $contador = $consultaComercioAll->count();
         
 
         return view('comercio.search', compact('categoriaList', 'consultaComercio','imagenList', 'palabraBusqueda', 'contador'));

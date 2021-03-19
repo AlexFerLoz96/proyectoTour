@@ -17,6 +17,8 @@ Route::get('/', 'ComercioController@public')->name('comercio.public');
 
 Route::get('/cargarDatos/{prioridad}', 'ComercioController@cargarDatos')->name('cargarDatos');
 
+Route::get('/cargarDatosSearch', 'ComercioController@cargarDatosSearch')->name('cargarDatosSearch');
+
 Route::get('/dashboard', 'ComercioController@public')->middleware(['auth'])->name('dashboard');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\AuthenticatedSessionController@destroy');

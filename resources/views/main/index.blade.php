@@ -237,6 +237,10 @@ $(document).ready(function() {
             }
         });
         prioridad++;
+
+        if(prioridad >= 8){
+            $("#cargarDatos").hide(500);
+        }
     });
 });
 </script>
