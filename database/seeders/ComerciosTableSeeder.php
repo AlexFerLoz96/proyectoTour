@@ -19,7 +19,7 @@ class ComerciosTableSeeder extends Seeder
         DB::table('comercios')->insert([//1
             'nombre' => 'La consentida',
             'ubicacion' => 'Plaza Antonio González Egea, 04001 Almería',
-            'descripcion' => 'Sed bienvenidos a la Brasería la Consentida. Nuestra filosofía de trabajo se basa en hacer sentir a nuestros clientes unos auténticos consentid@s. Somos especialistas en carnes a la brasa pero no por ello nuestras tapas son solo de carne, disponemos de una de la más amplia variedad de tapas en Almería. ¡Os esperamos a tod@s!',
+            'descripcion' => 'Sed bienvenidos a la Brasería la Consentida. Nuestra filosofía de trabajo se basa en hacer sentir a nuestros clientes unos auténticos consentid@s. <br> Somos especialistas en carnes a la brasa pero no por ello nuestras tapas son solo de carne, disponemos de una de la más amplia variedad de tapas en Almería. ¡Os esperamos a tod@s!',
             'prioridad' => '1',
             'categoria_id' => '1',
             'orden' => '10'

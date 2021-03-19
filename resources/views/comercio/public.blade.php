@@ -46,7 +46,7 @@
         <svg style="position:relative;left:50%;transform:translateX(-50%);margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
         </svg>
-        <h5 class="">{{$comercio->descripcion}}</h5>
+        <h6 class="">{!!$comercio->descripcion!!}</h6>
         <hr>
         <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q={{$comercio->ubicacion}}+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
         </div>
