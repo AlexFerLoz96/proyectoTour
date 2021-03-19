@@ -33,7 +33,7 @@
                                 <!-- Email Address -->
                                 <x-label for="email" :value="__('Email')" />
 
-                                <x-input id="user" class="block mt-1 w-full" type="text" title="Username" name="email" :value="old('email')" required autofocus />
+                                <x-input id="user" class="block mt-1 w-full" autocomplete="off" type="text" title="Username" name="email" :value="old('email')" required autofocus />
                                 <span id='valida' class='i i-warning'></span>
                             </p>
 
