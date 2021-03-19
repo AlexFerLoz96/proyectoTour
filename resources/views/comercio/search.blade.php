@@ -80,12 +80,17 @@
 
         /****************************** CONSULTA AJAX SEARCH *********************************/
 
-        var siguientesComercios = 11;
-
+        var skip = 10;
+        var key= "{{$palabraBusqueda}}";
+        if(skip >= {{$contador}}){
+                        $("#cargarDatos").hide(0);
+        }
         $("#cargarDatos").click(function() {
 
+            
+
             $.ajax({
-                url: "/cargarDatosSearch/" + siguientesComercios,
+                url: "/cargarDatosSearch/" + key +"/" + skip,
                 method: 'GET',
                 dataType: 'JSON',
 
@@ -113,18 +118,18 @@
 
                 complete: function() {
                     $(".descripcion").each(function(index, e) {
-                        limitarCaracteres(this, 130);
+                        limitarCaracteres(this, 400);
                     });
-
-                    $(".resena").each(function(index, e) {
-                        valor = $(this).data("value");
-                        puntuacion(this, valor);
-                    });
+                    
                 }
             });
 
-            siguientesComercios += 10;
+            skip += 10;
+            if(skip >= {{$contador}}){
+                        $("#cargarDatos").hide(500);
+            }
         });
+       
     });
 </script>
 @endsection

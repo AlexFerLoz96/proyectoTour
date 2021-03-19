@@ -67,7 +67,7 @@ class ComercioController extends Controller
     }
 
 
-    public function cargarDatosSearch($key){
+    public function cargarDatosSearch($key,$skip){
 
         $comercio = DB::table('comercios')
         ->join('categorias', 'categorias.id', '=','comercios.categoria_id')
@@ -77,6 +77,8 @@ class ComercioController extends Controller
         ->orWhere('comercios.descripcion', 'like', "%{$key}%")
         ->orWhere('categorias.nombre','like',"%{$key}%")
         ->orderBy('comercios.id')
+        ->skip($skip)
+        ->take(10)
         ->get();
         
         $resena = DB::table('resenas')
