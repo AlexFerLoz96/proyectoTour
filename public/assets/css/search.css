@@ -30,9 +30,6 @@
 
 
 
-
-
-
 .row:nth-child(odd){
   animation-name: izq;
   animation-duration: 1000ms;

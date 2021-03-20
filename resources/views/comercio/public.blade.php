@@ -149,7 +149,7 @@
             </div>
             <tr>
                 @foreach($comercioPrioridad as $comercio)
-                <td onclick="mostrarComercio({{$comercio->id}}) ">
+                <td class="elementoTabla" onclick="mostrarComercio({{$comercio->id}})">
                     @foreach ($imagenList as $imagen)
                     @if($comercio->id == $imagen->comercio_id)
                     <div class="imagen-cont">
@@ -191,7 +191,7 @@
         }
 
         $(".descripcion").each(function(index, e) {
-            ellipsis_box(this, 100);
+            ellipsis_box(this, 90);
         });
 
 

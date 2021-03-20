@@ -179,14 +179,14 @@ nav{
     margin-bottom: 5rem;
   }
 
-  td{
-    padding:0;
+  .elementoTabla{
+    padding: 0px !important;
     width: 12.5%;
     border: 1px solid white;
     border-bottom:5px white solid;
   }
 
-  td:hover{
+  .elementoTabla:hover{
     border: 1px solid grey;
     border-bottom:5px grey solid;
     cursor:pointer;
