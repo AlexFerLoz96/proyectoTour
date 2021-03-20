@@ -12,7 +12,8 @@
         <form action="{{ route('resena.store') }}" method="POST">
     @endisset
         @csrf
-        resena comentario:<input type="text" name="comentario" value="{{$resena->comentario ?? '' }}"><br>
+        <h2>Nueva reseña</h2>
+        Comentario:<textarea rows="10" cols="50" name="comentario" value="{{$resena->comentario ?? '' }}">{{$resena->comentario ?? '' }}</textarea><br>
         Puntuacion: <input type="number" min="1" max="5" name="puntuacion" value="{{$resena->puntuacion ?? ''}}"><br>
         Usuario: <select name="user_id" id="">
             <option >-- Seleccionar usuario --</option>

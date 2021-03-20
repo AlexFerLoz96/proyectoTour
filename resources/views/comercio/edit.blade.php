@@ -16,7 +16,7 @@
         Orden:<input type="text" name="orden" value="{{$comercio->orden ?? '' }}"><br>
         Nombre:<input type="text" name="nombre" value="{{$comercio->nombre ?? '' }}"><br>
         Ubicacion: <input type="text" name="ubicacion" value="{{$comercio->ubicacion ?? '' }}"><br>
-        Descripcion: <input type="text" name="descripcion" value="{{$comercio->descripcion ?? '' }}"> <br>
+        Descripcion: <textarea type="text" name="descripcion" value="{{$comercio->descripcion ?? '' }}">{{$comercio->descripcion ?? '' }}</textarea><br>
         Prioridad: <input type="number" min="1" name="prioridad" value="{{$comercio->prioridad ?? ''}}"><br>
         Categoria: <select name="categoria_id" id="">
             <option >-- Seleccionar categoria --</option>
