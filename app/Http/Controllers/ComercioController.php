@@ -146,6 +146,17 @@ class ComercioController extends Controller
         return view('comercio.index', compact('comercioList'));
     }
 
+    public function ordenar($key){
+        $orden = session()->get('orden', 'desc');
+
+        $comercioList = Comercio::orderBy($key,$orden)->get();
+        
+        $orden = $orden == 'desc' ? 'asc': 'desc';
+
+        session()->put('orden', $orden);
+
+        return view('comercio.index', compact('comercioList'));
+    }
 /*-------------------------------------------------------------------------------
 -------------------------CONSULTAS PARA VISTA DE CREACIÓN------------------------
 --------------------------------------------------------------------------------*/

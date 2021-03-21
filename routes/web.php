@@ -53,6 +53,7 @@ Route::get('/comercio/public/{id}', 'ComercioController@show')->name('comercio.p
 Route::get('/comercio/{id}/edit', 'ComercioController@edit')->middleware(['admin'])->name('comercio.edit');
 Route::put('/comercio/{id}', 'ComercioController@update')->middleware(['admin'])->name('comercio.update');
 Route::delete('/comercio/{id}/borrar', 'ComercioController@destroy')->middleware(['admin'])->name('comercio.destroy');
+Route::get('/comercio/{ordenar}/ordenar', 'ComercioController@ordenar')->middleware(['admin'])->name('comercio.ordenar');
 
 Route::get('/imagen', 'ImagenController@index')->middleware(['admin'])->name('imagen.index');
 Route::get('/imagen/create', 'ImagenController@create')->middleware(['admin'])->name('imagen.create');
@@ -69,6 +70,7 @@ Route::get('/resena/{id}', 'ResenaController@show')->middleware(['admin'])->name
 Route::get('/resena/{id}/edit', 'ResenaController@edit')->middleware(['admin'])->name('resena.edit');
 Route::put('/resena/{id}', 'ResenaController@update')->middleware(['admin'])->name('resena.update');
 Route::delete('/resena/{id}/borrar', 'ResenaController@destroy')->middleware(['admin'])->name('resena.destroy');
+Route::get('/resena/{ordenar}/ordenar', 'ResenaController@ordenar')->middleware(['admin'])->name('resena.ordenar');
 
 Route::get('/modelo', 'ModeloController@index')->middleware(['admin'])->name('modelo.index');
 Route::get('/modelo/create', 'ModeloController@create')->middleware(['admin'])->name('modelo.create');

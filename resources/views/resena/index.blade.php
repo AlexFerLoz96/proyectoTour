@@ -13,10 +13,10 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col"><a href="{{ route('resena.ordenar','id') }}">ID</a></th>
                 <th>Reseña</th>
-                <th>Puntuación</th>
-                <th>Fecha</th>
+                <th><a href="{{ route('resena.ordenar','puntuacion') }}">Puntuación</a></th>
+                <th><a href="{{ route('resena.ordenar','fecha') }}">Fecha</a></th>
                 <th>Usuario</th>
                 <th>Comercio</th>
                 <th></th>

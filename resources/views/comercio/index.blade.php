@@ -11,12 +11,12 @@
     <table class="table">
     <thead class="thead-dark">
             <tr>
-                <th scope="col">ID</th>
-                <th>Orden</th>
-                <th>Comercios</th>
+                <th scope="col"><a href="{{ route('comercio.ordenar','id') }}">ID</a></th>
+                <th><a href="{{ route('comercio.ordenar','orden') }}">Orden</a></th>
+                <th><a href="{{ route('comercio.ordenar','nombre') }}">Comercios</a></th>
                 <th>Ubicación</th>
                 <th>Descripción</th>
-                <th>Prioridad</th>
+                <th><a href="{{ route('comercio.ordenar','prioridad') }}">Prioridad</a></th>
                 <th>Categoria</th>
                 <th></th>
                 <th></th>

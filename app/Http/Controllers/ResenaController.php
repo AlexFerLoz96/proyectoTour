@@ -22,6 +22,21 @@ class ResenaController extends Controller
         return view('resena.index', compact('resenaList','userList','comercioList'));
     }
 
+    public function ordenar($key){
+        $orden = session()->get('orden', 'desc');
+
+        $resenaList = Resena::orderBy($key,$orden)->get();
+        
+        $orden = $orden == 'desc' ? 'asc': 'desc';
+
+        session()->put('orden', $orden);
+
+        $userList = User::all();
+
+        $comercioList = Comercio::all();
+        
+        return view('resena.index', compact('resenaList','userList','comercioList'));
+    }
 /*-------------------------------------------------------------------------------
 ------------------------CONSULTAS DE CREACION------------------------------------
 --------------------------------------------------------------------------------*/
