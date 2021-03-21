@@ -30,7 +30,7 @@
                     <input type="button"  onclick="question({{ $modelo->id }})" value="Delete" class="btn btn-danger">
                 </form>
             </td>
-        <br>
+        
     @endforeach
     </table>
 @endsection

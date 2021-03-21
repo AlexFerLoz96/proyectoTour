@@ -31,7 +31,7 @@
                     <input type="button"  onclick="question({{ $user->id }})" value="Delete" class="btn btn-danger">
                 </form>
             </td>
-        <br>
+    
     @endforeach
     </table>
 @endsection

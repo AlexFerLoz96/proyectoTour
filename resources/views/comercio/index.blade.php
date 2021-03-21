@@ -3,6 +3,10 @@
 @section("title", "Comercios")
 
 @section("content")
+    <form class="form-inline float-right my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
     <a href="{{ route('comercio.create') }}" class="btn btn-success">New</a>
     <table class="table">
     <thead class="thead-dark">
