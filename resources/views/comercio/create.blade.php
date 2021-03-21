@@ -13,11 +13,11 @@
     @endisset
         @csrf
         <h2>Nuevo comercio</h2>
-        Orden:<input class="form-control" type="text" name="orden" value="{{$comercio->orden ?? '' }}"><br>
         Nombre:<input class="form-control" type="text" name="nombre" value="{{$comercio->nombre ?? '' }}"><br>
+        Orden:<input class="form-control" type="text" name="orden" value="{{$comercio->orden ?? '' }}"><br>
         Ubicacion: <input class="form-control" type="text" name="ubicacion" value="{{$comercio->ubicacion ?? '' }}"><br>
         Descripcion: <div class="form-group mb-4"><textarea rows=4 class="form-control mt-2 mb-4" type="text" name="descripcion" value="{{$comercio->descripcion ?? ''}}"></textarea></div><br>
-        Prioridad: <input class="form-control" type="number" min="1" max="5" name="prioridad" value="{{$comercio->prioridad ?? ''}}"><br>
+        Prioridad: <input class="form-control" type="number" min="1" name="prioridad" value="{{$comercio->prioridad ?? ''}}"><br>
         Categoria: <select class="form-control" name="categoria_id" id="">
             <option >-- Seleccionar categoria --</option>
             @foreach($categoriaList as $categoria)
