@@ -68,7 +68,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Sin lugar a dudas, la comida en sí no está tan buena como la de la Taberna el Andaluz de la Avenida Meditarreneo. Algunas tapas estaban sosas, otras la carne más tiesa y la cerveza deja que desear... La carta de tapas es la misma que la de la otra taberna. Un punto a favor, es que, la atención es rápida y atenta por parte de los camareros. El local es llamativo. En conclusión, es un bar para estar de paso por la zona y que la cocina, está mucho mejor la de la otra taberna.',
-            'puntuacion' => '2',
+            'puntuacion' => '3',
             'fecha' => '2020/04/10',
             'user_id' => '3',
             'comercio_id' => '2'
@@ -110,7 +110,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Ambiente rancio. Solo se salva por la ubicación.',
-            'puntuacion' => '2',
+            'puntuacion' => '3',
             'fecha' => '2019/10/04',
             'user_id' => '4',
             'comercio_id' => '3'
@@ -144,7 +144,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Chorreante . La calidad es bastante buena',
-            'puntuacion' => '5',
+            'puntuacion' => '4',
             'fecha' => '2019/10/04',
             'user_id' => '4',
             'comercio_id' => '4'
@@ -162,7 +162,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Trato y comida genial... Repetiré segurooo',
-            'puntuacion' => '5',
+            'puntuacion' => '4',
             'fecha' => '2019/10/11',
             'user_id' => '2',
             'comercio_id' => '5'
@@ -196,7 +196,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Buen sitio con buenas tapas y variadas. Pero ojo!! Algunas como el USUN YUN (tataki de atún) un verdadero TIMO (dos trocitos enanos y eso que tiene suplemento!!!)',
-            'puntuacion' => '4',
+            'puntuacion' => '3',
             'fecha' => '2019/10/11',
             'user_id' => '2',
             'comercio_id' => '6'
@@ -238,7 +238,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Sin lugar a dudas, la comida en sí no está tan buena como la de la Taberna el Andaluz de la Avenida Meditarreneo. Algunas tapas estaban sosas, otras la carne más tiesa y la cerveza deja que desear... La carta de tapas es la misma que la de la otra taberna. Un punto a favor, es que, la atención es rápida y atenta por parte de los camareros. El local es llamativo. En conclusión, es un bar para estar de paso por la zona y que la cocina, está mucho mejor la de la otra taberna.',
-            'puntuacion' => '2',
+            'puntuacion' => '1',
             'fecha' => '2020/04/10',
             'user_id' => '3',
             'comercio_id' => '7'
@@ -264,7 +264,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Nos gusta mucho. Vamos con frecuencia. Te atienden genial. Nos encantan las visitas.',
-            'puntuacion' => '4',
+            'puntuacion' => '2',
             'fecha' => '2019/10/11',
             'user_id' => '2',
             'comercio_id' => '8'
@@ -290,7 +290,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Hamburguesas riquísimas, pero un poco caro',
-            'puntuacion' => '4',
+            'puntuacion' => '3',
             'fecha' => '2020/01/24',
             'user_id' => '1',
             'comercio_id' => '9'
@@ -332,7 +332,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Trato y comida genial... Repetiré segurooo',
-            'puntuacion' => '5',
+            'puntuacion' => '4',
             'fecha' => '2019/10/11',
             'user_id' => '2',
             'comercio_id' => '10'
@@ -358,7 +358,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Muy buena calidad en las tapas, trato excelente y local muy bien acondicionado',
-            'puntuacion' => '5',
+            'puntuacion' => '4',
             'fecha' => '2020/10/10',
             'user_id' => '1',
             'comercio_id' => '11'
@@ -476,7 +476,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'En este restaurante da igual lo que pidas, te ponen lo que les da la gana. Hicimos un pedido de 2 hamburguesas muy hechas, unas patatas finas y unas rústicas. Nos trajeron: 2 hamburguesas crudas (no nos las pudimos comer) y dos de patatas rústicas blandas y aceitosas. Por no alargarme acerca de cómo estaban el resto de ingredientes de las hamburguesas. Un desastre, no vuelvo a pedir aquí.',
-            'puntuacion' => '1',
+            'puntuacion' => '2',
             'fecha' => '2020/04/10',
             'user_id' => '3',
             'comercio_id' => '14'
@@ -494,7 +494,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
-            'puntuacion' => '4',
+            'puntuacion' => '3',
             'fecha' => '2020/02/09',
             'user_id' => '1',
             'comercio_id' => '15'
@@ -536,7 +536,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Buen sitio con buenas tapas y variadas. Pero ojo!! Algunas como el USUN YUN (tataki de atún) un verdadero TIMO (dos trocitos enanos y eso que tiene suplemento!!!)',
-            'puntuacion' => '4',
+            'puntuacion' => '3',
             'fecha' => '2019/10/11',
             'user_id' => '2',
             'comercio_id' => '16'
@@ -570,7 +570,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Excelente tapeo y magnífico el servicio. Muy recomendable',
-            'puntuacion' => '4',
+            'puntuacion' => '5',
             'fecha' => '2019/10/11',
             'user_id' => '2',
             'comercio_id' => '17'
@@ -612,7 +612,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Muy malas tapas.',
-            'puntuacion' => '1',
+            'puntuacion' => '2',
             'fecha' => '2020/04/10',
             'user_id' => '3',
             'comercio_id' => '18'
@@ -646,7 +646,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'En este restaurante da igual lo que pidas, te ponen lo que les da la gana. Hicimos un pedido de 2 hamburguesas muy hechas, unas patatas finas y unas rústicas. Nos trajeron: 2 hamburguesas crudas (no nos las pudimos comer) y dos de patatas rústicas blandas y aceitosas. Por no alargarme acerca de cómo estaban el resto de ingredientes de las hamburguesas. Un desastre, no vuelvo a pedir aquí.',
-            'puntuacion' => '1',
+            'puntuacion' => '2',
             'fecha' => '2020/04/10',
             'user_id' => '3',
             'comercio_id' => '19'
@@ -1174,6 +1174,7 @@ class ResenasTableSeeder extends Seeder
         ]);
 
         /************************************************ */
+        /************************************************ */
 
         DB::table('resenas')->insert([
             'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
@@ -1205,6 +1206,593 @@ class ResenasTableSeeder extends Seeder
             'fecha' => '2019/10/04',
             'user_id' => '4',
             'comercio_id' => '35'
+        ]);
+
+        /************************************************ */
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '36'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '36'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '36'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '36'
+        ]);
+
+        /************************************************ */
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '37'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '37'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '37'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '37'
+        ]);
+
+        /************************************************ */
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '38'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '38'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '38'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '38'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '39'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '39'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '39'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '39'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '40'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '40'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '40'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '40'
+        ]);
+
+        /************************************************ */
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '41'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '41'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '41'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '41'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '42'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '42'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '42'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '42'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '43'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '43'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '43'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '43'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '44'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '44'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '44'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '44'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '45'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '45'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '45'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '45'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '46'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '46'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '46'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '46'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '47'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '47'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '47'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '47'
+        ]);
+
+        /************************************************ */
+
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '48'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '48'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '48'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '48'
+        ]);
+
+        /************************************************ */
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '49'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '49'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '49'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '49'
+        ]);
+
+        /************************************************ */
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '50'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '50'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '50'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '50'
+        ]);
+
+        /************************************************ */
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '4',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '51'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '51'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '4',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '51'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '3',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '51'
+        ]);
+
+        /************************************************ */
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
+            'puntuacion' => '5',
+            'fecha' => '2020/02/09',
+            'user_id' => '1',
+            'comercio_id' => '52'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Trato y comida genial... Repetiré segurooo',
+            'puntuacion' => '5',
+            'fecha' => '2019/10/11',
+            'user_id' => '2',
+            'comercio_id' => '52'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'puntuacion' => '3',
+            'fecha' => '2020/04/10',
+            'user_id' => '3',
+            'comercio_id' => '52'
+        ]);
+
+        DB::table('resenas')->insert([
+            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'puntuacion' => '2',
+            'fecha' => '2019/10/04',
+            'user_id' => '4',
+            'comercio_id' => '52'
         ]);
 
         /************************************************ */

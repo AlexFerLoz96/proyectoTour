@@ -238,7 +238,7 @@ $(document).ready(function() {
         });
         prioridad++;
 
-        if(prioridad >= 8){
+        if(prioridad >= 7){
             $("#cargarDatos").hide(500);
         }
     });

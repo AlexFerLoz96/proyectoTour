@@ -13,7 +13,7 @@
     <div style="display:none">{{$valor = $comercio->id}}</div>
     <div class="container mb-5 p-0">
         <div class="row d-inline">
-            <h1 class="d-block">{{$comercio->nombre}}</h1>
+            <h1 class="d-block mt-3">{{$comercio->nombre}}</h1>
         </div>
 
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -78,7 +78,7 @@
                     @if(isset(Auth::User()->id))
                     <div class="text-center"><button type="submit" class="btn btn-outline-success w-25 text-center">Enviar</button></div>
                     @else
-                    <div class="text-center"><a href="/login" class="btn btn-outline-success w-25">Login</a></div>
+                    <div class="text-center"><a href="/login" class="btn btn-outline-success w-25">Inicia sesión</a></div>
                     @endif
                 </div>
 
