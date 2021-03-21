@@ -72,7 +72,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse p-3 bg-light" id="navbarScroll">
-                <ul class="navbar-nav me-auto  my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px; margin-right: 5% !important;">
+                <ul class="navbar-nav me-auto  my-2 my-lg-0 navbar-nav-scroll" style="margin-right: 5% !important;">
                     @if(isset(Auth::User()->id))
                     @if(Auth::User()->id == 1)
                     <li class="nav-item">
@@ -157,7 +157,7 @@
     $(document).ready(function(){
         $("#arribaDiv").fadeOut(0);
         $(window).scroll(function(){
-            if($(window).scrollTop() > 1500){
+            if($(window).scrollTop() > 1000){
                 $("#arribaDiv").attr("display", "inline-block").fadeIn(1000);
             } else{
                 $("#arribaDiv").fadeOut();

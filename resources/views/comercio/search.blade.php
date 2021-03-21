@@ -10,6 +10,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col mb-2">
+<!------------------------------------------- Número de resultado de la búsqueda ---------------------------------------------->
                 <p class="fs-2 d-inline">{{$palabraBusqueda}} </p>
                 <p class="fs-6 d-inline">{{$contador}}
                     @if($contador == 1)
@@ -24,7 +25,7 @@
                 </p>
             </div>
         </div>
-
+<!-------------------------------------------Bucles para los comerciose imagenes------------------------------------------------->
         @if(!@empty($consultaComercio))
         @foreach ($consultaComercio as $comercio)
         <div class="row justify-content-center mb-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
@@ -58,10 +59,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 <script>
-    function mostrarComercio(id) {
+    
+    function mostrarComercio(id) {//funcion para mostrar cada comercio
         location.href = "/comercio/public/" + id;
     }
-
+    /************************* LIMITACION DE CARACTERES *********************************/
     function limitarCaracteres(elemento, max_chars) {
         limite_text = $(elemento).text();
         if (limite_text.length > max_chars) {
@@ -73,23 +75,25 @@
     }
 
     $(document).ready(function() {
-
+        
         $(".descripcion").each(function(index, e) {
             limitarCaracteres(this, 350);
         });
-
+        /****************************** RESPONSIVIDAD ***************************************/
         $(window).resize(function(){
             if($(window).width() < 1000){
                 $(".col-4").css("display", "none");
+                $(".col-8").attr("class", "col-12")
             }else{
                 $(".col-4").css("display", "block");
+                $(".col-12").attr("class", "col-8");
             }
         });
 
         if($(window).width() < 1000){
-            $(".col-4").css("display", "none");
+            $(".col-8").attr("class", "col-12")
         }else{
-            $(".col-4").css("display", "block");
+            $(".col-12").attr("class", "col-8");
         }
 
 

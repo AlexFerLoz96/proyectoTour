@@ -3,16 +3,20 @@
 @section("title", "Comercios")
 
 @section("content")
+    <form class="form-inline float-right my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
     <a href="{{ route('comercio.create') }}" class="btn btn-success">New</a>
     <table class="table">
     <thead class="thead-dark">
             <tr>
-                <th scope="col">ID</th>
-                <th>Orden</th>
-                <th>Comercios</th>
+                <th scope="col"><a href="{{ route('comercio.ordenar','id') }}">ID</a></th>
+                <th><a href="{{ route('comercio.ordenar','orden') }}">Orden</a></th>
+                <th><a href="{{ route('comercio.ordenar','nombre') }}">Comercios</a></th>
                 <th>Ubicación</th>
                 <th>Descripción</th>
-                <th>Prioridad</th>
+                <th><a href="{{ route('comercio.ordenar','prioridad') }}">Prioridad</a></th>
                 <th>Categoria</th>
                 <th></th>
                 <th></th>

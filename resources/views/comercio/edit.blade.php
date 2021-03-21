@@ -6,19 +6,19 @@
 
 @section("content")
     @isset($comercio)
-        <form action="{{ route('comercio.update', ['id' => $comercio->id]) }}" method="POST">
+        <form class="bg-light border p-4" action="{{ route('comercio.update', ['id' => $comercio->id]) }}" method="POST">
         @method("PUT")
     @else
-        <form action="{{ route('comercio.store') }}" method="POST">
+        <form class="bg-light border p-4" action="{{ route('comercio.store') }}" method="POST">
     @endisset
         @csrf
         <h2>Comercio {{$comercio->id}}</h2>
-        Orden:<input type="text" name="orden" value="{{$comercio->orden ?? '' }}"><br>
-        Nombre:<input type="text" name="nombre" value="{{$comercio->nombre ?? '' }}"><br>
-        Ubicacion: <input type="text" name="ubicacion" value="{{$comercio->ubicacion ?? '' }}"><br>
-        Descripcion: <textarea type="text" name="descripcion" value="{{$comercio->descripcion ?? '' }}">{{$comercio->descripcion ?? '' }}</textarea><br>
-        Prioridad: <input type="number" min="1" name="prioridad" value="{{$comercio->prioridad ?? ''}}"><br>
-        Categoria: <select name="categoria_id" id="">
+        Orden:<input class="form-control" type="text" name="orden" value="{{$comercio->orden ?? '' }}"><br>
+        Nombre:<input class="form-control" type="text" name="nombre" value="{{$comercio->nombre ?? '' }}"><br>
+        Ubicación: <input class="form-control" type="text" name="ubicacion" value="{{$comercio->ubicacion ?? '' }}"><br>
+        Descripción: <div class="form-group mb-4"><textarea rows=4 class="form-control mt-2 mb-4" type="text" name="descripcion" value="{{$comercio->descripcion ?? '' }}">{{$comercio->descripcion ?? '' }}</textarea></div><br>
+        Prioridad: <input class="form-control" type="number" min="1" name="prioridad" value="{{$comercio->prioridad ?? ''}}"><br>
+        Categoría: <select class="form-control" name="categoria_id" id="">
             <option >-- Seleccionar categoria --</option>
             @foreach($categoriaList as $categoria)
                 @if($comercio->categoria->id == $categoria->id)
@@ -28,7 +28,7 @@
                 @endif
             @endforeach
         </select><br>
-        <input type="submit">
+        <input class="btn btn-success" type="submit">
         </form>
 
 @endsection
