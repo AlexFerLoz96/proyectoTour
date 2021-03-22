@@ -19,7 +19,7 @@
 
 <!----------------------------------------------------------------------------------------->
 
-<!----------------------------------- CARRUSEL CON LAS IMÁGENES DE CADA COMERCIO -------------------------------------->
+<!---------------------- CARRUSEL CON LAS IMÁGENES DE CADA COMERCIO ----------------------->
 
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -63,7 +63,7 @@
 
 <!--------------------------------- IFRAME GOOGLE MAPS -------------------------------------------------------->
 
-        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q={{$comercio->ubicacion}}+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q={{$comercio->ubicacion}}+({{$comercio->nombre}})&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
         </div>
         <hr>
         <br>
@@ -78,7 +78,7 @@
 
 <!------------------------------------- FORMULARIO DE RESEÑAS ---------------------------------------->
 
-        @if($hayResena)
+        @if(!$hayResena)
         <div class="row my-4">
             <form action="{{ route('resena.store') }}" method="POST" class="bg-light border p-4">
                 @csrf

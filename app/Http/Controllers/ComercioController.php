@@ -225,14 +225,14 @@ class ComercioController extends Controller
         ->select('users.*')
         ->get();
 
-        $hayResena=true;
+        $hayResena=false;
         if(isset(Auth::User()->id)){
         foreach($resenaList as $resena){
                     if(Auth::User()->id == $resena->user_id){
-                        $hayResena=false;
+                        $hayResena=true;
                     }
                     else{
-                        $hayResena=true;
+                        $hayResena=false;
                     }
                 }
         }
