@@ -402,5 +402,113 @@ class ImagensTableSeeder extends Seeder
             'descripcion' => 'Lubrin Cafetería Cerveceria',
             'comercio_id' => '34'
         ]);
+        //COMERCIO 35
+        DB::table('imagens')->insert([
+            'ruta' => 'acceso1.jpg',
+            'descripcion' => 'Academia Acceso',
+            'comercio_id' => '35'
+        ]);
+        //COMERCIO 36
+        DB::table('imagens')->insert([
+            'ruta' => 'sherwood1.jpg',
+            'descripcion' => 'Academia de Inglés Sherwood',
+            'comercio_id' => '36'
+        ]);
+        //COMERCIO 37
+        DB::table('imagens')->insert([
+            'ruta' => 'gestion1.jpg',
+            'descripcion' => 'Academia Gestión',
+            'comercio_id' => '37'
+        ]);
+        //COMERCIO 38
+        DB::table('imagens')->insert([
+            'ruta' => 'bretones1.jpg',
+            'descripcion' => 'Academia de Inglés Mati Bretones',
+            'comercio_id' => '38'
+        ]);
+        //COMERCIO 39
+        DB::table('imagens')->insert([
+            'ruta' => 'marbe1.jpg',
+            'descripcion' => 'Academia de Inglés Marbe',
+            'comercio_id' => '39'
+        ]);
+        //COMERCIO 40
+        DB::table('imagens')->insert([
+            'ruta' => 'easyway1.jpg',
+            'descripcion' => 'EasyWay',
+            'comercio_id' => '40'
+        ]);
+        //COMERCIO 41
+        DB::table('imagens')->insert([
+            'ruta' => 'ultramarinos1.jpg',
+            'descripcion' => 'Ultramarinos Finos San Antonio',
+            'comercio_id' => '41'
+        ]);
+        //COMERCIO 42
+        DB::table('imagens')->insert([
+            'ruta' => 'asian1.jpg',
+            'descripcion' => 'Asian Supermaxi',
+            'comercio_id' => '42'
+        ]);
+        //COMERCIO 43
+        DB::table('imagens')->insert([
+            'ruta' => 'blanes1.jpg',
+            'descripcion' => 'Eduardo Blanes Alcaraz',
+            'comercio_id' => '43'
+        ]);
+        //COMERCIO 44
+        DB::table('imagens')->insert([
+            'ruta' => 'salvador1.jpg',
+            'descripcion' => 'Salvador Martínez López',
+            'comercio_id' => '44'
+        ]);
+        //COMERCIO 45
+        DB::table('imagens')->insert([
+            'ruta' => 'supremo1.jpg',
+            'descripcion' => 'SUPREMO',
+            'comercio_id' => '45'
+        ]);
+        //COMERCIO 46
+        DB::table('imagens')->insert([
+            'ruta' => 'danai1.jpg',
+            'descripcion' => 'Comestibles y Encurtidos Danai',
+            'comercio_id' => '46'
+        ]);
+        //COMERCIO 47
+        DB::table('imagens')->insert([
+            'ruta' => 'sensse1.jpg',
+            'descripcion' => 'Sensse Boutique Almería',
+            'comercio_id' => '47'
+        ]);
+        //COMERCIO 48
+        DB::table('imagens')->insert([
+            'ruta' => 'suitie1.jpg',
+            'descripcion' => 'Suitié',
+            'comercio_id' => '48'
+        ]);
+        //COMERCIO 49
+        DB::table('imagens')->insert([
+            'ruta' => 'tempo1.jpg',
+            'descripcion' => 'Tempo',
+            'comercio_id' => '49'
+        ]);
+        //COMERCIO 50
+        DB::table('imagens')->insert([
+            'ruta' => 'dewe1.jpg',
+            'descripcion' => 'Dewe Almeria',
+            'comercio_id' => '50'
+        ]);
+        //COMERCIO 51
+        DB::table('imagens')->insert([
+            'ruta' => 'burbujas1.jpg',
+            'descripcion' => 'Burbujas Moda',
+            'comercio_id' => '51'
+        ]);
+        //COMERCIO 52
+        DB::table('imagens')->insert([
+            'ruta' => 'inside1.jpg',
+            'descripcion' => 'INSIDE',
+            'comercio_id' => '52'
+        ]);
     }
 }

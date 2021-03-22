@@ -199,6 +199,7 @@ class ComercioController extends Controller
         ->select('*')
         ->where('prioridad','=','1')
         ->where('comercios.id', '!=', "{$id}")
+        ->orderBy('orden')
         ->take(8)
         ->get();
 
