@@ -25,7 +25,7 @@
                 </p>
             </div>
         </div>
-<!-------------------------------------------Bucles para los comerciose imagenes------------------------------------------------->
+<!-------------------------------------------Bucles para los comercios e imagenes------------------------------------------------->
         @if(!@empty($consultaComercio))
         @foreach ($consultaComercio as $comercio)
         <div class="row justify-content-center mb-5 border shadow rounded" onclick="mostrarComercio({{$comercio->id}})">
@@ -45,7 +45,7 @@
                         <path fill="#0d6efd" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" class=""></path>
                     </svg>{{$comercio->ubicacion ?? ''}}</div>
                 <div class="descripcion d-block p-2">
-                    <h6>{{$comercio->descripcion ?? ''}}</h6>
+                    <h6>{!!$comercio->descripcion ?? '' !!}</h6>
                 </div>
             </div>
         </div>

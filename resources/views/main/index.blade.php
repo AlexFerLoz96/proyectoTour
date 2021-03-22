@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="assets/css/carrusel.css">
 @endsection
 
+    <!--------------------------------- CARRUSEL DE IMAGENES ----------------------->
 
 @section("content")
 <section class="seccion1">
@@ -60,6 +61,12 @@
         </div>
         </div>
     </section>
+
+    <!------------------------ FIN DEL CARRUSEL ---------------------------->
+
+
+
+    <!-- CONTENEDOR DONDE APARECEN TODOS LOS COMERCIOS --------------------------->
 
     <h2 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
 
@@ -103,12 +110,20 @@
                 @endforeach
             </div>
             @endforeach
-            
-            
         </div>
+
+        <!----------------------------------------------------------------------------------------->
+
+        <!------------------ CONTENEDOR DE COMERCIOS CARGADOS POR AJAX ------------------------>
+
         <div id="mostrarDatos" class="row justify-content-center text-center"></div>
         <div class="text-center"><button class="btn btn-outline-primary w-25" type="button" id="cargarDatos">Cargar más</button></div>
     </div>
+
+    <!---------------------------------------------------------------------->
+
+
+    <!--------------------------CONTENEDOR DE LUGARES ----------------------->
 
     <div class="container mt-5">
         <hr>
@@ -136,6 +151,7 @@
         </div>
     </div>
 </section>
+
 
 
 <script>
