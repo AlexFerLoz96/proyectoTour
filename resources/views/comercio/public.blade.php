@@ -236,7 +236,7 @@
 
         /************************************************************************************************/
 
-        /****************** MEDIA VALORACION, ESTA FUNCION RELLENA LAS ESTRELLAS ************************/
+        /****************** MEDIA VALORACION, ESTA FUNCION RELLENA LA ESTRELLA PRINCIPAL************************/
 
         function puntuacionMedia(elemento, valor) { 
             estrella = "<img style='z-index:1000;width:20rem;' src='/assets/imgs/estrellas.png'>";
@@ -255,7 +255,7 @@
         /**********************************************************/
 
 
-        /************************* COGE LA PUNTUACION QUE INSERTEMOS POR MEDIO DEL FORMULARIO ********************************/
+        /************************* PUNTUACION DE CADA RESEÑA ********************************/
 
         function puntuacion(elemento, valor) {
             estrella = "<img style='width:1.4rem;' src='/assets/imgs/resena.svg'>";

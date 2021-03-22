@@ -60,7 +60,7 @@
       <stop offset="0" stop-color="#2565C1">
         <animate dur="1s" attributeName="offset" fill="freeze" from="0" to="1" />
       </stop>
-      <stop offset="0" stop-color="#fff">
+      <stop offset="0" stop-color="transparent">
         <animate dur="1s" attributeName="offset" fill="freeze" from="0" to="1" />
       </stop>
       

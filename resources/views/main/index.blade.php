@@ -214,7 +214,7 @@ $(document).ready(function() {
             success: function(datos) {
                 var mostrar="";
                 for (var i = 0; i < Object.keys(datos.comercioPrioridad).length; i++){
-                        mostrar+="<div class='seccion2 col-xl-3 col-lg-5 col-md-8 col-sm-8 mx-4 my-5 p-0 border shadow rounded' onclick='mostrarComercio("+datos.comercioPrioridad[i].id+")'>";
+                        mostrar+="<div id='seccion2' class='col-xl-3 col-lg-5 col-md-6 col-sm-7 mx-4 my-5 p-0 border shadow rounded' onclick='mostrarComercio("+datos.comercioPrioridad[i].id+")'>";
                     for(var j= 0;j < Object.keys(datos.imgs).length; j++){
                         if(datos.comercioPrioridad[i].id == datos.imgs[j].comercio_id){
                             mostrar+="<div class='imagen-cont'><img class='zoom img-responsive w-100' src='/assets/imgs/comercio/"+datos.imgs[j].ruta+"'alt='"+datos.imgs[j].descripcion+"'></div>";

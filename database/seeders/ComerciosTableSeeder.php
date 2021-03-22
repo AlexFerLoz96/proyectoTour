@@ -109,8 +109,17 @@ class ComerciosTableSeeder extends Seeder
 
         DB::table('comercios')->insert([//10
             'nombre' => 'Barceló Cabo de Gata',
-            'ubicacion' => 'Urbanización El Toyo, Calle de los Juegos de Casablanca, 04131 Retamar, Almería',
-            'descripcion' => 'Hotel frente al mar con piscinas, restaurantes, spa y habitaciones y suites con balcón.',
+            'ubicacion' => 'Urbanización El Toyo, Calle de los Juegos de Casablanca, s/n, 04131 Retamar, Almería',
+            'descripcion' => '<h3>Un hotel en primera linea de playa y a las puertas de un Parque Natural.</h3> <br>
+            El hotel <strong>Barceló Cabo de Gata</strong>**** disfruta de una privilegiada ubicación, a pie de playa, frente al mar Mediterráneo, y a tan solo 10 min. en coche del aeropuerto de Almería. Su acceso directo al Parque Natural de Cabo de Gata lo convierte en un destino inigualable para amantes de la playa, el sol y la naturaleza. <br> <br>
+            
+            Sus 230 habitaciones amplias y muy luminosas son ideales para brindar una cómoda estancia en familia o unas relajantes vacaciones en pareja. La mayoría dispone de magníficas vistas al mar o a la zona de piscinas y disponen de un completo equipamiento. <br> <br>
+            
+            El hotel cuenta con 4.000 m2 de jardines, 4 piscinas exteriores (una de ellas con sistema aerotérmico), restaurantes y bares, interiores o al aire libre (con la posibilidad de Todo Incluido), además de 5 salones especiales para eventos. También incluye un abanico amplio de actividades y deportes para entretener a huéspedes de todas las edades. <br> <br>
+            
+            Barceló Cabo de Gata dispone de un completo U-Spa en el que podrá disfrutar de un amplio circuito de hidroterapias, novedosos tratamientos de belleza o de un entrenamiento en su sofisticado centro Fitness. <br> <br>
+            
+            El Cabo de Gata es un destino inspirador gracias a sus maravillosas playas, su naturaleza virgen y deliciosa gastronomía. Así, el Barceló Cabo de Gata se sirve de estas grandes virtudes para convertirse en el mejor marco para familias, viajes románticos o de negocios.',
             'prioridad' => '2',
             'categoria_id' => '3'
         ]);

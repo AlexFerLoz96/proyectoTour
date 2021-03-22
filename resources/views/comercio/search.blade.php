@@ -109,7 +109,7 @@
         $("#cargarDatos").click(function() {
 
             $.ajax({
-                url: "/cargarDatosSearch/" + key +"/" + skip,
+                url: "/cargarDatosSearch/" + key + "/" + skip,
                 method: 'GET',
                 dataType: 'JSON',
 
@@ -124,8 +124,8 @@
                             }
                         }
                         mostrar += "</div>";
-                        mostrar += "<div class='col-8 pe-0'><div class='d-block p-2'>";
-                        mostrar += "<h3 class='nombre p-3'>" + datos.comercio[i].nombre + "</h3></div>";
+                        mostrar += "<div class='col-8'><div class='d-block p-2'>";
+                        mostrar += "<h3 class='nombre'>" + datos.comercio[i].nombre + "</h3></div>";
                         mostrar += "<div class='d-block p-2'><svg style='margin-right: 0.6rem;' aria-hidden='true' width='25' focusable='false' data-prefix='fas' data-icon='map-marker-alt' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' class='svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x'><path fill='#0d6efd' d='M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z'></path></svg>";
                         mostrar += datos.comercio[i].ubicacion + "</div>";
                         mostrar += "<div class='descripcion d-block p-2'>";

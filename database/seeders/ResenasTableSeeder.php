@@ -323,23 +323,23 @@ class ResenasTableSeeder extends Seeder
         /************************************************ */
 
         DB::table('resenas')->insert([
-            'comentario' => 'Calidad si, pero un pelin por encima del precio sobre todo los postres son excesivamente caros para lo que se ve por ahí por el mismo precio siendo el mismo postre o parecido.Y los platos igual un pelin por encima.Para ir un par de veces al año y ya',
-            'puntuacion' => '4',
+            'comentario' => 'El hotel se encuentra en un paraje ideal para desconectar del ajetreo diario, tranquilo y muy relajante. El servicio desde el momento en que llegamos fue muy cordial y amabilidad por parte de todo el personal del hotel. Muchas gracias a tod@s.',
+            'puntuacion' => '5',
             'fecha' => '2020/02/09',
             'user_id' => '1',
             'comercio_id' => '10'
         ]);
 
         DB::table('resenas')->insert([
-            'comentario' => 'Trato y comida genial... Repetiré segurooo',
-            'puntuacion' => '4',
+            'comentario' => 'En pleno retamar, término municipal de Almería, está esta joya de la naturaleza, acceso fácil, tranquilo, parquín, buenas playas, y muchos senderos',
+            'puntuacion' => '5',
             'fecha' => '2019/10/11',
             'user_id' => '2',
             'comercio_id' => '10'
         ]);
 
         DB::table('resenas')->insert([
-            'comentario' => 'Soy mexicano y el chilecito hizo de mi estancia en Almería, mas Feliz de lo que ya estaba, la comida muy buena, los tacos al pastor son muy parecidos a los de México, me encantaria regresar y visitar el chilecito',
+            'comentario' => 'Es un hotel funcional, y muy agradable. Las personas que trabajan en él son muy atentas y dispuestas con los huéspedes. El mobiliario está escogido con buen gusto, y no está deteriorado como suele pasar en algunos hoteles de costa. La lencería de la habitación muy limpia, las toallas son gruesas, y da la impresión de que las estás estrenando.',
             'puntuacion' => '4',
             'fecha' => '2020/04/10',
             'user_id' => '3',
@@ -347,7 +347,7 @@ class ResenasTableSeeder extends Seeder
         ]);
 
         DB::table('resenas')->insert([
-            'comentario' => 'Venden por just eat tacos cuando la masa es de burritos y no de maíz. Ojo, no son tacos originales.',
+            'comentario' => 'Hotel con buenas instalaciones y ubicación. Le haría falta una manita de pintura en algun sitio pero bueno, 8 de 10. Lo que ha sido claramente decepcionante es el servicio de restauración. Contratamos media pensión, incluyendo desayuno y cena. Desayuno ok, pero la cena era de risa. Menú cerrado con tres platos a elegir. Calidad malísima. Era como estar en el comedor del colegio, a elegir macarrones pasados, carne descongelada de la peor calidad, fruta de lata, tartas de las cutre-envasadas... Preferible no cenar a comer con asco. No había por dónde cogerlo, y mira que yo no tengo un paladar exquisito.',
             'puntuacion' => '3',
             'fecha' => '2019/10/04',
             'user_id' => '4',
@@ -468,7 +468,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Excelente comida, pero la falta de personal hace que la atención disminuya y se genere lentitud',
-            'puntuacion' => '1',
+            'puntuacion' => '3',
             'fecha' => '2019/10/11',
             'user_id' => '2',
             'comercio_id' => '14'
@@ -578,7 +578,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Sin lugar a dudas, la comida en sí no está tan buena como la de la Taberna el Andaluz de la Avenida Meditarreneo. Algunas tapas estaban sosas, otras la carne más tiesa y la cerveza deja que desear... La carta de tapas es la misma que la de la otra taberna. Un punto a favor, es que, la atención es rápida y atenta por parte de los camareros. El local es llamativo. En conclusión, es un bar para estar de paso por la zona y que la cocina, está mucho mejor la de la otra taberna.',
-            'puntuacion' => '2',
+            'puntuacion' => '3',
             'fecha' => '2020/04/10',
             'user_id' => '3',
             'comercio_id' => '17'
@@ -612,7 +612,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'Muy malas tapas.',
-            'puntuacion' => '2',
+            'puntuacion' => '1',
             'fecha' => '2020/04/10',
             'user_id' => '3',
             'comercio_id' => '18'
@@ -646,7 +646,7 @@ class ResenasTableSeeder extends Seeder
 
         DB::table('resenas')->insert([
             'comentario' => 'En este restaurante da igual lo que pidas, te ponen lo que les da la gana. Hicimos un pedido de 2 hamburguesas muy hechas, unas patatas finas y unas rústicas. Nos trajeron: 2 hamburguesas crudas (no nos las pudimos comer) y dos de patatas rústicas blandas y aceitosas. Por no alargarme acerca de cómo estaban el resto de ingredientes de las hamburguesas. Un desastre, no vuelvo a pedir aquí.',
-            'puntuacion' => '2',
+            'puntuacion' => '1',
             'fecha' => '2020/04/10',
             'user_id' => '3',
             'comercio_id' => '19'
