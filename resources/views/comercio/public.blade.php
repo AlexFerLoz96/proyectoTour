@@ -10,11 +10,16 @@
 
 @section("content")
 <div class="seccion1">
+<!----------------------------- NOMBRE DE COMERCIO ---------------------------------------->
     <div style="display:none">{{$valor = $comercio->id}}</div>
     <div class="container mb-5 p-0">
         <div class="row d-inline">
             <h1 class="d-block mt-3">{{$comercio->nombre}}</h1>
         </div>
+
+<!----------------------------------------------------------------------------------------->
+
+<!----------------------------------- CARRUSEL CON LAS IMÁGENES DE CADA COMERCIO -------------------------------------->
 
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -43,18 +48,36 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
         </div><br>
+
+<!------------------------------------------------------------------------------------------->
+
+<!-------------------------------------- DESCRIPCION DEL COMERCIO --------------------------------------------------->
+
         <svg style="position:relative;left:50%;transform:translateX(-50%);margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
         </svg>
         <div class="mx-5"><h6 class="text-center">{!!$comercio->descripcion!!}</h6></div>
         <hr>
+
+<!----------------------------------------------------------------------------------------->
+
+<!--------------------------------- IFRAME GOOGLE MAPS -------------------------------------------------------->
+
         <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q={{$comercio->ubicacion}}+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
         </div>
         <hr>
         <br>
+
+<!----------------------------------------------------------------------------------------->    
+
         <svg style="position:relative;left:50%;transform:translateX(-50%);margin-bottom: 1rem;" fill="none" width="60" height="25" viewBox="0 0 35 10" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
         </svg>
+
+<!----------------------------------------------------------------------------------------->
+
+<!------------------------------------- FORMULARIO DE RESEÑAS ---------------------------------------->
+
         @if($hayResena)
         <div class="row my-4">
             <form action="{{ route('resena.store') }}" method="POST" class="bg-light border p-4">
@@ -81,10 +104,15 @@
                     <div class="text-center"><a href="/login" class="btn btn-outline-success w-25">Inicia sesión</a></div>
                     @endif
                 </div>
-
             </form>
         </div>
         @endif
+
+<!----------------------------------------------------------------------------------------->
+
+
+<!-------------------------------- LISTADO DE COMENTARIOS ---------------------------------->
+
         <h2 class="text-center">Comentarios y valoraciones</h2>
 
         <div class="row justify-content-center mb-4 border-2 border-end border-start">
@@ -122,7 +150,12 @@
             <path d="M6.83833 0L12.2482 5.45455L17.658 0L23.0678 5.45455L28.4777 0L34.775 6.34939L33 8.10987L28.4777 3.55017L23.0678 9.00472L17.658 3.55017L12.2482 9.00472L6.83833 3.55017L1.77503 8.65533L0 6.89485L6.83833 0Z" clip-rule="evenodd" fill="#0d6efd" fill-rule="evenodd"></path>
         </svg>
     </div>
-    <!--container mb-5 p-0-->
+
+
+<!----------------------------------------------------------------------------------------->
+
+
+<!------------------------------- TABLA CON CARRUSEL LATERAL DE COMERCIOS P1------------------------------->
 
     <h2 class="text-center my-3">Otras sugerencias</h2>
 
@@ -171,7 +204,11 @@
         </table>
     </div>
 
+<!----------------------------------------------------------------------------------------->
+
 </div>
+
+
 <script>
     function mostrarComercio(id) {
         location.href = "/comercio/public/" + id;
@@ -180,7 +217,9 @@
 
     $(document).ready(function() {
 
-        function ellipsis_box(elemento, max_chars) {
+        /*************************************** FUNCION PARA LIMITAR LOS CARACTERES **********************/
+
+        function limitarCaracteres(elemento, max_chars) {
             limite_text = $(elemento).text();
             if (limite_text.length > max_chars) {
                 limite = limite_text.substr(0, max_chars) + " ...";
@@ -191,11 +230,15 @@
         }
 
         $(".descripcion").each(function(index, e) {
-            ellipsis_box(this, 90);
+            limitarCaracteres(this, 90);
         });
 
 
-        function puntuacionMedia(elemento, valor) { //media de todas 
+        /************************************************************************************************/
+
+        /****************** MEDIA VALORACION, ESTA FUNCION RELLENA LAS ESTRELLAS ************************/
+
+        function puntuacionMedia(elemento, valor) { 
             estrella = "<img style='z-index:1000;width:20rem;' src='/assets/imgs/estrellas.png'>";
             estrella_v =
                 "<div style='position:absolute;width:auto;top:50%;transform:translateY(-50%);padding:0;margin-left:8rem;'><img style='width:20rem; opacity:0.4;' src='/assets/imgs/estrellas.png'></div> ";
@@ -209,7 +252,12 @@
             puntuacionMedia(this, valor);
         });
 
-        function puntuacion(elemento, valor) { //cada una
+        /**********************************************************/
+
+
+        /************************* COGE LA PUNTUACION QUE INSERTEMOS POR MEDIO DEL FORMULARIO ********************************/
+
+        function puntuacion(elemento, valor) {
             estrella = "<img style='width:1.4rem;' src='/assets/imgs/resena.svg'>";
             estrella_v = "<img style='width:1.4rem; opacity:0.4;' src='/assets/imgs/resena.svg'>";
             switch (valor) {
@@ -236,6 +284,9 @@
             puntuacion(this, valor);
         });
 
+        /*******************************************************************************************/
+
+        /********************** MOVIMIENTO DEL CARRUSEL INFERIOR (TABLA)****************************/
         posicion = 0;
 
         $("#derecha-svg").click(function() {
@@ -263,6 +314,7 @@
             }
         });
     });
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
