@@ -3,6 +3,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+<script type="text/javascript"> 
+        function callbackThen(response){
+            // read HTTP status
+            console.log(response.status);
+            
+            // read Promise object
+            response.json().then(function(data){
+                console.log(data);
+            });
+        }
+        function callbackCatch(error){
+            console.error('Error:', error)
+        }   
+</script>
+{!! htmlScriptTagJsApi([ 'callback_then' => 'callbackThen', 'callback_catch' => 'callbackCatch' ]) !!}
+
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">

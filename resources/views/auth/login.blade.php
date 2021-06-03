@@ -1,8 +1,23 @@
 <link rel="stylesheet" href="assets/css/login.css">
-<script src="assets/css/login.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+<script type="text/javascript"> 
+        function callbackThen(response){
+            // read HTTP status
+            console.log(response.status);
+            
+            // read Promise object
+            response.json().then(function(data){
+                console.log(data);
+            });
+        }
+        function callbackCatch(error){
+            console.error('Error:', error)
+        }   
+</script>
+{!! htmlScriptTagJsApi([ 'callback_then' => 'callbackThen', 'callback_catch' => 'callbackCatch' ]) !!}
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -59,3 +74,59 @@
                 </div>
     </x-auth-card>
 </x-guest-layout>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    $("#do_login").click(function() { 
+       closeLoginInfo();
+       $(this).parent().find('span').css("display","none");
+       $(this).parent().find('span').removeClass("i-save");
+       $(this).parent().find('span').removeClass("i-warning");
+       $(this).parent().find('span').removeClass("i-close");
+       
+        var proceed = true;
+        $("#login_form input").each(function(){
+            
+            if(!$.trim($(this).val())){
+                $(this).parent().find('span').addClass("i-warning");
+            	$(this).parent().find('span').css("display","block");  
+                proceed = false;
+            }
+        });
+       
+        if(proceed) //everything looks good! proceed...
+        {
+            $(this).parent().find('span').addClass("i-save");
+            $(this).parent().find('span').css("display","block");
+        }
+    });
+    
+    //reset previously results and hide all message on .keyup()
+    $("#login_form input").keyup(function() { 
+        $(this).parent().find('span').css("display","none");
+    });
+ 
+  openLoginInfo();
+  setTimeout(closeLoginInfo, 1000);
+});
+
+function openLoginInfo() {
+    $(document).ready(function(){ 
+    	$('.b-form').css("opacity","0.01");
+      $('.box-form').css("left","-37%");
+      $('.box-info').css("right","-37%");
+    });
+}
+
+function closeLoginInfo() {
+    $(document).ready(function(){ 
+    	$('.b-form').css("opacity","1");
+    	$('.box-form').css("left","0px");
+      $('.box-info').css("right","-5px"); 
+    });
+}
+
+$(window).on('resize', function(){
+      closeLoginInfo();
+});
+</script>
