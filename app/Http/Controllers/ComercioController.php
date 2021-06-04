@@ -139,6 +139,29 @@ class ComercioController extends Controller
 /*-------------------------------------------------------------------------------
 -------------------------------CONSULTA DEL CRUD---------------------------------
 --------------------------------------------------------------------------------*/
+public function adminsearch(Request $r)
+{
+    $key = trim($r->get('busqueda'));
+
+    $palabraBusqueda = $key;
+
+
+    $comercioList = DB::table('comercios')
+        ->select('comercios.*')
+        ->where('comercios.nombre', 'like', "%{$key}%")
+        ->orWhere('comercios.ubicacion', 'like', "%{$key}%")
+        ->orWhere('comercios.descripcion', 'like', "%{$key}%")
+        ->orderBy('comercios.id')
+        ->get();
+
+    $imagenList = DB::table('imagens')
+    ->join('comercios', 'comercios.id', '=','imagens.comercio_id')
+    ->select('imagens.*')
+    ->get();    
+
+    return view('comercio.adminsearch', compact('comercioList','imagenList'));
+}
+
 
     public function index()
     {

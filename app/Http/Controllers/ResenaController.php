@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Resena;
 use App\Models\Comercio;
 use App\Models\User;
+use DB;
 use Illuminate\Support\Carbon;
 
 class ResenaController extends Controller
@@ -43,7 +44,6 @@ class ResenaController extends Controller
 
     public function create()
     {
-
         $userList = User::all();
         $comercioList = Comercio::all();
         return view('resena.create',compact('userList','comercioList'));
@@ -101,7 +101,33 @@ class ResenaController extends Controller
         $resena->user_id = $r->user_id;
         $resena->comercio_id = $r->comercio_id;
         $resena->save();
-        return redirect()->route('resena.index');    }
+        return redirect()->route('resena.index');    
+    }
+
+
+/*-------------------------------------------------------------------------------
+------------------------BUSQUEDA DE RESEÑAS-------------------------------
+--------------------------------------------------------------------------------*/
+
+    public function search(Request $r)
+    {
+        $key = trim($r->get('busqueda'));
+
+        $userList = User::all();
+
+        $comercioList = Comercio::all();
+
+        $resenaList = DB::table('resenas')
+            ->select('resenas.*')
+            ->where('resenas.comentario', 'like', "%{$key}%")
+            ->orWhere('resenas.puntuacion', 'like', "%{$key}%")
+            ->orWhere('resenas.fecha', 'like', "%{$key}%")
+            ->orderBy('resenas.id')
+            ->get();
+
+        return view('resena.search', compact('resenaList', 'userList', 'comercioList'));
+
+    }
 
 /*-------------------------------------------------------------------------------
 ------------------------ELIMINACION DE CADA RESEÑA-------------------------------
@@ -111,5 +137,6 @@ class ResenaController extends Controller
     {
         $resena = Resena::find($id);
         $resena->delete();
-        return redirect()->route('resena.index');    }
+        return redirect()->route('resena.index');    
+    }
 }

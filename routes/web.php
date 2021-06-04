@@ -27,6 +27,11 @@ require __DIR__.'/auth.php';
 
 Route::get('/comercio/search', 'ComercioController@search')->name('comercio.search');
 
+Route::get('/comercio/adminsearch', 'ComercioController@adminsearch')->name('comercio.adminsearch');
+
+Route::get('/resena/search', 'ResenaController@search')->name('resena.search');
+
+
 Route::get('/user', 'UserController@index')->middleware(['admin'])->name('user.index');
 Route::get('/user/create', 'UserController@create')->middleware(['admin'])->name('user.create');
 Route::post('/user/store', 'UserController@store')->middleware(['admin'])->name('user.store');
