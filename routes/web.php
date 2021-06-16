@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Categoria;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,26 @@ Route::get('/comercio/search', 'ComercioController@search')->name('comercio.sear
 Route::get('/comercio/adminsearch', 'ComercioController@adminsearch')->name('comercio.adminsearch');
 
 Route::get('/resena/search', 'ResenaController@search')->name('resena.search');
+
+Route::get('/politica', function () {
+    $categoriaList = Categoria::all();
+    return view('politica', compact("categoriaList"));
+});
+
+Route::get('/info', function (){
+    $categoriaList = Categoria::all();
+    return view('info', compact("categoriaList"));
+});
+
+Route::get('/contacto', function (){
+    $categoriaList = Categoria::all();
+    return view('contacto', compact("categoriaList"));
+});
+
+Route::get('/mapa', function (){
+    $categoriaList = Categoria::all();
+    return view('mapa', compact("categoriaList"));
+});
 
 
 Route::get('/user', 'UserController@index')->middleware(['admin'])->name('user.index');

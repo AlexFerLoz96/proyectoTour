@@ -145,8 +145,48 @@
     </div>
 
 
-    <footer class="position-relative bottom-0 end-0 w-100 bg-dark text-center text-white">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <footer class="position-relative bg-gray-dark bottom-0 end-0 w-100 bg-dark text-center text-white">
+        <div class="row">
+            <div class="col ms-5 my-5">
+                <table class="ms-5">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h2 class="text-white">Asistencia</h2>
+                            </td>
+                        </tr>
+                      <tr class="my-1">
+                        <td class="align-baseline">
+                            <a class="text-white" href="/contacto" target="_blank">Contacto</a>
+                        </td>
+                      </tr>
+                      <tr class="my-1">
+                        <td class="align-baseline">
+                            <a class="text-white" href="/politica" target="_blank">Política de privacidad</a>
+                        </td>
+                      </tr>
+                      <tr  class="my-1">
+                        <td class="align-baseline">
+                            <a class="text-white" href="/info" target="_blank">Información legal</a>
+                        </td>
+                      </tr>
+                      <tr  class="my-1">
+                        <td class="align-baseline">
+                            <a class="text-white" href="/mapa" target="_blank">Mapa del sitio</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+                <div class="col">
+                        <svg fill="none" height="20" viewBox="0 0 9 18" id="ic-facebook" xmlns="http://www.w3.org/2000/svg"><path d="M5.842 18V9.79h2.653l.397-3.2h-3.05V4.545c0-.926.247-1.557 1.527-1.557H9V.126A21.06 21.06 0 006.623 0C4.27 0 2.66 1.491 2.66 4.23v2.36H0v3.2h2.66V18h3.182z" fill="currentColor"></path></svg>
+                        <svg aria-hidden="true" height="25" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-instagram fa-w-14 fa-3x"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" class=""></path></svg>
+                        <svg fill="none" height="20" viewBox="0 0 18 15" id="ic-twitter" xmlns="http://www.w3.org/2000/svg"><path d="M5.66 15c6.793 0 10.508-5.771 10.508-10.776 0-.164 0-.328-.01-.49A7.622 7.622 0 0018 1.774a7.228 7.228 0 01-2.121.595A3.786 3.786 0 0017.503.275a7.29 7.29 0 01-2.346.919A3.669 3.669 0 0013.062.05a3.616 3.616 0 00-2.341.399 3.754 3.754 0 00-1.623 1.777 3.88 3.88 0 00-.234 2.422A10.28 10.28 0 014.648 3.5 10.539 10.539 0 011.253.69a3.874 3.874 0 00-.405 2.76c.213.94.766 1.76 1.548 2.296A3.596 3.596 0 01.72 5.273v.048c0 .874.295 1.722.835 2.398a3.68 3.68 0 002.128 1.315 3.598 3.598 0 01-1.668.065A3.79 3.79 0 003.33 10.98a3.637 3.637 0 002.137.748A7.293 7.293 0 010 13.299a10.266 10.266 0 005.66 1.698" fill="currentColor"></path></svg>
+                        <svg fill="none" height="20" viewBox="0 0 19 17" id="ic-linkedin" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.57 5.674V17H1.127V5.674H4.57zm.227-3.503c0 1.087-.748 1.957-1.949 1.957h-.022C1.67 4.128.923 3.258.923 2.17c0-1.111.77-1.957 1.948-1.957s1.903.846 1.926 1.957zM11.187 17H7.378s.05-10.289 0-11.354h3.807v1.607l-.025.04h.025v-.04c.506-.774 1.412-1.874 3.431-1.874C17.122 5.38 19 7.002 19 10.49V17h-3.807v-6.074c0-1.527-.55-2.568-1.928-2.568-1.052 0-1.679.702-1.954 1.38-.1.243-.125.582-.125.921V17z" fill="currentColor"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3">
             © 2021 Copyright:
             <a class="text-white" href="/">TourAlmeria.com</a>
         </div>
