@@ -7,9 +7,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
     <body>
-            @section('nav') 
+            @section('nav')
                 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-                
+
                     <a class="navbar-brand" href="/">Tour</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -37,10 +37,10 @@
                             <!--
                             <li class="nav-item">
                                 <a class="nav-link" href="/opcion">Opciones</a>
-                            </li>-->
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/modelo">Modelos 3D</a>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </nav>

@@ -9,6 +9,7 @@
 <div class="seccion1">
     <div class="container">
         <div class="row justify-content-center">
+            <div class="sectionName mt-2"><a href="/">Inicio</a> > Búsqueda</div>
             <div class="col mb-2">
 <!------------------------------------------- Número de resultado de la búsqueda ---------------------------------------------->
                 <p class="fs-2 d-inline">{{$palabraBusqueda}} </p>
@@ -24,6 +25,7 @@
 
                 </p>
             </div>
+
         </div>
 <!-------------------------------------------Bucles para los comercios e imagenes------------------------------------------------->
         @if(!@empty($consultaComercio))
@@ -41,6 +43,7 @@
                 <div class="d-block p-2">
                     <h3>{{$comercio->nombre ?? ''}}</h3>
                 </div>
+
                 <div class="d-block p-2"><svg style="margin-right: 0.6rem;" aria-hidden="true" width="25" focusable="false" data-prefix="fas" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-3x">
                         <path fill="#0d6efd" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" class=""></path>
                     </svg>{{$comercio->ubicacion ?? ''}}</div>
@@ -59,7 +62,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 <script>
-    
+
     function mostrarComercio(id) {//funcion para mostrar cada comercio
         location.href = "/comercio/public/" + id;
     }
@@ -75,7 +78,7 @@
     }
 
     $(document).ready(function() {
-        
+
         $(".descripcion").each(function(index, e) {
             limitarCaracteres(this, 350);
         });
@@ -147,7 +150,7 @@
                         $("#cargarDatos").hide(500);
             }
         });
-       
+
     });
 </script>
 @endsection

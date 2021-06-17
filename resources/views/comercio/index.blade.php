@@ -3,12 +3,9 @@
 @section("title", "Comercios")
 
 @section("content")
-    <!--<form class="form-inline float-right my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>-->
-    <a href="{{ route('comercio.create') }}" class="btn btn-success">New</a>
-    <form action="{{route('comercio.adminsearch')}}" class="d-flex my-2 ml-1" style="width: 40%;">
+    
+    
+    <form action="{{route('comercio.adminsearch')}}" class="d-flex my-2 ml-1 float-right" style="width: 40%;">
     {{ csrf_field() }}
         <input class="form-control me-2" required type="search" placeholder="¿Qué deseas buscar?" autocomplete="off" aria-label="Search" name="busqueda">
         <button class="btn btn-outline-primary" type="submit">
@@ -17,6 +14,7 @@
             </svg>
         </button>
         </form>
+    <a href="{{ route('comercio.create') }}" class="btn btn-success">New</a>
     <table class="table">
     <thead class="thead-dark">
             <tr>

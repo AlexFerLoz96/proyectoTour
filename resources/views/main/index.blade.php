@@ -24,6 +24,7 @@
     <!--------------------------------- CARRUSEL DE IMAGENES ----------------------->
 
 @section("content")
+
 <section class="seccion1">
     <section class="b1">
         <div class="b1-slider">
@@ -68,10 +69,12 @@
 
     <!-- CONTENEDOR DONDE APARECEN TODOS LOS COMERCIOS --------------------------->
 
-    <h2 class="mt-5 text-center" id="titulo">Mejores sitios para visitar en Almería</h2>
+    <h2 class="mt-5 text-center" id="titulo">Bienvenido a los mejores sitios para visitar en Almería</h2>
 
     <div class="container-fluid">
         <div class="row justify-content-center text-center">
+            <p class="text-center mt-4 w-75">Descubre una de las ciudades más desconocidas de Andalucía con este free tour por Almería. Sus calles y barrios han sabido conservar todo el encanto de épocas pasadas. 
+            </p>
             @foreach ($comercioPrioridad as $comercio)
             <div class="col-xl-3 col-lg-5 col-md-6 col-sm-7 mx-4 my-5 p-0 border shadow rounded"
                 onclick="mostrarComercio({{$comercio->id}})">
@@ -192,8 +195,8 @@ $(document).ready(function() {
 
     $(".descripcion").each(function(index, e) {
         limitarCaracteres(this, 130);
-    });   
-    
+    });
+
     $(".nombre").each(function(index, e) {
         limitarCaracteres(this, 30);
     });
@@ -205,7 +208,7 @@ $(document).ready(function() {
     var prioridad = 2;
 
     $("#cargarDatos").click(function() {
-        
+
         $.ajax({
             url: "/cargarDatos/"+prioridad,
             method: 'GET',
@@ -235,7 +238,7 @@ $(document).ready(function() {
                             break;
                         }
                     }
-                    
+
                     mostrar+="</div>";
                 }
                 $("#mostrarDatos").append(mostrar);
@@ -245,7 +248,7 @@ $(document).ready(function() {
                 $(".descripcion").each(function(index, e) {
                     limitarCaracteres(this, 130);
                 });
-                
+
                 $(".resena").each(function(index, e) {
                     valor = $(this).data("value");
                     puntuacion(this, valor);

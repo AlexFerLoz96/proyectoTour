@@ -118,9 +118,11 @@ class ResenaController extends Controller
         $comercioList = Comercio::all();
 
         $resenaList = DB::table('resenas')
+        ->join('users', 'resenas.user_id', '=','users.id')
             ->select('resenas.*')
             ->where('resenas.comentario', 'like', "%{$key}%")
             ->orWhere('resenas.puntuacion', 'like', "%{$key}%")
+            ->orWhere('users.name', 'like', "%{$key}%")
             ->orWhere('resenas.fecha', 'like', "%{$key}%")
             ->orderBy('resenas.id')
             ->get();

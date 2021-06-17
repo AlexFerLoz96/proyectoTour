@@ -5,7 +5,7 @@
 @section("header", "resenas")
 
 @section("content")
-    <form action="{{route('resena.search')}}" class="d-flex my-2 ml-1" style="width: 40%;">
+    <form action="{{route('resena.search')}}" class="d-flex my-2 ml-1 float-right" style="width: 40%;">
         {{ csrf_field() }}
             <input class="form-control me-2" required type="search" placeholder="¿Qué deseas buscar?" autocomplete="off" aria-label="Search" name="busqueda">
             <button class="btn btn-outline-primary" type="submit">
